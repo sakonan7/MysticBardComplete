@@ -663,7 +663,7 @@ void draw() {
     text("You have defeated your first enemy! But the battle has just begun", 50, 210);
     
     image(tutorialV, 230, 250, 625, 463);
-    text("The true challenge is yet to come", 50, 772); 
+    text("The true challenge has yet to come", 50, 772); 
     fill(#FFF300);
     textFont(Font1);
     text("\n" + "\n" + clickRight, width - 385, height - 165);   
@@ -1511,6 +1511,7 @@ void draw() {
         redTDead = true;
         redDeadPage = true;
         minim.stop();
+        redraw();
       } 
       else if (playerHP <= 0 && stage1 == true) {
         //may need to do if stage2, foe not alive to make them disappear
@@ -1520,6 +1521,7 @@ void draw() {
         redDead = true;
         redDeadPage = true;
         minim.stop();
+        redraw();
       }        
       else if (playerHP <= 0 && stage2 == true) {
         //may need to do if stage2, foe not alive to make them disappear
@@ -1529,6 +1531,7 @@ void draw() {
         redDead = true;
         redDeadPage = true;
         minim.stop();
+        redraw();
       }       
     }
     else if (playerAttacked == false) {
@@ -4264,7 +4267,8 @@ void mousePressed () {
         player3 = minim3.loadFile("Victory.mp3", 800);
         player3.play();    
         player3.shiftGain(player3.getGain(),-15,FADE);
-        player3.loop();          
+        player3.loop();
+        redraw();
       }      
       
       if (foe1HP <= 0 && foe2HP <= 0 && foe3HP <= 0 && stage1 == true && playerAlive == true) {
@@ -4278,7 +4282,8 @@ void mousePressed () {
         player3 = minim3.loadFile("Victory.mp3", 800);
         player3.play();    
         player3.shiftGain(player3.getGain(),-15,FADE);
-        player3.loop();      
+        player3.loop(); 
+        redraw();
       }
       if (foe4HP <= 0 && foe5HP <= 0 && foe6HP <= 0 && foe7HP <= 0 && foe8HP <= 0
       && stage2 == true && playerAlive == true) {
@@ -4295,7 +4300,8 @@ void mousePressed () {
         player3 = minim3.loadFile("Victory.mp3", 800);
         player3.play();    
         player3.shiftGain(player3.getGain(),-15,FADE);
-        player3.loop();      
+        player3.loop();
+        redraw();
       }      
       
     }
@@ -4332,7 +4338,8 @@ void mousePressed () {
       player = minim.loadFile("Battle.mp3", 800);
       player.play();
       player.shiftGain(player.getGain(),-15,FADE);
-      player.loop();      
+      player.loop();
+      redraw();
     }
 
   }
@@ -4377,7 +4384,8 @@ void mousePressed () {
       player = minim.loadFile("Battle.mp3", 800);
       player.play();
       player.shiftGain(player.getGain(),-15,FADE);
-      player.loop();      
+      player.loop();
+      redraw();
     }
     else if (mouseButton == RIGHT && stayTuned == true) {
       stayTuned = false;
@@ -4451,7 +4459,8 @@ void mousePressed () {
       player = minim.loadFile("Title Theme.mp3", 800);
       player.play();
       player.shiftGain(player.getGain(),-15,FADE);
-      player.loop();      
+      player.loop();
+      redraw();
     }    
     else if (mouseButton == LEFT && musicCredits == true) {
       musicCredits = false;
@@ -4509,7 +4518,8 @@ void mousePressed () {
       player = minim.loadFile("Battle.mp3", 800);
       player.play();
       player.shiftGain(player.getGain(),-15,FADE);
-      player.loop();      
+      player.loop();
+      redraw();
     }
   }
   if (redDead == true) {
@@ -4588,7 +4598,8 @@ void mousePressed () {
       player = minim.loadFile("Battle.mp3", 800);
       player.play();
       player.shiftGain(player.getGain(),-15,FADE);
-      player.loop();      
+      player.loop();
+      redraw();
     }
   }
   redraw();
