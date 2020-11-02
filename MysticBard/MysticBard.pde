@@ -2982,7 +2982,7 @@ void mousePressed () {
                 monsterTrombone = true;
                 player5 = minim5.loadFile("firstTrumpet.mp3", 500);
                 player5.play();
-                player5.shiftGain(-30, -30,1000); 
+                player5.shiftGain(-13, -13,1000); 
                 if (foeTFlash == true && foeTattacked == true) {
                   foeTAttack = false;
                   foeTAlive = true;
@@ -3032,7 +3032,7 @@ void mousePressed () {
                 monsterTrombone = true;
                 player6 = minim6.loadFile("secondTrumpet.mp3", 500);
                 player6.play();
-                player6.shiftGain(-30, -30,1000); 
+                player6.shiftGain(-13, -13,1000); 
                 if (foeTFlash == true && foeTattacked == true) {
                   foeTAttack = false;
                   foeTAlive = true;
@@ -3075,7 +3075,7 @@ void mousePressed () {
                 monsterTrombone = true;
                 player6 = minim6.loadFile("secondTrumpet.mp3", 500);
                 player6.play();
-                player6.shiftGain(-30, -30,1000);                
+                player6.shiftGain(-13, -13,1000);                
               }
               if (mouseX <= foeT3SizeX + foeT3X + 140 && mouseX >= foeT3X - 140
               && (mouseY <= foeT3SizeY + foeT3Y + 140 && mouseY >= foeT3Y - 140) && foeT3HP > 0) { 
@@ -3102,7 +3102,7 @@ void mousePressed () {
                 monsterTrombone = true;
                 player6 = minim6.loadFile("secondTrumpet.mp3", 500);
                 player6.play();
-                player6.shiftGain(-30, -30,1000);               
+                player6.shiftGain(-13, -13,1000);               
               }              
             }
      
@@ -3166,7 +3166,7 @@ void mousePressed () {
                 monsterTrombone = true;
                 player5 = minim5.loadFile("firstTrumpet.mp3", 500);
                 player5.play();
-                player5.shiftGain(-30, -30,1000); 
+                player5.shiftGain(-13, -13,1000); 
                 //Need to add code to all foes
                 if (foe1Flash == true && foe1attacked == true) {
                   foe1Attack = false;
@@ -3250,7 +3250,7 @@ void mousePressed () {
                 monsterTrombone = true;
                 player6 = minim6.loadFile("secondTrumpet.mp3", 500);
                 player6.play();
-                player6.shiftGain(-30, -30,1000); 
+                player6.shiftGain(-13, -13,1000); 
                 if (foe1Flash == true && foe1attacked == true) {
                   foe1Attack = false;
                   foe1Alive = true;
@@ -3294,7 +3294,7 @@ void mousePressed () {
                 monsterTrombone = true;
                 player6 = minim6.loadFile("secondTrumpet.mp3", 500);
                 player6.play();
-                player6.shiftGain(-30, -30,1000);  
+                player6.shiftGain(-13, -13,1000);  
                 if (foe2Flash == true && foe2attacked == true) {
                   foe2Attack = false;
                   foe2Alive = true;
@@ -3339,7 +3339,7 @@ void mousePressed () {
                 monsterTrombone = true;
                 player6 = minim6.loadFile("secondTrumpet.mp3", 500);
                 player6.play();
-                player6.shiftGain(-30, -30,1000);  
+                player6.shiftGain(-13, -13,1000);  
                 if (foe3Flash == true && foe3attacked == true) {
                   foe3Attack = false;
                   foe3Alive = true;
@@ -3433,7 +3433,7 @@ void mousePressed () {
                 monsterTrombone = true;
                 player5 = minim5.loadFile("firstTrumpet.mp3", 500);
                 player5.play();
-                player5.shiftGain(-30, -30,1000); 
+                player5.shiftGain(-13, -13,1000); 
                 //Need to add code to all foes
                 if (foe4Flash == true && foe4attacked == true) {
                   foe4Attack = false;
@@ -3550,7 +3550,7 @@ void mousePressed () {
                 monsterTrombone = true;
                 player6 = minim6.loadFile("secondTrumpet.mp3", 500);
                 player6.play();
-                player6.shiftGain(-30, -30,1000);
+                player6.shiftGain(-13, -13,1000);
                 if (foe4Flash == true && foe4attacked == true) {
                   foe4Attack = false;
                   foe4Alive = true;
@@ -3594,7 +3594,7 @@ void mousePressed () {
                 monsterTrombone = true;
                 player6 = minim6.loadFile("secondTrumpet.mp3", 500);
                 player6.play();
-                player6.shiftGain(-30, -30,1000);
+                player6.shiftGain(-13, -13,1000);
                 if (foe5Flash == true && foe5attacked == true) {
                   foe5Attack = false;
                   foe5Alive = true;
@@ -3639,7 +3639,7 @@ void mousePressed () {
                 monsterTrombone = true;
                 player6 = minim6.loadFile("secondTrumpet.mp3", 500);
                 player6.play();
-                player6.shiftGain(-30, -30,1000); 
+                player6.shiftGain(-13, -13,1000); 
                 if (foe6Flash == true && foe6attacked == true) {
                   foe6Attack = false;
                   foe6Alive = true;
@@ -3684,7 +3684,7 @@ void mousePressed () {
                 monsterTrombone = true;
                 player6 = minim6.loadFile("secondTrumpet.mp3", 500);
                 player6.play();
-                player6.shiftGain(-30, -30,1000);
+                player6.shiftGain(-13, -13,1000);
                 if (foe7Flash == true && foe7attacked == true) {
                   foe7Attack = false;
                   foe7Alive = true;
@@ -3729,7 +3729,7 @@ void mousePressed () {
                 monsterTrombone = true;
                 player6 = minim6.loadFile("secondTrumpet.mp3", 500);
                 player6.play();
-                player6.shiftGain(-30, -30,1000);  
+                player6.shiftGain(-13, -13,1000);  
                 if (foe8Flash == true && foe8attacked == true) {
                   foe8Attack = false;
                   foe8Alive = true;
@@ -3805,11 +3805,13 @@ void mousePressed () {
                 foeTredint = int(millis()/1000) + 3; 
                 foeTflash2int = int(millis()/1000) + 3;
                 player7 = minim7.loadFile("violinFlinch.mp3", 500);
-                player7.play();            
+                player7.play(); 
+                player7.shiftGain(-7, -7,1000);
               }        
               else if (foeTFlash == false) {
                 player2 = minim2.loadFile("violin.mp3", 400);
                 player2.play();
+                player2.shiftGain(-7, -7,1000);
               }
               if (foeTInterupt == true) {
                 foeTInterupt = false;
@@ -3837,7 +3839,8 @@ void mousePressed () {
               fill(#FFFFFF);
               monsterViolin = true;
               player2 = minim2.loadFile("violin.mp3", 400);
-              player2.play();              
+              player2.play();
+              player2.shiftGain(-7, -7,1000);
             } 
             if (mouseX <= foeT3SizeX + foeT3X && mouseX >= foeT3X
             && (mouseY <= foeT3SizeY + foeT3Y && mouseY >= foeT3Y) && foeT3HP > 0) { 
@@ -3860,7 +3863,8 @@ void mousePressed () {
               fill(#FFFFFF);
               monsterViolin = true;
               player2 = minim2.loadFile("violin.mp3", 400);
-              player2.play();              
+              player2.play();
+              player2.shiftGain(-7, -7,1000);
             }            
           }
           //stage1 
@@ -3897,11 +3901,13 @@ void mousePressed () {
                 foe1redint = int(millis()/1000) + 3; 
                 foe1flash2int = int(millis()/1000) + 3;   
                 player7 = minim7.loadFile("violinFlinch.mp3", 500);
-                player7.play();            
+                player7.play();
+                player7.shiftGain(-7, -7,1000);
               }        
               else if (foe1Flash == false) {
                 player2 = minim2.loadFile("violin.mp3", 400);
                 player2.play();
+                player2.shiftGain(-7, -7,1000);
               }
               if (foe1Interupt == true) {
                 foe1Interupt = false;
@@ -3941,11 +3947,13 @@ void mousePressed () {
                 foe2redint = int(millis()/1000) + 3; 
                 foe2flash2int = int(millis()/1000) + 3;   
                 player7 = minim7.loadFile("violinFlinch.mp3", 500);
-                player7.play();            
+                player7.play();
+                player7.shiftGain(-7, -7,1000);
               }        
               else if (foe2Flash == false) {
                 player2 = minim2.loadFile("violin.mp3", 400);
                 player2.play();
+                player2.shiftGain(-7, -7,1000);
               }
               if (foe2Interupt == true) {
                 foe2Interupt = false;
@@ -3985,11 +3993,13 @@ void mousePressed () {
                 foe3redint = int(millis()/1000) + 3; 
                 foe3flash2int = int(millis()/1000) + 3;   
                 player7 = minim7.loadFile("violinFlinch.mp3", 500);
-                player7.play();            
+                player7.play();
+                player7.shiftGain(-7, -7,1000);
               }        
               else if (foe3Flash == false) {
                 player2 = minim2.loadFile("violin.mp3", 400);
                 player2.play();
+                player2.shiftGain(-7, -7,1000);
               }
               if (foe3Interupt == true) {
                 foe3Interupt = false;
@@ -4031,11 +4041,13 @@ void mousePressed () {
                 foe4redint = int(millis()/1000) + 3; 
                 foe4flash2int = int(millis()/1000) + 3;   
                 player7 = minim7.loadFile("violinFlinch.mp3", 500);
-                player7.play();            
+                player7.play();
+                player7.shiftGain(-7, -7,1000);
               }        
               else if (foe4Flash == false) {
                 player2 = minim2.loadFile("violin.mp3", 400);
                 player2.play();
+                player2.shiftGain(-7, -7,1000);
               }
               if (foe4Interupt == true) {
                 foe4Interupt = false;
@@ -4075,11 +4087,13 @@ void mousePressed () {
                 foe5redint = int(millis()/1000) + 3; 
                 foe5flash2int = int(millis()/1000) + 3;   
                 player7 = minim7.loadFile("violinFlinch.mp3", 500);
-                player7.play();            
+                player7.play();
+                player7.shiftGain(-7, -7,1000);
               }        
               else if (foe5Flash == false) {
                 player2 = minim2.loadFile("violin.mp3", 400);
                 player2.play();
+                player2.shiftGain(-7, -7,1000);
               }
               if (foe5Interupt == true) {
                 foe5Interupt = false;
@@ -4119,11 +4133,13 @@ void mousePressed () {
                 foe6redint = int(millis()/1000) + 3; 
                 foe6flash2int = int(millis()/1000) + 3;   
                 player7 = minim7.loadFile("violinFlinch.mp3", 500);
-                player7.play();            
+                player7.play(); 
+                player7.shiftGain(-7, -7,1000);
               }        
               else if (foe6Flash == false) {
                 player2 = minim2.loadFile("violin.mp3", 400);
                 player2.play();
+                player2.shiftGain(-7, -7,1000);
               }
               if (foe6Interupt == true) {
                 foe6Interupt = false;
@@ -4163,11 +4179,13 @@ void mousePressed () {
                 foe7redint = int(millis()/1000) + 3; 
                 foe7flash2int = int(millis()/1000) + 3;   
                 player7 = minim7.loadFile("violinFlinch.mp3", 500);
-                player7.play();                
+                player7.play(); 
+                player7.shiftGain(-7, -7,1000);
               }        
               else if (foe7Flash == false) {
                 player2 = minim2.loadFile("violin.mp3", 400);
                 player2.play();
+                player2.shiftGain(-7, -7,1000);
               }
               if (foe7Interupt == true) {
                 foe7Interupt = false;
@@ -4207,11 +4225,13 @@ void mousePressed () {
                 foe8redint = int(millis()/1000) + 3; 
                 foe8flash2int = int(millis()/1000) + 3;   
                 player7 = minim7.loadFile("violinFlinch.mp3", 500);
-                player7.play();            
+                player7.play(); 
+                player7.shiftGain(-7, -7,1000);
               }        
               else if (foe8Flash == false) {
                 player2 = minim2.loadFile("violin.mp3", 400);
                 player2.play();
+                player2.shiftGain(-7, -7,1000);
               }
               if (foe8Interupt == true) {
                 foe8Interupt = false;
@@ -4266,7 +4286,7 @@ void mousePressed () {
 
         player3 = minim3.loadFile("Victory.mp3", 800);
         player3.play();    
-        player3.shiftGain(player3.getGain(),-15,1000);
+        player3.shiftGain(-20,-20,1000);
         player3.loop();
         redraw();
       }      
@@ -4299,7 +4319,7 @@ void mousePressed () {
         
         player3 = minim3.loadFile("Victory.mp3", 800);
         player3.play();    
-        player3.shiftGain(player3.getGain(),-15,1000);
+        player3.shiftGain(-20,-20,1000);
         player3.loop();
         redraw();
       }      
@@ -4337,7 +4357,7 @@ void mousePressed () {
       
       player = minim.loadFile("Battle.mp3", 800);
       player.play();
-      player.shiftGain(player.getGain(),-15,1000);
+      player.shiftGain(-20,-20,1000);
       player.loop();
       redraw();
     }
@@ -4383,7 +4403,7 @@ void mousePressed () {
       
       player = minim.loadFile("Battle.mp3", 800);
       player.play();
-      player.shiftGain(player.getGain(),-15,1000);
+      player.shiftGain(-20,-20,1000);
       player.loop();
       redraw();
     }
@@ -4458,7 +4478,7 @@ void mousePressed () {
       messageOver = false;
       player = minim.loadFile("Title Theme.mp3", 800);
       player.play();
-      player.shiftGain(player.getGain(),-15,1000);
+      player.shiftGain(-20,-20,1000);
       player.loop();
       redraw();
     }    
@@ -4474,7 +4494,7 @@ void mousePressed () {
       tutorialDead = true;
       player3 = minim3.loadFile("death.mp3", 800);
       player3.play();    
-      player3.shiftGain(player3.getGain(),-15,1000);
+      player3.shiftGain(-20,-20,1000);
       player3.loop();       
     }
     else if (mouseButton == RIGHT && tutorialDead == true) {
@@ -4517,7 +4537,7 @@ void mousePressed () {
       
       player = minim.loadFile("Battle.mp3", 800);
       player.play();
-      player.shiftGain(player.getGain(),-15,1000);
+      player.shiftGain(-20,-20,1000);
       player.loop();
       redraw();
     }
@@ -4528,7 +4548,7 @@ void mousePressed () {
       playerDead = true;
       player3 = minim3.loadFile("death.mp3", 800);
       player3.play();    
-      player3.shiftGain(player3.getGain(),-15,1000);
+      player3.shiftGain(-20,-20,1000);
       player3.loop();  
     }
     else if (mouseButton == RIGHT && playerDead == true) {
@@ -4597,7 +4617,7 @@ void mousePressed () {
       
       player = minim.loadFile("Battle.mp3", 800);
       player.play();
-      player.shiftGain(player.getGain(),-15,1000);
+      player.shiftGain(-20,-20,1000);
       player.loop();
       redraw();
     }
