@@ -2958,7 +2958,7 @@ void mousePressed () {
                 ellipse(cursorX, cursorY, width/2 + 120, width/2 + 110);
                 ellipse(cursorX, cursorY, width/2 - 10, width/2);
                 ellipse(cursorX, cursorY, width/2 - 140, width/2 - 150);
-                image(trombone, cursorX - 40, cursorY - 15, 100, 40);
+                image(trombone, cursorX - 30, cursorY - 15, 100, 40);
 
                 //fill(#E505FF);
                 image(violinUI, 251, height - 156, 240, 156);
@@ -3021,7 +3021,7 @@ void mousePressed () {
                 ellipse(cursorX, cursorY , 120, 120);
                 ellipse(cursorX, cursorY , 60, 60);
                 
-                image(trombone, cursorX - 40, cursorY - 15, 100, 40);
+                image(trombone, cursorX - 30, cursorY - 15, 100, 40);
       
                 foeTHP -= 15;
                 text("  " + 15, foetutorialX + foetutorialSizeX/5 - 10, foetutorialY - 60);
@@ -3092,7 +3092,7 @@ void mousePressed () {
                 ellipse(cursorX, cursorY , 120, 120);
                 ellipse(cursorX, cursorY , 60, 60);
                 
-                image(trombone, cursorX - 40, cursorY - 15, 100, 40);
+                image(trombone, cursorX - 30, cursorY - 15, 100, 40);
       
                 foeT3HP -= 15;
                 text("  " + 15, foeT3X + foeT3SizeX/5 - 10, foeT3Y - 60);
@@ -3139,7 +3139,7 @@ void mousePressed () {
                 ellipse(cursorX, cursorY, width/2 + 120, width/2 + 110);
                 ellipse(cursorX, cursorY, width/2 - 10, width/2);
                 ellipse(cursorX, cursorY, width/2 - 140, width/2 - 150);
-                image(trombone, cursorX - 40, cursorY - 15, 100, 40);
+                image(trombone, cursorX - 30, cursorY - 15, 100, 40);
 
                 //fill(#E505FF);
                 image(violinUI, 251, height - 156, 240, 156);
@@ -3239,7 +3239,7 @@ void mousePressed () {
                 ellipse(cursorX, cursorY , 120, 120);
                 ellipse(cursorX, cursorY , 60, 60);
                 
-                image(trombone, cursorX - 40, cursorY - 15, 100, 40);
+                image(trombone, cursorX - 30, cursorY - 15, 100, 40);
       
                 foe1HP -= 15;
                 text("  " + 15, foe1CoordX + foe1SizeX/5 - 10, foe1CoordY - 60);
@@ -3283,7 +3283,7 @@ void mousePressed () {
                 ellipse(cursorX, cursorY , 200, 200);
                 ellipse(cursorX, cursorY , 120, 120);
                 ellipse(cursorX, cursorY , 60, 60);
-                image(trombone, cursorX - 40, cursorY - 15, 100, 40);
+                image(trombone, cursorX - 30, cursorY - 15, 100, 40);
       
                 foe2HP -= 15;
                 text("  " + 15, foe2CoordX + foe2SizeX/5 - 10, foe2CoordY - 60);
@@ -3328,7 +3328,7 @@ void mousePressed () {
                 ellipse(cursorX, cursorY , 120, 120);
                 ellipse(cursorX, cursorY , 60, 60);
                 
-                image(trombone, cursorX - 40, cursorY - 15, 100, 40);
+                image(trombone, cursorX - 30, cursorY - 15, 100, 40);
       
                 foe3HP -= 15;
                 text("  " + 15, foe3CoordX + foe3SizeX/5 - 10, foe3CoordY - 60);
@@ -3404,7 +3404,7 @@ void mousePressed () {
                 ellipse(cursorX, cursorY, width/2 + 120, width/2 + 110);
                 ellipse(cursorX, cursorY, width/2 - 10, width/2);
                 ellipse(cursorX, cursorY, width/2 - 140, width/2 - 150);
-                image(trombone, cursorX - 40, cursorY - 15, 100, 40);
+                image(trombone, cursorX - 30, cursorY - 15, 100, 40);
 
                 //fill(#E505FF);
                 image(violinUI, 251, height - 156, 240, 156);
@@ -3539,7 +3539,7 @@ void mousePressed () {
                 ellipse(cursorX, cursorY , 120, 120);
                 ellipse(cursorX, cursorY , 60, 60);
                 
-                image(trombone, cursorX - 40, cursorY - 15, 100, 40);
+                image(trombone, cursorX - 30, cursorY - 15, 100, 40);
       
                 foe4HP -= 15;
                 text("  " + 15, foe4CoordX + foe4SizeX/5 - 10, foe4CoordY - 60);
@@ -3583,7 +3583,7 @@ void mousePressed () {
                 ellipse(cursorX, cursorY , 200, 200);
                 ellipse(cursorX, cursorY , 120, 120);
                 ellipse(cursorX, cursorY , 60, 60);
-                image(trombone, cursorX - 40, cursorY - 15, 100, 40);
+                image(trombone, cursorX - 30, cursorY - 15, 100, 40);
       
                 foe5HP -= 15;
                 text("  " + 15, foe5CoordX + foe5SizeX/5 - 10, foe5CoordY - 60);
@@ -3628,7 +3628,7 @@ void mousePressed () {
                 ellipse(cursorX, cursorY , 120, 120);
                 ellipse(cursorX, cursorY , 60, 60);
                 
-                image(trombone, cursorX - 40, cursorY - 15, 100, 40);
+                image(trombone, cursorX - 30, cursorY - 15, 100, 40);
       
                 foe6HP -= 15;
                 text("  " + 15, foe6CoordX + foe6SizeX/5 - 10, foe6CoordY - 60);
@@ -3673,7 +3673,7 @@ void mousePressed () {
                 ellipse(cursorX, cursorY , 120, 120);
                 ellipse(cursorX, cursorY , 60, 60);
                 
-                image(trombone, cursorX - 40, cursorY - 15, 100, 40);
+                image(trombone, cursorX - 30, cursorY - 15, 100, 40);
       
                 foe7HP -= 15;
                 text("  " + 15, foe7CoordX + foe7SizeX/5 - 10, foe7CoordY - 60);
@@ -3718,7 +3718,7 @@ void mousePressed () {
                 ellipse(cursorX, cursorY , 120, 120);
                 ellipse(cursorX, cursorY , 60, 60);
                 
-                image(trombone, cursorX - 40, cursorY - 15, 100, 40);
+                image(trombone, cursorX - 30, cursorY - 15, 100, 40);
       
                 foe8HP -= 15;
                 text("  " + 15, foe8CoordX + foe8SizeX/5 - 10, foe8CoordY - 60);
