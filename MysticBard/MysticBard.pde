@@ -3786,7 +3786,7 @@ void mousePressed () {
               ellipse(cursorX, cursorY, 140, 140);
               ellipse(cursorX, cursorY , 100, 100);
               ellipse(cursorX, cursorY , 50, 50);
-              image(violin, cursorX, cursorY - 20, 46.5, 50);
+              image(violin, cursorX + 10, cursorY - 25, 46.5, 50);
       
               foeTHP -= damage;
               text("  " + damage, foetutorialX + foetutorialSizeX/4, foetutorialY - foetutorialY/11);
@@ -3832,7 +3832,7 @@ void mousePressed () {
               ellipse(cursorX, cursorY , 100, 100);
               ellipse(cursorX, cursorY , 50, 50);
               
-              image(violin, cursorX, cursorY - 20, 46.5, 50);
+              image(violin, cursorX + 10, cursorY - 25, 46.5, 50);
               
               foeT2HP -= damage;
               text("  " + damage, foeT2X + foeT2SizeX/4, foeT2Y - foeT2Y/11);
@@ -3856,7 +3856,7 @@ void mousePressed () {
               ellipse(cursorX, cursorY , 100, 100);
               ellipse(cursorX, cursorY , 50, 50);
               
-              image(violin, cursorX, cursorY - 20, 46.5, 50);
+              image(violin, cursorX + 10, cursorY - 25, 46.5, 50);
       
               foeT3HP -= damage;
               text("  " + damage, foeT3X + foeT3SizeX/4, foeT3Y - foeT3Y/11);
@@ -3882,7 +3882,7 @@ void mousePressed () {
               ellipse(cursorX, cursorY, 140, 140);
               ellipse(cursorX, cursorY , 100, 100);
               ellipse(cursorX, cursorY , 50, 50);
-              image(violin, cursorX, cursorY - 20, 46.5, 50);
+              image(violin, cursorX + 10, cursorY - 25, 46.5, 50);
       
               foe1HP -= damage;
               text("  " + damage, foe1CoordX + foe1SizeX/4, foe1CoordY - foe1CoordY/11);
@@ -3928,7 +3928,7 @@ void mousePressed () {
               ellipse(cursorX, cursorY , 100, 100);
               ellipse(cursorX, cursorY , 50, 50);
               
-              image(violin, cursorX, cursorY - 20, 46.5, 50);
+              image(violin, cursorX + 10, cursorY - 25, 46.5, 50);
               
               foe2HP -= damage;
               text("  " + damage, foe2CoordX + foe2SizeX/4, foe2CoordY - foe2CoordY/11);
@@ -3974,7 +3974,7 @@ void mousePressed () {
               ellipse(cursorX, cursorY , 100, 100);
               ellipse(cursorX, cursorY , 50, 50);
               
-              image(violin, cursorX, cursorY - 20, 46.5, 50);
+              image(violin, cursorX + 10, cursorY - 25, 46.5, 50);
       
               foe3HP -= damage;
               text("  " + damage, foe3CoordX + foe3SizeX/4, foe3CoordY - foe3CoordY/11);
@@ -4022,7 +4022,7 @@ void mousePressed () {
               ellipse(cursorX, cursorY , 100, 100);
               ellipse(cursorX, cursorY , 50, 50);
               
-              image(violin, cursorX, cursorY - 20, 46.5, 50);
+              image(violin, cursorX + 10, cursorY - 25, 46.5, 50);
       
               foe4HP -= damage;
               text("  " + damage, foe4CoordX + foe4SizeX/4, foe4CoordY - foe4CoordY/11);
@@ -4068,7 +4068,7 @@ void mousePressed () {
               ellipse(cursorX, cursorY , 100, 100);
               ellipse(cursorX, cursorY , 50, 50);
               
-              image(violin, cursorX, cursorY - 20, 46.5, 50);
+              image(violin, cursorX + 10, cursorY - 25, 46.5, 50);
       
               foe5HP -= damage;
               text("  " + damage, foe5CoordX + foe5SizeX/4, foe5CoordY - foe5CoordY/11);
@@ -4114,7 +4114,7 @@ void mousePressed () {
               ellipse(cursorX, cursorY , 100, 100);
               ellipse(cursorX, cursorY , 50, 50);
               
-              image(violin, cursorX, cursorY - 20, 46.5, 50);
+              image(violin, cursorX + 10, cursorY - 25, 46.5, 50);
       
               foe6HP -= damage;
               text("  " + damage, foe6CoordX + foe6SizeX/4, foe6CoordY - foe6CoordY/11);
@@ -4160,7 +4160,7 @@ void mousePressed () {
               ellipse(cursorX, cursorY , 100, 100);
               ellipse(cursorX, cursorY , 50, 50);
               
-              image(violin, cursorX, cursorY - 20, 46.5, 50);
+              image(violin, cursorX + 10, cursorY - 25, 46.5, 50);
       
               foe7HP -= damage;
               text("  " + damage, foe7CoordX + foe7SizeX/4, foe7CoordY - foe7CoordY/11);
@@ -4206,7 +4206,7 @@ void mousePressed () {
               ellipse(cursorX, cursorY , 100, 100);
               ellipse(cursorX, cursorY , 50, 50);
               
-              image(violin, cursorX, cursorY - 20, 46.5, 50);
+              image(violin, cursorX + 10, cursorY - 25, 46.5, 50);
       
               foe8HP -= damage;
               text("  " + damage, foe8CoordX + foe8SizeX/4, foe8CoordY - foe8CoordY/11);
