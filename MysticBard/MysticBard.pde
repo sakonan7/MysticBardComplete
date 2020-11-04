@@ -2983,6 +2983,8 @@ void mousePressed () {
                 player5 = minim5.loadFile("firstTrumpet.mp3", 500);
                 player5.play();
                 player5.shiftGain(-13, -13,1000); 
+                //player4
+                //15
                 if (foeTFlash == true && foeTattacked == true) {
                   foeTAttack = false;
                   foeTAlive = true;
