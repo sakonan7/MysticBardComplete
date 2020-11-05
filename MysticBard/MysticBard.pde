@@ -2979,12 +2979,7 @@ void mousePressed () {
           
                 rect(13, height - 148, 235, 135, 8);
                 foeTattacked = true;
-                monsterTrombone = true;
-                player5 = minim5.loadFile("firstTrumpet.mp3", 500);
-                player5.play();
-                player5.shiftGain(-13, -13,1000); 
-                //player4
-                //15
+                monsterTrombone = true; 
                 if (foeTFlash == true && foeTattacked == true) {
                   foeTAttack = false;
                   foeTAlive = true;
@@ -2995,15 +2990,22 @@ void mousePressed () {
                   foeTwhiteint = int(millis()/1000) + 3; 
                   foeTflashint = int(millis()/1000) + 3;
                   foeTredint = int(millis()/1000) + 3; 
-                  foeTflash2int = int(millis()/1000) + 3;              
-             
-                }        
-
+                  foeTflash2int = int(millis()/1000) + 3;
+                  player4 = minim4.loadFile("tromboneFlinching.mp3", 500);
+                  player4.play();
+                  player4.shiftGain(15, 15,1000);                  
+                }
+                else if (foeTFlash == false) {
+                  player5 = minim5.loadFile("firstTrumpet.mp3", 500);
+                  player5.play();
+                  player5.shiftGain(-13, -13,1000);
+                }                
                 if (foeTInterupt == true) {
                   foeTInterupt = false;
                   foeTattacked = false;       
                 } 
-                firstBlast = false;                
+                firstBlast = false;
+                
               }              
             }
             
@@ -3032,9 +3034,7 @@ void mousePressed () {
 
                 foeTattacked = true;
                 monsterTrombone = true;
-                player6 = minim6.loadFile("secondTrumpet.mp3", 500);
-                player6.play();
-                player6.shiftGain(-13, -13,1000); 
+
                 if (foeTFlash == true && foeTattacked == true) {
                   foeTAttack = false;
                   foeTAlive = true;
@@ -3045,9 +3045,15 @@ void mousePressed () {
                   foeTflashint = int(millis()/1000) + 3;
                   foeTredint = int(millis()/1000) + 3; 
                   foeTflash2int = int(millis()/1000) + 3;              
-             
+                  player4 = minim4.loadFile("tromboneFlinching.mp3", 500);
+                  player4.play();
+                  player4.shiftGain(15, 15,1000);             
                 }        
-
+                else if (foeTFlash == false) {
+                  player6 = minim6.loadFile("secondTrumpet.mp3", 500);
+                  player6.play();
+                  player6.shiftGain(-13, -13,1000); 
+                }
                 if (foeTInterupt == true) {
                   foeTInterupt = false;
                   foeTattacked = false;      
@@ -3165,10 +3171,7 @@ void mousePressed () {
                 foe2attacked = true;
                 foe3attacked = true;
                 
-                monsterTrombone = true;
-                player5 = minim5.loadFile("firstTrumpet.mp3", 500);
-                player5.play();
-                player5.shiftGain(-13, -13,1000); 
+                monsterTrombone = true; 
                 //Need to add code to all foes
                 if (foe1Flash == true && foe1attacked == true) {
                   foe1Attack = false;
@@ -3182,11 +3185,7 @@ void mousePressed () {
                   foe1redint = int(millis()/1000) + 3; 
                   foe1flash2int = int(millis()/1000) + 3;              
              
-                }        
-                if (foe1Interupt == true) {
-                  foe1Interupt = false;
-                  foe1attacked = false;       
-                }   
+                }           
                 if (foe2Flash == true && foe2attacked == true) {
                   foe2Attack = false;
                   foe2Alive = true;
@@ -3199,11 +3198,7 @@ void mousePressed () {
                   foe2redint = int(millis()/1000) + 3; 
                   foe2flash2int = int(millis()/1000) + 3;              
              
-                }        
-                if (foe2Interupt == true) {
-                  foe2Interupt = false;
-                  foe2attacked = false;       
-                } 
+                }         
                 if (foe3Flash == true && foe3attacked == true) {
                   foe3Attack = false;
                   foe3Alive = true;
@@ -3216,11 +3211,30 @@ void mousePressed () {
                   foe3redint = int(millis()/1000) + 3; 
                   foe3flash2int = int(millis()/1000) + 3;              
              
-                }        
+                }
+                if (foe1Interupt == true || foe2Interupt == true || foe3Interupt == true) {
+                  player4 = minim4.loadFile("tromboneFlinching.mp3", 500);
+                  player4.play();
+                  player4.shiftGain(15, 15,1000);                  
+                }
+                else if (foe1Interupt == false && foe2Interupt == false && foe3Interupt == false) {
+                  player5 = minim5.loadFile("firstTrumpet.mp3", 500);
+                  player5.play();
+                  player5.shiftGain(-13, -13,1000);                  
+                }
+                if (foe1Interupt == true) {
+                  foe1Interupt = false;
+                  foe1attacked = false;       
+                }                
+                if (foe2Interupt == true) {
+                  foe2Interupt = false;
+                  foe2attacked = false;       
+                }                
                 if (foe3Interupt == true) {
                   foe3Interupt = false;
                   foe3attacked = false;       
-                } 
+                }
+                
                 firstBlast = false;               
               }              
             }
