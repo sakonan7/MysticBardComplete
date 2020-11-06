@@ -1395,12 +1395,11 @@ void draw() {
     }
     if (tromboneDrained == true) {
       tromboneReplenisht = tromboneReplenish-int(millis()/1000);
-
+      firstBlast = true;
       if(tromboneReplenisht == 0){
         tromboneBar = originalWeaponBar;
         currentTromboneBarX = originalTromboneBarX; 
         tromboneDrained = false;
-        firstBlast = true;
       }
 
     }        
@@ -2739,7 +2738,17 @@ void keyPressed () {
     weapon = "Trombone";
   }
  
-}  
+} 
+void mouseMoved() {
+  cursorX = mouseX;
+  cursorY = mouseY;  
+  if (weapon == "Trombone" && firstBlast == false) {
+    //fill(#FFC246);
+    fill(255,194,70,65);
+    stroke(255,194,70,65);
+    ellipse(cursorX, cursorY, 270, 270);    
+  }
+}
 void mousePressed () {
   color damageWave = #DEA3DA;
   if (messageOver == false) {
@@ -3113,7 +3122,6 @@ void mousePressed () {
                 player6.shiftGain(-13, -13,1000);               
               }              
             }
-     
           }
           if (stage1 == true) {
             if (firstBlast == true) {
