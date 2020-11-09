@@ -790,7 +790,7 @@ void draw() {
   }  
   if (redDeadPage == true) {
     image(violinUI, 251, height - 156, 240, 156);
-    image(tromboneD, 12, height - 157, 244, 156);
+    image(tromboneD, 7, height - 157, 250, 156);
     image(shieldD, width - 253, height - 157, 244, 156);    
     
     noFill();
@@ -1337,7 +1337,7 @@ void draw() {
       setGradient(currentHPX, 50, HPbar, 40, c2, c1, 3);
     }   
     image(violinUI, 251, height - 156, 240, 156);
-    image(tromboneD, 12, height - 157, 244, 156);
+    image(tromboneD, 7, height - 157, 250, 156);
     image(shieldD, width - 253, height - 157, 244, 156);
         
     setGradient(currentShieldBarX, height-105, shieldBar, 15, c3, c4, 2);
@@ -1472,7 +1472,7 @@ void draw() {
       stroke(#FFFFFF);
 
       image(violinUI, 251, height - 156, 240, 156);
-      image(tromboneD, 12, height - 157, 244, 156);
+      image(tromboneD, 7, height - 157, 250, 156);
       image(shieldD, width - 253, height - 157, 244, 156);          
       rect(0, 1, 1099, 898);        
         
@@ -2225,7 +2225,7 @@ void draw() {
             }            
           }           
           image(violinUI, 251, height - 156, 240, 156);
-          image(tromboneD, 12, height - 157, 244, 156);
+          image(tromboneD, 7, height - 157, 250, 156);
           image(shieldD, width - 253, height - 157, 244, 156);              
               
           rect(0, 0, 1100, 900);              
@@ -2306,7 +2306,7 @@ void draw() {
             }            
           }   
           image(violinUI, 251, height - 156, 240, 156);
-          image(tromboneD, 12, height - 157, 244, 156);
+          image(tromboneD, 7, height - 157, 250, 156);
           image(shieldD, width - 253, height - 157, 244, 156);              
               
           rect(0, 0, 1100, 900);
@@ -2984,7 +2984,7 @@ void mousePressed () {
 
                 //fill(#E505FF);
                 image(violinUI, 251, height - 156, 240, 156);
-                image(tromboneD, 12, height - 157, 244, 156);
+                image(tromboneD, 7, height - 157, 250, 156);
                 image(shieldD, width - 253, height - 157, 244, 156);                
               
                 setGradient(currentHPX, 50, HPbar, 40, c2, c1, 3);
@@ -3172,7 +3172,7 @@ void mousePressed () {
 
                 //fill(#E505FF);
                 image(violinUI, 251, height - 156, 240, 156);
-                image(tromboneD, 12, height - 157, 244, 156);
+                image(tromboneD, 7, height - 157, 250, 156);
                 image(shieldD, width - 253, height - 157, 244, 156);                
               
                 setGradient(currentHPX, 50, HPbar, 40, c2, c1, 3);
@@ -3460,7 +3460,7 @@ void mousePressed () {
 
                 //fill(#E505FF);
                 image(violinUI, 251, height - 156, 240, 156);
-                image(tromboneD, 12, height - 157, 244, 156);
+                image(tromboneD, 7, height - 157, 250, 156);
                 image(shieldD, width - 253, height - 157, 244, 156);                
               
                 setGradient(currentHPX, 50, HPbar, 40, c2, c1, 3);
