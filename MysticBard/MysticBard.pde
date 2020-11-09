@@ -2737,7 +2737,20 @@ void keyPressed () {
   if (key == 'a' || key == 'A') {
     weapon = "Trombone";
   }
- 
+  if ((key == 's' || key == 'S') && messageOver == true) {
+    if (playerHP >= 70) {
+      //injured boolean
+      playerHP = 100;
+      currentHP = playerHP;
+      HPbar = originalHPbar;
+      currentHPX = originalHPX;      
+    }
+    else {
+      playerHP += 30;
+      HPbar = HPbar + (3 * originalHPbar/10);
+      currentHPX = currentHPX - (3 * originalHPX/10);      
+    }
+  }
 } 
 void mouseMoved() {
   cursorX = mouseX;
