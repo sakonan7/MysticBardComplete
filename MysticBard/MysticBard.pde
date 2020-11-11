@@ -189,17 +189,22 @@ float violinBar = 0;
 float tromboneBar = 0;
 
 float shieldBar = 190;
+float potionBar = 170;
 float originalWeaponBar = 190;
 float currentViolinBar = 190;
 float currentTromboneBar = 190;
 float originalShieldBar = 190;
 float currentShieldBar = 190;
+float originalPotionBar = 170;
+float currentPotionBar = 170;
 int currentViolinBarX = 465;
 int originalViolinBarX = 275;
 int currentTromboneBarX = 225;
 int originalTromboneBarX = 35;
 int currentShieldBarX;
 int originalShieldBarX;
+int currentPotionBarX = 510;
+int originalPotionBarX = 510;
 boolean violinDrained = true;
 boolean tromboneDrained = true;
 boolean shieldDrained = false;
@@ -1335,14 +1340,29 @@ void draw() {
     if (currentHP == playerHP + damage) {
       currentHP = playerHP;
       setGradient(currentHPX, 50, HPbar, 40, c2, c1, 3);
-    }   
+    }
+    //Potion Code
+        strokeWeight(3);
+        noFill();
+        textSize(20);
+        
     image(violinUI, 251, height - 156, 240, 156);
     image(tromboneD, 7, height - 157, 250, 156);
     image(shieldD, width - 253, height - 157, 244, 156);
+      rect(497, height - 140, 200, 120, 7);
         
     setGradient(currentShieldBarX, height-105, shieldBar, 15, c3, c4, 2);
     setGradient(currentViolinBarX, height-105, violinBar, 15, c3, c4, 2);
     setGradient(currentTromboneBarX, height-105, tromboneBar, 15, c3, c4, 2);
+    setGradient(currentPotionBarX, height-105, potionBar, 15, c3, c4, 2);
+    
+        stroke(#9B9B9B);
+        textSize(20);
+        text("   Potion", 512, height - 115);
+        
+        
+        strokeWeight(10);
+        point(513, height - 122);        
 
     strokeWeight(3);
     noFill();
