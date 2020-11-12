@@ -102,6 +102,8 @@ PImage bardEnd;
 
 PImage tutorialD;
 
+PImage potion;
+
 PImage title;
 
 PImage violinUI;
@@ -208,6 +210,7 @@ int originalPotionBarX = 510;
 boolean violinDrained = true;
 boolean tromboneDrained = true;
 boolean shieldDrained = false;
+boolean potionDrained = false;
 
 boolean monsterViolin = false;
 boolean monsterTrombone = false;
@@ -557,6 +560,8 @@ void setup() {
   victoryS = loadImage("victoryS.jpg");
   
   point = loadImage("point.png");
+  
+  potion = loadImage("potionBox.png");
   
   minim = new Minim(this);
   player = minim.loadFile("Title Theme.mp3", 800);
@@ -1349,7 +1354,10 @@ void draw() {
     image(violinUI, 251, height - 156, 240, 156);
     image(tromboneD, 7, height - 157, 250, 156);
     image(shieldD, width - 253, height - 157, 244, 156);
-      rect(497, height - 140, 200, 120, 7);
+      //rect(497, height - 140, 200, 120, 7);
+    if (potionDrained == false) {
+      image(potion, 492, height - 157, 247, 156); 
+    }
         
     setGradient(currentShieldBarX, height-105, shieldBar, 15, c3, c4, 2);
     setGradient(currentViolinBarX, height-105, violinBar, 15, c3, c4, 2);
