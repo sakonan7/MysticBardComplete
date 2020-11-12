@@ -103,6 +103,7 @@ PImage bardEnd;
 PImage tutorialD;
 
 PImage potion;
+PImage potionD;
 
 PImage title;
 
@@ -562,6 +563,7 @@ void setup() {
   point = loadImage("point.png");
   
   potion = loadImage("potionBox.png");
+  potionD = loadImage("potionD.png");
   
   minim = new Minim(this);
   player = minim.loadFile("Title Theme.mp3", 800);
@@ -801,7 +803,13 @@ void draw() {
   if (redDeadPage == true) {
     image(violinUI, 251, height - 156, 240, 156);
     image(tromboneD, 7, height - 157, 250, 156);
-    image(shieldD, width - 253, height - 157, 244, 156);    
+    image(shieldD, width - 253, height - 157, 244, 156);
+    if (potionDrained == false) {
+      image(potion, 492, height - 157, 214, 156); 
+    }
+    else if (potionDrained == true) {
+      image(potionD, 492, height - 157, 214, 156);
+    }    
     
     noFill();
     stroke(#9B9B9B);
@@ -810,6 +818,7 @@ void draw() {
     setGradient(currentShieldBarX, height-105, shieldBar, 15, c3, c4, 2);
     setGradient(currentViolinBarX, height-105, violinBar, 15, c3, c4, 2); //Violin
     setGradient(currentTromboneBarX, height-105, tromboneBar, 15, c3, c4, 2);
+    setGradient(currentPotionBarX, height-105, potionBar, 15, c3, c4, 2);
     
     if (weapon == "Violin") {
       stroke(#FFCE46);
@@ -1346,31 +1355,22 @@ void draw() {
       currentHP = playerHP;
       setGradient(currentHPX, 50, HPbar, 40, c2, c1, 3);
     }
-    //Potion Code
-        //strokeWeight(3);
-        //noFill();
-        //textSize(20);
-        
+    
     image(violinUI, 251, height - 156, 240, 156);
     image(tromboneD, 7, height - 157, 250, 156);
     image(shieldD, width - 253, height - 157, 244, 156);
       //rect(497, height - 140, 200, 120, 7);
     if (potionDrained == false) {
-      image(potion, 492, height - 157, 247, 156); 
+      image(potion, 492, height - 157, 214, 156); 
+    }
+    else if (potionDrained == true) {
+      image(potionD, 492, height - 157, 214, 156);
     }
         
     setGradient(currentShieldBarX, height-105, shieldBar, 15, c3, c4, 2);
     setGradient(currentViolinBarX, height-105, violinBar, 15, c3, c4, 2);
     setGradient(currentTromboneBarX, height-105, tromboneBar, 15, c3, c4, 2);
-    setGradient(currentPotionBarX, height-105, potionBar, 15, c3, c4, 2);
-    
-        //stroke(#9B9B9B);
-        //textSize(20);
-        //text("   Potion", 512, height - 115);
-        
-        
-        //strokeWeight(10);
-        //point(513, height - 122);        
+    setGradient(currentPotionBarX, height-105, potionBar, 15, c3, c4, 2);        
 
     strokeWeight(3);
     noFill();
@@ -1501,7 +1501,14 @@ void draw() {
 
       image(violinUI, 251, height - 156, 240, 156);
       image(tromboneD, 7, height - 157, 250, 156);
-      image(shieldD, width - 253, height - 157, 244, 156);          
+      image(shieldD, width - 253, height - 157, 244, 156); 
+      if (potionDrained == false) {
+        image(potion, 492, height - 157, 214, 156); 
+      }
+      else if (potionDrained == true) {
+        image(potionD, 492, height - 157, 214, 156);
+      }      
+      
       rect(0, 1, 1099, 898);        
         
       setGradient(currentHPX, 50, HPbar, 40, c2, c1, 3);
@@ -1512,6 +1519,7 @@ void draw() {
       setGradient(currentShieldBarX, height-105, shieldBar, 15, c3, c4, 2);
       setGradient(currentViolinBarX, height-105, violinBar, 15, c3, c4, 2); 
       setGradient(currentTromboneBarX, height-105, tromboneBar, 15, c3, c4, 2);
+      setGradient(currentPotionBarX, height-105, potionBar, 15, c3, c4, 2);
         
       strokeWeight(3);
       noFill();
@@ -2254,7 +2262,13 @@ void draw() {
           }           
           image(violinUI, 251, height - 156, 240, 156);
           image(tromboneD, 7, height - 157, 250, 156);
-          image(shieldD, width - 253, height - 157, 244, 156);              
+          image(shieldD, width - 253, height - 157, 244, 156);
+          if (potionDrained == false) {
+            image(potion, 492, height - 157, 214, 156); 
+          }
+          else if (potionDrained == true) {
+            image(potionD, 492, height - 157, 214, 156);
+          }          
               
           rect(0, 0, 1100, 900);              
           setGradient(currentHPX, 50, HPbar, 40, c2, c1, 3);
@@ -2265,6 +2279,7 @@ void draw() {
           setGradient(currentShieldBarX, height-105, shieldBar, 15, c3, c4, 2);
           setGradient(currentViolinBarX, height-105, violinBar, 15, c3, c4, 2); 
           setGradient(currentTromboneBarX, height-105, tromboneBar, 15, c3, c4, 2);
+          setGradient(currentPotionBarX, height-105, potionBar, 15, c3, c4, 2);
         
           strokeWeight(3);
           noFill();
@@ -2335,7 +2350,13 @@ void draw() {
           }   
           image(violinUI, 251, height - 156, 240, 156);
           image(tromboneD, 7, height - 157, 250, 156);
-          image(shieldD, width - 253, height - 157, 244, 156);              
+          image(shieldD, width - 253, height - 157, 244, 156);
+          if (potionDrained == false) {
+            image(potion, 492, height - 157, 214, 156); 
+          }
+          else if (potionDrained == true) {
+            image(potionD, 492, height - 157, 214, 156);
+          }          
               
           rect(0, 0, 1100, 900);
           setGradient(currentHPX, 50, HPbar, 40, c2, c1, 3);
@@ -2346,6 +2367,7 @@ void draw() {
           setGradient(currentShieldBarX, height-105, shieldBar, 15, c3, c4, 2);
           setGradient(currentViolinBarX, height-105, violinBar, 15, c3, c4, 2);
           setGradient(currentTromboneBarX, height-105, tromboneBar, 15, c3, c4, 2);
+          setGradient(currentPotionBarX, height-105, potionBar, 15, c3, c4, 2);
         
           strokeWeight(3);
           noFill();
@@ -3013,7 +3035,13 @@ void mousePressed () {
                 //fill(#E505FF);
                 image(violinUI, 251, height - 156, 240, 156);
                 image(tromboneD, 7, height - 157, 250, 156);
-                image(shieldD, width - 253, height - 157, 244, 156);                
+                image(shieldD, width - 253, height - 157, 244, 156);
+                if (potionDrained == false) {
+                  image(potion, 492, height - 157, 214, 156); 
+                }
+                else if (potionDrained == true) {
+                  image(potionD, 492, height - 157, 214, 156);
+                }                
               
                 setGradient(currentHPX, 50, HPbar, 40, c2, c1, 3);
                 noFill();
@@ -3023,6 +3051,7 @@ void mousePressed () {
                 setGradient(currentShieldBarX, height-105, shieldBar, 15, c3, c4, 2);
                 setGradient(currentViolinBarX, height-105, violinBar, 15, c3, c4, 2); //Violin
                 setGradient(currentTromboneBarX, height-105, tromboneBar, 15, c3, c4, 2);
+                setGradient(currentPotionBarX, height-105, potionBar, 15, c3, c4, 2);
 
                 strokeWeight(3);
                 stroke(#FFCE46);
@@ -3201,7 +3230,13 @@ void mousePressed () {
                 //fill(#E505FF);
                 image(violinUI, 251, height - 156, 240, 156);
                 image(tromboneD, 7, height - 157, 250, 156);
-                image(shieldD, width - 253, height - 157, 244, 156);                
+                image(shieldD, width - 253, height - 157, 244, 156);
+                if (potionDrained == false) {
+                  image(potion, 492, height - 157, 214, 156); 
+                }
+                else if (potionDrained == true) {
+                  image(potionD, 492, height - 157, 214, 156);
+                }                
               
                 setGradient(currentHPX, 50, HPbar, 40, c2, c1, 3);
                 noFill();
@@ -3211,6 +3246,7 @@ void mousePressed () {
                 setGradient(currentShieldBarX, height-105, shieldBar, 15, c3, c4, 2);
                 setGradient(currentViolinBarX, height-105, violinBar, 15, c3, c4, 2); //Violin
                 setGradient(currentTromboneBarX, height-105, tromboneBar, 15, c3, c4, 2);
+                setGradient(currentPotionBarX, height-105, potionBar, 15, c3, c4, 2);
 
                 strokeWeight(3);
                 stroke(#FFCE46);
@@ -3489,7 +3525,13 @@ void mousePressed () {
                 //fill(#E505FF);
                 image(violinUI, 251, height - 156, 240, 156);
                 image(tromboneD, 7, height - 157, 250, 156);
-                image(shieldD, width - 253, height - 157, 244, 156);                
+                image(shieldD, width - 253, height - 157, 244, 156);
+                if (potionDrained == false) {
+                  image(potion, 492, height - 157, 214, 156); 
+                }
+                else if (potionDrained == true) {
+                  image(potionD, 492, height - 157, 214, 156);
+                }                
               
                 setGradient(currentHPX, 50, HPbar, 40, c2, c1, 3);
                 noFill();
@@ -3499,6 +3541,7 @@ void mousePressed () {
                 setGradient(currentShieldBarX, height-105, shieldBar, 15, c3, c4, 2);
                 setGradient(currentViolinBarX, height-105, violinBar, 15, c3, c4, 2); //Violin
                 setGradient(currentTromboneBarX, height-105, tromboneBar, 15, c3, c4, 2);
+                setGradient(currentPotionBarX, height-105, potionBar, 15, c3, c4, 2);
 
                 strokeWeight(3);
                 stroke(#FFCE46);
