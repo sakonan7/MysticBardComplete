@@ -198,8 +198,8 @@ float currentViolinBar = 190;
 float currentTromboneBar = 190;
 float originalShieldBar = 190;
 float currentShieldBar = 190;
-float originalPotionBar = 170;
-float currentPotionBar = 170;
+float originalPotionBar = 172;
+float currentPotionBar = 172;
 int currentViolinBarX = 465;
 int originalViolinBarX = 275;
 int currentTromboneBarX = 225;
@@ -2787,7 +2787,7 @@ void keyPressed () {
   if (key == 'a' || key == 'A') {
     weapon = "Trombone";
   }
-  if ((key == 's' || key == 'S') && messageOver == true) {
+  if ((key == 'd' || key == 'D') && messageOver == true && potionDrained == false) {
     if (playerHP >= 70) {
       //injured boolean
       playerHP = 100;
@@ -2800,6 +2800,12 @@ void keyPressed () {
       HPbar = HPbar + (3 * originalHPbar/10);
       currentHPX = currentHPX - (3 * originalHPX/10);      
     }
+    potionBar -= originalPotionBar/2;
+
+    currentPotionBarX += originalPotionBar/2;
+    if (potionBar == 0) {
+      potionDrained = true;
+    }    
   }
 } 
 void mouseMoved() {
@@ -4507,7 +4513,10 @@ void mousePressed () {
       currentTromboneBarX = 225;
       shieldBar = 190;
       currentShieldBarX = originalShieldBarX;
+      potionBar = 172;
+      currentPotionBarX = originalPotionBarX;      
       shieldDrained = false;
+      potionDrained = false;
       playerAlive = true;
       weapon = "Violin";     
       
@@ -4553,7 +4562,10 @@ void mousePressed () {
       currentTromboneBarX = 225;
       shieldBar = 190;
       currentShieldBarX = originalShieldBarX;
+      potionBar = 172;
+      currentPotionBarX = originalPotionBarX;      
       shieldDrained = false;
+      potionDrained = false;
       playerAlive = true;
       weapon = "Violin";      
       
@@ -4608,7 +4620,10 @@ void mousePressed () {
       currentTromboneBarX = 225;
       shieldBar = 190;
       currentShieldBarX = originalShieldBarX;
+      potionBar = 172;
+      currentPotionBarX = originalPotionBarX;      
       shieldDrained = false;
+      potionDrained = false;
 //reset all enemies
       foeTAlive = true;
       foeT2Alive = true;
@@ -4682,7 +4697,10 @@ void mousePressed () {
       currentTromboneBarX = 225;
       shieldBar = 190;
       currentShieldBarX = originalShieldBarX;
+      potionBar = 172;
+      currentPotionBarX = originalPotionBarX;      
       shieldDrained = false;
+      potionDrained = false;
       foeTAlive = true;
       foeT2Alive = true;
       foeT3Alive = true;
@@ -4729,7 +4747,10 @@ void mousePressed () {
       currentTromboneBarX = 225;
       shieldBar = 190;
       currentShieldBarX = originalShieldBarX;
+      potionBar = 172;
+      currentPotionBarX = originalPotionBarX;      
       shieldDrained = false;
+      potionDrained = false;
       weapon = "Violin";
       playerAlive = true;
       tryAgain = false;
