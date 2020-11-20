@@ -41,6 +41,10 @@ Minim minim12;
 AudioPlayer player13;
 Minim minim13;
 
+//potion
+AudioPlayer player14;
+Minim minim14;
+
 
 static final int FADE = 2200;
 
@@ -585,6 +589,7 @@ void setup() {
   minim11 = new Minim(this);
   minim12 = new Minim(this);
   minim13 = new Minim(this);
+  minim14 = new Minim(this);
   
   foetutorialSizeX = 125 * 1.1;
   foetutorialSizeY = 200 * 1.1;
@@ -2793,16 +2798,24 @@ void keyPressed () {
       playerHP = 100;
       currentHP = playerHP;
       HPbar = originalHPbar;
-      currentHPX = originalHPX;      
+      currentHPX = originalHPX;
+      potionBar -= originalPotionBar/2;
+      currentPotionBarX += originalPotionBar/2;
+      player14 = minim14.loadFile("potion.mp3", 700);
+      player14.play();
+      player14.shiftGain(-5,-5,1000);           
     }
     else {
       playerHP += 30;
       HPbar = HPbar + (3 * originalHPbar/10);
-      currentHPX = currentHPX - (3 * originalHPX/10);      
+      currentHPX = currentHPX - (3 * originalHPX/10);
+      potionBar -= originalPotionBar/2;
+      currentPotionBarX += originalPotionBar/2;
+      player14 = minim14.loadFile("potion.mp3", 700);
+      player14.play();
+      player14.shiftGain(-5,-5,1000);      
     }
-    potionBar -= originalPotionBar/2;
 
-    currentPotionBarX += originalPotionBar/2;
     if (potionBar == 0) {
       potionDrained = true;
     }    
