@@ -1631,7 +1631,8 @@ void draw() {
       foeTwhitet = foeTwhiteint-int(millis()/1000); 
       if (foeTHP > 0) {
         if (foeTwhitet > 0) {
-          image(foeWhite, foetutorialX, foetutorialY, foetutorialSizeX, foetutorialSizeY);
+          //image(foeWhite, foetutorialX, foetutorialY, foetutorialSizeX, foetutorialSizeY);
+          tint(255, 255, 255, 206);
         }
         else if (foeTwhitet <= 0) {
           foeTflasht = foeTflashint - int(millis()/1000);
