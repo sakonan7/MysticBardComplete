@@ -26,8 +26,6 @@ Minim minim7;
 AudioPlayer player8;
 Minim minim8;
 
-//muffled violin
-
 //axe punches
 AudioPlayer player9;
 Minim minim9;
@@ -46,6 +44,9 @@ Minim minim14;
 //blocked axe
 AudioPlayer player15;
 Minim minim15;
+//muffled violin
+AudioPlayer player16;
+Minim minim16;
 
 static final int FADE = 2200;
 
@@ -592,6 +593,7 @@ void setup() {
   minim13 = new Minim(this);
   minim14 = new Minim(this);
   minim15 = new Minim(this);
+  minim16 = new Minim(this);
   
   foetutorialSizeX = 125 * 1.1;
   foetutorialSizeY = 200 * 1.1;
@@ -4444,7 +4446,9 @@ void mousePressed () {
                 foe8attacked = false;     
               }              
             }//stage2 end            
-            
+                //player16 = minim16.loadFile("muffled violin.mp3", 400);
+                //player16.play();
+                //player16.shiftGain(-7, -7,1000);            
           }
           
         }
