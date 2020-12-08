@@ -171,6 +171,23 @@ float foe7CoordY;
 float foe8CoordX;
 float foe8CoordY;
 
+float rGiantSizeX;
+float rGiantSizeY;
+float foe9SizeX;
+float foe9SizeY;
+float foe10SizeX;
+float foe10SizeY;
+float foe11SizeX;
+float foe11SizeY;
+float rGiantCoordX;
+float rGiantCoordY;
+float foe9CoordX;
+float foe9CoordY;
+float foe10CoordX;
+float foe10CoordY;
+float foe11CoordX;
+float foe11CoordY;
+
 int foe1HP = 150;
 int foe2HP = 150;
 int foe3HP = 150;
@@ -183,6 +200,12 @@ int foeT3HP = 150;
 int foe6HP = 150;
 int foe7HP = 150;
 int foe8HP = 150;
+
+int rGiantArmor = 100;
+int rGiantHP = 250;
+int foe9HP = 150;
+int foe10HP = 150;
+int foe11HP = 150;
 
 int playerHP = 100;
 
@@ -236,6 +259,11 @@ boolean foe6Alive = true;
 boolean foe7Alive = true;
 boolean foe8Alive = true;
 
+boolean rGiantAlive = true;
+boolean foe9Alive = true;
+boolean foe10Alive = true;
+boolean foe11Alive = true;
+
 boolean playerAlive = true;
 boolean playerDead = false;
 boolean tryAgain = false;
@@ -245,10 +273,12 @@ boolean playerTDead = false;
 boolean tutorialStage = false;
 boolean stage1 = false;
 boolean stage2 = false;
+boolean stage3 = false;
 
 boolean tutorialSDead = false;
 boolean stage1Dead = false;
 boolean stage2Dead = false;
+boolean stage3Dead = false;
 
 int foeTinterval = int(random(5, 8));
 int foeTt = 0;
@@ -274,6 +304,11 @@ boolean first5Attack = true;
 boolean first6Attack = true;
 boolean first7Attack = true;
 boolean first8Attack = true;
+
+boolean rGiantAttack = true;
+boolean first9Attack = true;
+boolean first10Attack = true;
+boolean first11Attack = true;
 
 int foe1interval = 5;
 int foe1t = 0;
@@ -370,6 +405,30 @@ int foe8flash2t = 0;
 int foe8redint = 3;
 int foe8redt = 0;
 boolean foe8Flash = false;
+
+int rGiantinterval = 10;
+int rGiantt = 0;
+int rGiantwhiteint = 3;
+int rGiantwhitet = 0;
+int rGiantflashint = 3;
+int rGiantflasht = 0;
+int rGiantflash2int = 3;
+int rGiantflash2t = 0;
+int rGiantredint = 3;
+int rGiantredt = 0;
+boolean rGiantFlash = false;
+
+int foe9interval = 10;
+int foe9t = 0;
+int foe9whiteint = 3;
+int foe9whitet = 0;
+int foe9flashint = 3;
+int foe9flasht = 0;
+int foe9flash2int = 3;
+int foe9flash2t = 0;
+int foe9redint = 3;
+int foe9redt = 0;
+boolean foe9Flash = false;
 
 boolean shield = false;
 int shieldInterval = 3;
