@@ -305,7 +305,7 @@ boolean first6Attack = true;
 boolean first7Attack = true;
 boolean first8Attack = true;
 
-boolean rGiantAttack = true;
+boolean rGiantFirstAttack = true;
 boolean first9Attack = true;
 boolean first10Attack = true;
 boolean first11Attack = true;
@@ -430,6 +430,30 @@ int foe9redint = 3;
 int foe9redt = 0;
 boolean foe9Flash = false;
 
+int foe10interval = 10;
+int foe10t = 0;
+int foe10whiteint = 3;
+int foe10whitet = 0;
+int foe10flashint = 3;
+int foe10flasht = 0;
+int foe10flash2int = 3;
+int foe10flash2t = 0;
+int foe10redint = 3;
+int foe10redt = 0;
+boolean foe10Flash = false;
+
+int foe11interval = 10;
+int foe11t = 0;
+int foe11whiteint = 3;
+int foe11whitet = 0;
+int foe11flashint = 3;
+int foe11flasht = 0;
+int foe11flash2int = 3;
+int foe11flash2t = 0;
+int foe11redint = 3;
+int foe11redt = 0;
+boolean foe11Flash = false;
+
 boolean shield = false;
 int shieldInterval = 3;
 int shieldt = 0;
@@ -460,6 +484,11 @@ boolean foe6Attack = false;
 boolean foe7Attack = false;
 boolean foe8Attack = false;
 
+boolean rGiantAttack = false;
+boolean foe9Attack = false;
+boolean foe10Attack = false;
+boolean foe11Attack = false;
+
 boolean foe1attacked = false;
 boolean foe1Interupt = false;
 boolean foe2attacked = false;
@@ -481,6 +510,15 @@ boolean foe7Interupt = false;
 boolean foe8attacked = false;
 boolean foe8Interupt = false;
 
+boolean rGiantattacked = false;
+boolean rGiantInterupt = false;
+boolean foe9attacked = false;
+boolean foe9Interupt = false;
+boolean foe10attacked = false;
+boolean foe10Interupt = false;
+boolean foe11attacked = false;
+boolean foe11Interupt = false;
+
 boolean foeTdisapp = false;
 boolean foeT2disapp = false;
 boolean foeT3disapp = false;
@@ -494,6 +532,11 @@ boolean foe5disapp = false;
 boolean foe6disapp = false;
 boolean foe7disapp = false;
 boolean foe8disapp = false;
+
+boolean rGiantdisapp = false;
+boolean foe9disapp = false;
+boolean foe10disapp = false;
+boolean foe11disapp = false;
 
 int cursorX;
 int cursorY;
