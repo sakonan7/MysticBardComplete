@@ -2891,6 +2891,125 @@ void draw() {
         }        
       }      
     }
+    else if (stage3 == true) {
+      if (foe9Alive == true) {
+        if (foe9disapp == false) {
+          image(foe9, foe9CoordX, foe9CoordY, foe9SizeX, foe9SizeY);
+        }
+        if (foe9Attack == false && foe9HP > 0) {
+          foe9t = foe9interval-int(millis()/1000);
+            
+          if(foe9t <= 0){
+            if (first9Attack == true) {
+               foe9whiteint = int(millis()/1000) + 1;
+               foe9flashint = int(millis()/1000) + 2;
+               foe9redint = int(millis()/1000) + 3;
+               foe9flash2int = int(millis()/1000) + 4;              
+               
+            }
+            else if (first9Attack == false) {
+              //may have to change
+              foe9whiteint += 3;
+              foe9flashint += 4;
+              foe9redint += 5;
+              foe9flash2int += 6;              
+            }           
+              
+            foe9disapp = true;
+            foe9Attack = true;
+            foe9Alive = false;
+            first9Attack = false;
+          }
+        }        
+      }
+      if (foe10Alive == true) {
+        if (foe10disapp == false) {
+          image(foe10, foe10CoordX, foe10CoordY, foe10SizeX, foe10SizeY);          
+        }
+        if (foe10Attack == false && foe10HP > 0) {
+          foe10t = foe10interval-int(millis()/1000);
+            
+          if(foe10t <= 0){
+            if (first10Attack == true) {
+               foe10whiteint = int(millis()/1000) + 1;
+               foe10flashint = int(millis()/1000) + 2;
+               foe10redint = int(millis()/1000) + 3;
+               foe10flash2int = int(millis()/1000) + 4;              
+               
+            }
+            else if (first10Attack == false) {
+              foe10whiteint += 3;
+              foe10flashint += 4;
+              foe10redint += 5;
+              foe10flash2int += 6;              
+            }           
+              
+            foe10disapp = true;
+            foe10Attack = true;
+            foe10Alive = false;
+            first10Attack = false;
+          }
+        }        
+      }  
+      if (foe11Alive == true) {
+        if (foe11disapp == false) {
+          image(foe11, foe11CoordX, foe11CoordY, foe11SizeX, foe11SizeY);
+        }
+        if (foe11Attack == false && foe11HP > 0) {
+          foe11t = foe11interval-int(millis()/1000);
+            
+          if(foe11t <= 0){
+            if (first11Attack == true) {
+               foe11whiteint = int(millis()/1000) + 1;
+               foe11flashint = int(millis()/1000) + 2;
+               foe11redint = int(millis()/1000) + 3;
+               foe11flash2int = int(millis()/1000) + 4;              
+               
+            }
+            else if (first11Attack == false) {
+              foe11whiteint += 3;
+              foe11flashint += 4;
+              foe11redint += 5;
+              foe11flash2int += 6;              
+            }           
+              
+            foe11disapp = true;
+            foe11Attack = true;
+            foe11Alive = false;
+            first11Attack = false;
+          }
+        }        
+      }
+      if (rGiantAlive == true) {
+        if (rGiantdisapp == false) {
+          image(rGiant, rGiantCoordX, rGiantCoordY, rGiantSizeX, rGiantSizeY);
+        }
+        if (rGiantAttack == false && rGiantHP > 0) {
+          rGiantt = rGiantinterval-int(millis()/1000);
+            
+          if(rGiantt <= 0){
+            if (rGiantAttack == true) {
+               rGiantwhiteint = int(millis()/1000) + 1;
+               rGiantflashint = int(millis()/1000) + 2;
+               rGiantredint = int(millis()/1000) + 3;
+               rGiantflash2int = int(millis()/1000) + 4;              
+               
+            }
+            else if (rGiantAttack == false) {
+              rGiantwhiteint += 3;
+              rGiantflashint += 4;
+              rGiantredint += 5;
+              rGiantflash2int += 6;              
+            }           
+              
+            rGiantdisapp = true;
+            rGiantAttack = true;
+            rGiantAlive = false;
+            rGiantAttack = false;
+          }
+        }        
+      }      
+    }
   }
 }
 void keyPressed () {
