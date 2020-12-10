@@ -68,6 +68,11 @@ PImage foe6;
 PImage foe7;
 PImage foe8;
 
+PImage foe9;
+PImage foe10;
+PImage foe11;
+PImage rGiant;
+
 PImage foeWhite;
 PImage foeRed;
 
@@ -617,6 +622,11 @@ void setup() {
   foe6 = loadImage("goblin.png");
   foe7 = loadImage("goblin.png");
   foe8 = loadImage("goblin.png");
+  
+  rGiant = loadImage("redgiant.png");
+  foe9 = loadImage("goblin.png");
+  foe10 = loadImage("goblin.png");
+  foe11 = loadImage("goblin.png");  
   
   foeWhite = loadImage("goblinwhite.png");
   foeRed = loadImage("goblinred.png");
