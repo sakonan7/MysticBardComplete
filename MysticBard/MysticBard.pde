@@ -2352,7 +2352,276 @@ void draw() {
       else if (foe8HP <= 0) {
         foe8Attack = false;
       }
+    } 
+    if (foe9Attack == true) {  
+      foe9Alive = false;  
+      foe9whitet = foe9whiteint-int(millis()/1000); 
+      if (foe9HP > 0) {
+        if (foe9whitet > 0) {
+          image(foeWhite, foe9CoordX, foe9CoordY, foe9SizeX, foe9SizeY);
+        }
+        else if (foe9whitet <= 0) {
+          foe9flasht = foe9flashint - int(millis()/1000);
+          if (foe9flasht > 0) {
+            image(foe9, foe9CoordX, foe9CoordY, foe9SizeX, foe9SizeY);
+          }
+          else if (foe9flasht <= 0) {
+            foe9redt = foe9redint-int(millis()/1000);
+            if (foe9redt > 0) {
+              image(foeRed, foe9CoordX, foe9CoordY, foe9SizeX, foe9SizeY);
+            }
+            else if (foe9redt <= 0) {
+              foe9flash2t = foe9flash2int - int(millis()/1000);
+              if (foe9flash2t > 0) {
+                image(foe9, foe9CoordX, foe9CoordY, foe9SizeX, foe9SizeY);
+                foe9Flash = true;
+              }
+              else if (foe9flash2t <= 0 && foe9Interupt == false) {
+                if (shield == true) {
+                  foe9Attack = false;
+                  attackBlocked = true;
+                
+                  foe9interval = int(millis()/1000) + 5;
+                  foe9whiteint = int(millis()/1000) + 3; 
+                  foe9flashint = int(millis()/1000) + 3;
+                  foe9redint = int(millis()/1000) + 3; 
+                  foe9flash2int = int(millis()/1000) + 3;
+                  player15 = minim9.loadFile("blocked axepunch.mp3", 500);
+                  player15.play();
+                  player15.shiftGain(-8, -8,1000);                  
+                }
+                else if (shield == false) {
+                  player13 = minim13.loadFile("axepunch.mp3", 500);
+                  player13.play();
+                  player13.shiftGain(-18, -18,1000);                   
+                
+                  playerAttacked = true;
+                  foe10Alive = false;
+                  foe11Alive = false;  
+                  rGiantAlive = false;
+                    
+                  foe9interval = int(millis()/1000) + 5;
+                  foe9whiteint = int(millis()/1000) + 3;
+                  foe9flashint = int(millis()/1000) + 3;
+                  foe9redint = int(millis()/1000) + 3;
+                  foe9flash2int = int(millis()/1000) + 3;
+                  playerHP -= 10;
+                  HPbar = HPbar - originalHPbar/10;
+                  currentHPX = currentHPX + originalHPX/10;              
+                } 
+                foe9Flash = false;
+                foe9Attack = false;
+              }
+            }                  
+          }
+        }        
+      }
+      else if (foe9HP <= 0) {
+        foe9Attack = false;
+      }
+    }
+    if (foe10Attack == true) {  
+      foe10Alive = false;  
+      foe10whitet = foe10whiteint-int(millis()/1000); 
+      if (foe10HP > 0) {
+        if (foe10whitet > 0) {
+          image(foeWhite, foe10CoordX, foe10CoordY, foe10SizeX, foe10SizeY);
+        }
+        else if (foe10whitet <= 0) {
+          foe10flasht = foe10flashint - int(millis()/1000);
+          if (foe10flasht > 0) {
+            image(foe10, foe10CoordX, foe10CoordY, foe10SizeX, foe10SizeY);
+          }
+          else if (foe10flasht <= 0) {
+            foe10redt = foe10redint-int(millis()/1000);
+            if (foe10redt > 0) {
+              image(foeRed, foe10CoordX, foe10CoordY, foe10SizeX, foe10SizeY);
+            }
+            else if (foe10redt <= 0) {
+              foe10flash2t = foe10flash2int - int(millis()/1000);
+              if (foe10flash2t > 0) {
+                image(foe10, foe10CoordX, foe10CoordY, foe10SizeX, foe10SizeY);
+                foe10Flash = true;
+              }
+              else if (foe10flash2t <= 0 && foe10Interupt == false) {
+                if (shield == true) {
+                  foe10Attack = false;
+                  attackBlocked = true;
+                
+                  foe10interval = int(millis()/1000) + 5;
+                  foe10whiteint = int(millis()/1000) + 3; 
+                  foe10flashint = int(millis()/1000) + 3;
+                  foe10redint = int(millis()/1000) + 3; 
+                  foe10flash2int = int(millis()/1000) + 3;
+                  player15 = minim9.loadFile("blocked axepunch.mp3", 500);
+                  player15.play();
+                  player15.shiftGain(-8, -8,1000);                  
+                }
+                else if (shield == false) {
+                  player13 = minim13.loadFile("axepunch.mp3", 500);
+                  player13.play();
+                  player13.shiftGain(-18, -18,1000);                   
+                
+                  playerAttacked = true;
+                  foe9Alive = false;
+                  foe11Alive = false;  
+                  rGiantAlive = false;
+                    
+                  foe10interval = int(millis()/1000) + 5;
+                  foe10whiteint = int(millis()/1000) + 3;
+                  foe10flashint = int(millis()/1000) + 3;
+                  foe10redint = int(millis()/1000) + 3;
+                  foe10flash2int = int(millis()/1000) + 3;
+                  playerHP -= 10;
+                  HPbar = HPbar - originalHPbar/10;
+                  currentHPX = currentHPX + originalHPX/10;              
+                } 
+                foe10Flash = false;
+                foe10Attack = false;
+              }
+            }                  
+          }
+        }        
+      }
+      else if (foe10HP <= 0) {
+        foe10Attack = false;
+      }
+    } 
+    if (foe11Attack == true) {  
+      foe11Alive = false;  
+      foe11whitet = foe11whiteint-int(millis()/1000); 
+      if (foe11HP > 0) {
+        if (foe11whitet > 0) {
+          image(foeWhite, foe11CoordX, foe11CoordY, foe11SizeX, foe11SizeY);
+        }
+        else if (foe11whitet <= 0) {
+          foe11flasht = foe11flashint - int(millis()/1000);
+          if (foe11flasht > 0) {
+            image(foe11, foe11CoordX, foe11CoordY, foe11SizeX, foe11SizeY);
+          }
+          else if (foe11flasht <= 0) {
+            foe11redt = foe11redint-int(millis()/1000);
+            if (foe11redt > 0) {
+              image(foeRed, foe11CoordX, foe11CoordY, foe11SizeX, foe11SizeY);
+            }
+            else if (foe11redt <= 0) {
+              foe11flash2t = foe11flash2int - int(millis()/1000);
+              if (foe11flash2t > 0) {
+                image(foe11, foe11CoordX, foe11CoordY, foe11SizeX, foe11SizeY);
+                foe11Flash = true;
+              }
+              else if (foe11flash2t <= 0 && foe11Interupt == false) {
+                if (shield == true) {
+                  foe11Attack = false;
+                  attackBlocked = true;
+                
+                  foe11interval = int(millis()/1000) + 5;
+                  foe11whiteint = int(millis()/1000) + 3; 
+                  foe11flashint = int(millis()/1000) + 3;
+                  foe11redint = int(millis()/1000) + 3; 
+                  foe11flash2int = int(millis()/1000) + 3;
+                  player15 = minim9.loadFile("blocked axepunch.mp3", 500);
+                  player15.play();
+                  player15.shiftGain(-8, -8,1000);                  
+                }
+                else if (shield == false) {
+                  player13 = minim13.loadFile("axepunch.mp3", 500);
+                  player13.play();
+                  player13.shiftGain(-18, -18,1000);                   
+                
+                  playerAttacked = true;
+                  foe9Alive = false;
+                  foe10Alive = false;  
+                  rGiantAlive = false;
+                    
+                  foe11interval = int(millis()/1000) + 5;
+                  foe11whiteint = int(millis()/1000) + 3;
+                  foe11flashint = int(millis()/1000) + 3;
+                  foe11redint = int(millis()/1000) + 3;
+                  foe11flash2int = int(millis()/1000) + 3;
+                  playerHP -= 10;
+                  HPbar = HPbar - originalHPbar/10;
+                  currentHPX = currentHPX + originalHPX/10;              
+                } 
+                foe11Flash = false;
+                foe11Attack = false;
+              }
+            }                  
+          }
+        }        
+      }
+      else if (foe11HP <= 0) {
+        foe11Attack = false;
+      }
+    }
+    if (rGiantAttack == true) {  
+      rGiantAlive = false;  
+      rGiantwhitet = rGiantwhiteint-int(millis()/1000); 
+      if (rGiantHP > 0) {
+        if (rGiantwhitet > 0) {
+          image(rGiantWhite, rGiantCoordX, rGiantCoordY, rGiantSizeX, rGiantSizeY);
+        }
+        else if (rGiantwhitet <= 0) {
+          rGiantflasht = rGiantflashint - int(millis()/1000);
+          if (rGiantflasht > 0) {
+            image(rGiant, rGiantCoordX, rGiantCoordY, rGiantSizeX, rGiantSizeY);
+          }
+          else if (rGiantflasht <= 0) {
+            rGiantredt = rGiantredint-int(millis()/1000);
+            if (rGiantredt > 0) {
+              image(rGiantRed, rGiantCoordX, rGiantCoordY, rGiantSizeX, rGiantSizeY);
+            }
+            else if (rGiantredt <= 0) {
+              rGiantflash2t = rGiantflash2int - int(millis()/1000);
+              if (rGiantflash2t > 0) {
+                image(rGiant, rGiantCoordX, rGiantCoordY, rGiantSizeX, rGiantSizeY);
+                rGiantFlash = true;
+              }
+              else if (rGiantflash2t <= 0 && rGiantInterupt == false) {
+                if (shield == true) {
+                  rGiantAttack = false;
+                  attackBlocked = true;
+                
+                  rGiantinterval = int(millis()/1000) + 5;
+                  rGiantwhiteint = int(millis()/1000) + 3; 
+                  rGiantflashint = int(millis()/1000) + 3;
+                  rGiantredint = int(millis()/1000) + 3; 
+                  rGiantflash2int = int(millis()/1000) + 3;
+                  player15 = minim9.loadFile("blocked axepunch.mp3", 500);
+                  player15.play();
+                  player15.shiftGain(-8, -8,1000);                  
+                }
+                else if (shield == false) {
+                  player13 = minim13.loadFile("axepunch.mp3", 500);
+                  player13.play();
+                  player13.shiftGain(-18, -18,1000);                   
+                
+                  playerAttacked = true;
+                  foe9Alive = false;
+                  foe10Alive = false;
+                  foe11Alive = false; 
+                    
+                  rGiantinterval = int(millis()/1000) + 5;
+                  rGiantwhiteint = int(millis()/1000) + 3;
+                  rGiantflashint = int(millis()/1000) + 3;
+                  rGiantredint = int(millis()/1000) + 3;
+                  rGiantflash2int = int(millis()/1000) + 3;
+                  playerHP -= 10;
+                  HPbar = HPbar - originalHPbar/10;
+                  currentHPX = currentHPX + originalHPX/10;              
+                } 
+                rGiantFlash = false;
+                rGiantAttack = false;
+              }
+            }                  
+          }
+        }        
+      }
+      else if (rGiantHP <= 0) {
+        rGiantAttack = false;
+      }
     }    
+    
     if (shield == true) {
       shieldt = shieldInterval - int(millis()/1000);
       if (shieldt > 0) {
