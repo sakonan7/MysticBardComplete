@@ -763,6 +763,26 @@ void setup() {
   foe8CoordX = 950 - 60 - 15;
   foe8CoordY = height - 450 - 75 - 20;
   
+  foe9SizeX = 125 * 1.1;
+  foe9SizeY = 200 * 1.1;
+  foe9CoordX = 200;
+  foe9CoordY = height/2 + 160;  
+  
+  rGiantSizeX = 234;
+  rGiantSizeY = 288;
+  rGiantCoordX = 300;
+  rGiantCoordY = height/2 + 50;
+  
+  foe10SizeX = 125 * 1.1;
+  foe10SizeY = 200 * 1.1;
+  foe10CoordX = 400;
+  foe10CoordY = height/2 + 100;  
+  
+  foe11SizeX = 125 * 1.1;
+  foe11SizeY = 200 * 1.1;
+  foe11CoordX = 500;
+  foe11CoordY = height/2 + 60;  
+  
   weapon = "Violin";
 
   currentShieldBarX = width - 225;
@@ -1470,7 +1490,7 @@ void draw() {
     text("\n" + "\n" + clickSkip, width - 625, height - 165);
   }  
   
-  else if (playerAlive == true && (stage2 == true || stage1 == true || tutorialStage == true)){
+  else if (playerAlive == true && (stage3 == true || stage2 == true || stage1 == true || tutorialStage == true)){
     setGradient(currentHPX, 50, HPbar, 40, c2, c1, 3);
     noFill();
     stroke(#9B9B9B);
@@ -3313,7 +3333,7 @@ void keyPressed () {
     messageLast = false;
 
     messageOver = true;
-    tutorialStage = true;
+    stage3 = true;
     minim.stop();
     player = minim.loadFile("Battle.mp3", 800);
     player.play();
