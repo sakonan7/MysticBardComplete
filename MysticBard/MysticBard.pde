@@ -209,6 +209,7 @@ int foe7HP = 150;
 int foe8HP = 150;
 
 int rGiantArmor = 100;
+boolean giantArmor = true;
 int rGiantHP = 250;
 int foe9HP = 150;
 int foe10HP = 150;
@@ -3195,6 +3196,14 @@ void draw() {
       }      
     }
     else if (stage3 == true) {
+      if (giantArmor == true) {
+        //llok back at HP Bar art
+         //giantArmor is depleted in mousepress
+         //rGiantCoordX and Width == rGiantSizeX and rGiantCoordY - 20
+         //height == 
+         //setGradient(currentShieldBarX, height-105, shieldBar, 15, c3, c4, 2);
+      }
+      
       if (foe9Alive == true) {
         if (foe9disapp == false) {
           image(foe9, foe9CoordX, foe9CoordY, foe9SizeX, foe9SizeY);
