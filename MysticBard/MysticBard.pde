@@ -765,23 +765,23 @@ void setup() {
   
   foe9SizeX = 125 * 1.1;
   foe9SizeY = 200 * 1.1;
-  foe9CoordX = 200;
-  foe9CoordY = height/2 + 160;  
+  foe9CoordX = 180 - 60 - 15 + 20;
+  foe9CoordY = height - 380 - 25 - 20 - 50;  
   
   rGiantSizeX = 234;
   rGiantSizeY = 288;
-  rGiantCoordX = 300;
-  rGiantCoordY = height/2 + 50;
+  rGiantCoordX = 390 - 60 - 15 + 25;
+  rGiantCoordY = height - 400 - 75 - 20 - 50;
   
   foe10SizeX = 125 * 1.1;
   foe10SizeY = 200 * 1.1;
-  foe10CoordX = 400;
-  foe10CoordY = height/2 + 100;  
+  foe10CoordX = 600 - 60 - 15 + 60;
+  foe10CoordY = height - 370 - 75 - 20 - 25;  
   
   foe11SizeX = 125 * 1.1;
   foe11SizeY = 200 * 1.1;
-  foe11CoordX = 500;
-  foe11CoordY = height/2 + 60;  
+  foe11CoordX = 800 - 60 - 15 + 70;
+  foe11CoordY = height - 450 - 75 - 20 - 25;  
   
   weapon = "Violin";
 
