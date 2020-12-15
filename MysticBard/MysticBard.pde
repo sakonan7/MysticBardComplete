@@ -210,6 +210,10 @@ int foe8HP = 150;
 
 int rGiantArmor = 100;
 boolean giantArmor = true;
+int currentArmorBarX;
+int armorBarY;
+float armorBar;
+
 int rGiantHP = 250;
 int foe9HP = 150;
 int foe10HP = 150;
@@ -600,7 +604,9 @@ String weapon;
 color c1 = color(#F1F200);
 color c2 = color(#A1FF00);
 color c3 = #ADFF00; 
-color c4 = #7C0000; 
+color c4 = #7C0000;
+color c5 = #4682b4;
+color c6 = #E8F5FF;
 
 void setup() {
   size(1100, 900);
@@ -773,6 +779,10 @@ void setup() {
   rGiantSizeY = 288;
   rGiantCoordX = 390 - 60 - 15 + 25;
   rGiantCoordY = height - 400 - 75 - 20 - 50;
+  
+  currentArmorBarX = (int)rGiantCoordX;
+  armorBarY = (int)rGiantCoordY - 20 - 4;
+  armorBar = rGiantSizeX;  
   
   foe10SizeX = 125 * 1.1;
   foe10SizeY = 200 * 1.1;
@@ -3199,16 +3209,17 @@ void draw() {
       if (giantArmor == true) {
         //llok back at HP Bar art
          //giantArmor is depleted in mousepress
-         //rGiantCoordX and Width == rGiantSizeX and rGiantCoordY - 20
-         //height == 
-         //setGradient(currentShieldBarX, height-105, shieldBar, 15, c3, c4, 2);
+         setGradient(currentArmorBarX, armorBarY, armorBar, 17, c5, c6, 2);
+         noFill();
+         stroke(#EAEAEA); //#DEDEDE //F5F5F5 in the F level
+         rect(currentArmorBarX - 3, armorBarY - 3, armorBar + 6, 23);          
       }
       
       if (foe9Alive == true) {
         if (foe9disapp == false) {
           image(foe9, foe9CoordX, foe9CoordY, foe9SizeX, foe9SizeY);
         }
-        if (foe9Attack == false && foe9HP > 0) {
+        if (foe9Attack == false && foe9HP > 0 && noAttack == false) {
           foe9t = foe9interval-int(millis()/1000);
             
           if(foe9t <= 0){
@@ -3238,7 +3249,7 @@ void draw() {
         if (foe10disapp == false) {
           image(foe10, foe10CoordX, foe10CoordY, foe10SizeX, foe10SizeY);          
         }
-        if (foe10Attack == false && foe10HP > 0) {
+        if (foe10Attack == false && foe10HP > 0 && noAttack == false) {
           foe10t = foe10interval-int(millis()/1000);
             
           if(foe10t <= 0){
@@ -3267,7 +3278,7 @@ void draw() {
         if (foe11disapp == false) {
           image(foe11, foe11CoordX, foe11CoordY, foe11SizeX, foe11SizeY);
         }
-        if (foe11Attack == false && foe11HP > 0) {
+        if (foe11Attack == false && foe11HP > 0 && noAttack == false) {
           foe11t = foe11interval-int(millis()/1000);
             
           if(foe11t <= 0){
@@ -3296,7 +3307,7 @@ void draw() {
         if (rGiantdisapp == false) {
           image(rGiant, rGiantCoordX, rGiantCoordY, rGiantSizeX, rGiantSizeY);
         }
-        if (rGiantAttack == false && rGiantHP > 0) {
+        if (rGiantAttack == false && rGiantHP > 0 && noAttack == false) {
           rGiantt = rGiantinterval-int(millis()/1000);
             
           if(rGiantt <= 0){
