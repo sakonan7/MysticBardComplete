@@ -3378,7 +3378,12 @@ void keyPressed () {
       currentPotionBarX += originalPotionBar/2;
       player14 = minim14.loadFile("potion.mp3", 700);
       player14.play();
-      player14.shiftGain(-5,-5,1000);           
+      player14.shiftGain(-5,-5,1000);
+      noFill();
+      strokeWeight(9);
+      stroke(#e1ff2f);
+      ellipse(width/2, height/2 - 100, 285, 285);
+      ellipse(width/2, height/2 - 100, 165, 165);      
     }
     else {
       playerHP += 30;
