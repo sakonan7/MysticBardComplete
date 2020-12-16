@@ -1563,6 +1563,12 @@ void draw() {
         foe6interval = int(millis()/1000) + int(random(3,8));
         foe7interval = int(millis()/1000) + int(random(3,8));
         foe8interval = int(millis()/1000) + int(random(3,8));
+      }
+      if (stage3 == true) {
+        rGiantinterval = int(millis()/1000) + int(random(3,8));
+        foe9interval = int(millis()/1000) + int(random(3,8));
+        foe10interval = int(millis()/1000) + int(random(3,8));
+        foe11interval = int(millis()/1000) + int(random(3,8));
       }      
       
       warmUp = false;
@@ -1651,7 +1657,32 @@ void draw() {
         if (foe8HP > 0) {
           image(foe8, foe8CoordX, foe8CoordY - 30, foe8SizeX, foe8SizeY);
         }        
-      }        
+      }
+      if (stage3 == true) {
+        rGiantdisapp = true;
+        foe6disapp = true;
+        foe7disapp = true;
+        foe8disapp = true;
+        if (giantArmor == true) {
+          setGradient(currentArmorBarX, armorBarY - 30, armorBar, 17, c5, c6, 2);
+          noFill();
+          stroke(#EAEAEA); 
+          rect(currentArmorBarX - 3, armorBarY - 33, armorBar + 6, 23);          
+        }
+        
+        if (rGiantHP > 0) {
+          image(rGiant, rGiantCoordX, rGiantCoordY - 30, rGiantSizeX, rGiantSizeY);
+        }        
+        if (foe9HP > 0) {
+          image(foe9, foe9CoordX, foe9CoordY - 30, foe9SizeX, foe9SizeY);
+        }
+        if (foe10HP > 0) {
+          image(foe10, foe10CoordX, foe10CoordY - 30, foe10SizeX, foe10SizeY);
+        }        
+        if (foe11HP > 0) {
+          image(foe11, foe11CoordX, foe11CoordY - 30, foe11SizeX, foe11SizeY);
+        }        
+      }      
       fill(117,0,0,145);
       stroke(#FFFFFF);
 
@@ -1723,7 +1754,17 @@ void draw() {
         redDeadPage = true;
         minim.stop();
         redraw();
-      }       
+      }
+      else if (playerHP <= 0 && stage3 == true) {
+        //may need to do if stage2, foe not alive to make them disappear
+        stage3 = false;
+        stage3Dead = true;
+        playerAlive = false;
+        redDead = true;
+        redDeadPage = true;
+        minim.stop();
+        redraw();
+      }      
     }
     else if (playerAttacked == false) {
       if (tutorialStage == true) {
@@ -1774,6 +1815,24 @@ void draw() {
         }         
         if (foe8HP > 0) {
           foe8Alive = true;
+        }          
+      } 
+      if (stage3 == true) {
+        rGiantdisapp = false;
+        foe9disapp = false;
+        foe10disapp = false; 
+        foe11disapp = false; 
+        if (rGiantHP > 0) {
+          rGiantAlive = true;
+        }
+        if (foe9HP > 0) {
+          foe9Alive = true;
+        }       
+        if (foe10HP > 0) {
+          foe10Alive = true;
+        }         
+        if (foe11HP > 0) {
+          foe11Alive = true;
         }          
       }      
     }
@@ -2641,9 +2700,9 @@ void draw() {
                   rGiantflashint = int(millis()/1000) + 3;
                   rGiantredint = int(millis()/1000) + 3;
                   rGiantflash2int = int(millis()/1000) + 3;
-                  playerHP -= 10;
-                  HPbar = HPbar - originalHPbar/10;
-                  currentHPX = currentHPX + originalHPX/10;              
+                  playerHP -= 30;
+                  HPbar = HPbar - 3 *(originalHPbar/10);
+                  currentHPX = currentHPX + 3*(originalHPX/10);              
                 } 
                 rGiantFlash = false;
                 rGiantAttack = false;
