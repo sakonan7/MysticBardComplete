@@ -1022,6 +1022,31 @@ void draw() {
         if (foe8HP > 0) {
           image(foe8, foe8CoordX, foe8CoordY, foe8SizeX, foe8SizeY);
         }        
+    }
+    if (stage3Dead == true) {
+      rGiantdisapp = true;
+      foe6disapp = true;
+      foe7disapp = true;
+      foe8disapp = true;
+      if (giantArmor == true) {
+        setGradient(currentArmorBarX, armorBarY - 30, armorBar, 17, c5, c6, 2);
+        noFill();
+        stroke(#EAEAEA); 
+        rect(currentArmorBarX - 3, armorBarY - 33, armorBar + 6, 23);          
+      }
+        
+      if (rGiantHP > 0) {
+        image(rGiant, rGiantCoordX, rGiantCoordY - 30, rGiantSizeX, rGiantSizeY);
+      }        
+      if (foe9HP > 0) {
+        image(foe9, foe9CoordX, foe9CoordY - 30, foe9SizeX, foe9SizeY);
+      }
+      if (foe10HP > 0) {
+        image(foe10, foe10CoordX, foe10CoordY - 30, foe10SizeX, foe10SizeY);
+      }        
+      if (foe11HP > 0) {
+        image(foe11, foe11CoordX, foe11CoordY - 30, foe11SizeX, foe11SizeY);
+      }        
     }    
     fill(117,0,0,175);   
     rect(0, 1, 1100, 900); 
@@ -2770,7 +2795,32 @@ void draw() {
             if (foe8HP > 0) {
               image(foe8, foe8CoordX, foe8CoordY, foe8SizeX, foe8SizeY);
             }            
-          }           
+          }
+          if (stage3 == true) {
+            rGiantdisapp = true;
+            foe6disapp = true;
+            foe7disapp = true;
+            foe8disapp = true;
+            if (giantArmor == true) {
+              setGradient(currentArmorBarX, armorBarY - 30, armorBar, 17, c5, c6, 2);
+              noFill();
+              stroke(#EAEAEA); 
+              rect(currentArmorBarX - 3, armorBarY - 33, armorBar + 6, 23);          
+            }
+        
+            if (rGiantHP > 0) {
+              image(rGiant, rGiantCoordX, rGiantCoordY - 30, rGiantSizeX, rGiantSizeY);
+            }        
+            if (foe9HP > 0) {
+              image(foe9, foe9CoordX, foe9CoordY - 30, foe9SizeX, foe9SizeY);
+            }
+            if (foe10HP > 0) {
+              image(foe10, foe10CoordX, foe10CoordY - 30, foe10SizeX, foe10SizeY);
+            }        
+            if (foe11HP > 0) {
+              image(foe11, foe11CoordX, foe11CoordY - 30, foe11SizeX, foe11SizeY);
+            }        
+          }          
           image(violinUI, 251, height - 156, 240, 156);
           image(tromboneD, 7, height - 157, 250, 156);
           image(shieldD, width - 253, height - 157, 244, 156);
