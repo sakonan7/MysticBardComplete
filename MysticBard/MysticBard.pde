@@ -51,6 +51,14 @@ Minim minim16;
 AudioPlayer player17;
 Minim minim17;
 
+//Foes 9-11
+AudioPlayer player18;
+Minim minim18;
+AudioPlayer player19;
+Minim minim19;
+AudioPlayer player20;
+Minim minim20;
+
 static final int FADE = 2200;
 
 PImage background;
@@ -721,6 +729,9 @@ void setup() {
   minim15 = new Minim(this);
   minim16 = new Minim(this);
   minim17 = new Minim(this);
+  minim18 = new Minim(this);
+  minim19 = new Minim(this);
+  minim20 = new Minim(this);
   
   foetutorialSizeX = 125 * 1.1;
   foetutorialSizeY = 200 * 1.1;
@@ -2514,9 +2525,9 @@ void draw() {
                   player15.shiftGain(-8, -8,1000);                  
                 }
                 else if (shield == false) {
-                  player13 = minim13.loadFile("axepunch.mp3", 500);
-                  player13.play();
-                  player13.shiftGain(-18, -18,1000);                   
+                  player18 = minim18.loadFile("axepunch.mp3", 500);
+                  player18.play();
+                  player18.shiftGain(-18, -18,1000);                   
                 
                   playerAttacked = true;
                   foe10Alive = false;
@@ -2581,9 +2592,9 @@ void draw() {
                   player15.shiftGain(-8, -8,1000);                  
                 }
                 else if (shield == false) {
-                  player13 = minim13.loadFile("axepunch.mp3", 500);
-                  player13.play();
-                  player13.shiftGain(-18, -18,1000);                   
+                  player19 = minim19.loadFile("axepunch.mp3", 500);
+                  player19.play();
+                  player19.shiftGain(-18, -18,1000);                   
                 
                   playerAttacked = true;
                   foe9Alive = false;
@@ -2648,9 +2659,9 @@ void draw() {
                   player15.shiftGain(-8, -8,1000);                  
                 }
                 else if (shield == false) {
-                  player13 = minim13.loadFile("axepunch.mp3", 500);
-                  player13.play();
-                  player13.shiftGain(-18, -18,1000);                   
+                  player20 = minim20.loadFile("axepunch.mp3", 500);
+                  player20.play();
+                  player20.shiftGain(-18, -18,1000);                   
                 
                   playerAttacked = true;
                   foe9Alive = false;
