@@ -47,6 +47,9 @@ Minim minim15;
 //muffled violin
 AudioPlayer player16;
 Minim minim16;
+//Giant Strike
+AudioPlayer player17;
+Minim minim17;
 
 static final int FADE = 2200;
 
@@ -717,6 +720,7 @@ void setup() {
   minim14 = new Minim(this);
   minim15 = new Minim(this);
   minim16 = new Minim(this);
+  minim17 = new Minim(this);
   
   foetutorialSizeX = 125 * 1.1;
   foetutorialSizeY = 200 * 1.1;
@@ -1896,7 +1900,7 @@ void draw() {
                   foeTflashint = int(millis()/1000) + 3;
                   foeTredint = int(millis()/1000) + 3; 
                   foeTflash2int = int(millis()/1000) + 3;
-                  player15 = minim9.loadFile("blocked axepunch.mp3", 500);
+                  player15 = minim15.loadFile("blocked axepunch.mp3", 500);
                   player15.play();
                   player15.shiftGain(-8, -8,1000);                  
                 }
@@ -1964,7 +1968,7 @@ void draw() {
                   foe1flashint = int(millis()/1000) + 3;
                   foe1redint = int(millis()/1000) + 3; 
                   foe1flash2int = int(millis()/1000) + 3;
-                  player15 = minim9.loadFile("blocked axepunch.mp3", 500);
+                  player15 = minim15.loadFile("blocked axepunch.mp3", 500);
                   player15.play();
                   player15.shiftGain(-8, -8,1000);                  
                 }
@@ -2031,7 +2035,7 @@ void draw() {
                   foe2flashint = int(millis()/1000) + 3;
                   foe2redint = int(millis()/1000) + 3; 
                   foe2flash2int = int(millis()/1000) + 3;
-                  player15 = minim9.loadFile("blocked axepunch.mp3", 500);
+                  player15 = minim15.loadFile("blocked axepunch.mp3", 500);
                   player15.play();
                   player15.shiftGain(-8, -8,1000);                  
                 }
@@ -2098,7 +2102,7 @@ void draw() {
                   foe3flashint = int(millis()/1000) + 3;
                   foe3redint = int(millis()/1000) + 3; 
                   foe3flash2int = int(millis()/1000) + 3;
-                  player15 = minim9.loadFile("blocked axepunch.mp3", 500);
+                  player15 = minim15.loadFile("blocked axepunch.mp3", 500);
                   player15.play();
                   player15.shiftGain(-8, -8,1000);                  
                 }
@@ -2165,7 +2169,7 @@ void draw() {
                   foe4flashint = int(millis()/1000) + 3;
                   foe4redint = int(millis()/1000) + 3; 
                   foe4flash2int = int(millis()/1000) + 3;
-                  player15 = minim9.loadFile("blocked axepunch.mp3", 500);
+                  player15 = minim15.loadFile("blocked axepunch.mp3", 500);
                   player15.play();
                   player15.shiftGain(-8, -8,1000);                  
                 }
@@ -2233,7 +2237,7 @@ void draw() {
                   foe5flashint = int(millis()/1000) + 3;
                   foe5redint = int(millis()/1000) + 3; 
                   foe5flash2int = int(millis()/1000) + 3;
-                  player15 = minim9.loadFile("blocked axepunch.mp3", 500);
+                  player15 = minim15.loadFile("blocked axepunch.mp3", 500);
                   player15.play();
                   player15.shiftGain(-8, -8,1000);                  
                 }
@@ -2301,7 +2305,7 @@ void draw() {
                   foe6flashint = int(millis()/1000) + 3;
                   foe6redint = int(millis()/1000) + 3; 
                   foe6flash2int = int(millis()/1000) + 3;
-                  player15 = minim9.loadFile("blocked axepunch.mp3", 500);
+                  player15 = minim15.loadFile("blocked axepunch.mp3", 500);
                   player15.play();
                   player15.shiftGain(-8, -8,1000);                  
                 }
@@ -2369,7 +2373,7 @@ void draw() {
                   foe7flashint = int(millis()/1000) + 3;
                   foe7redint = int(millis()/1000) + 3; 
                   foe7flash2int = int(millis()/1000) + 3;
-                  player15 = minim9.loadFile("blocked axepunch.mp3", 500);
+                  player15 = minim15.loadFile("blocked axepunch.mp3", 500);
                   player15.play();
                   player15.shiftGain(-8, -8,1000);                  
                 }
@@ -2437,7 +2441,7 @@ void draw() {
                   foe8flashint = int(millis()/1000) + 3;
                   foe8redint = int(millis()/1000) + 3; 
                   foe8flash2int = int(millis()/1000) + 3;
-                  player15 = minim9.loadFile("blocked axepunch.mp3", 500);
+                  player15 = minim15.loadFile("blocked axepunch.mp3", 500);
                   player15.play();
                   player15.shiftGain(-8, -8,1000);                  
                 }
@@ -2505,7 +2509,7 @@ void draw() {
                   foe9flashint = int(millis()/1000) + 3;
                   foe9redint = int(millis()/1000) + 3; 
                   foe9flash2int = int(millis()/1000) + 3;
-                  player15 = minim9.loadFile("blocked axepunch.mp3", 500);
+                  player15 = minim15.loadFile("blocked axepunch.mp3", 500);
                   player15.play();
                   player15.shiftGain(-8, -8,1000);                  
                 }
@@ -2572,7 +2576,7 @@ void draw() {
                   foe10flashint = int(millis()/1000) + 3;
                   foe10redint = int(millis()/1000) + 3; 
                   foe10flash2int = int(millis()/1000) + 3;
-                  player15 = minim9.loadFile("blocked axepunch.mp3", 500);
+                  player15 = minim15.loadFile("blocked axepunch.mp3", 500);
                   player15.play();
                   player15.shiftGain(-8, -8,1000);                  
                 }
@@ -2639,7 +2643,7 @@ void draw() {
                   foe11flashint = int(millis()/1000) + 3;
                   foe11redint = int(millis()/1000) + 3; 
                   foe11flash2int = int(millis()/1000) + 3;
-                  player15 = minim9.loadFile("blocked axepunch.mp3", 500);
+                  player15 = minim15.loadFile("blocked axepunch.mp3", 500);
                   player15.play();
                   player15.shiftGain(-8, -8,1000);                  
                 }
@@ -2706,14 +2710,14 @@ void draw() {
                   rGiantflashint = int(millis()/1000) + 3;
                   rGiantredint = int(millis()/1000) + 3; 
                   rGiantflash2int = int(millis()/1000) + 3;
-                  player15 = minim9.loadFile("blocked axepunch.mp3", 500);
+                  player15 = minim15.loadFile("blocked axepunch.mp3", 500);
                   player15.play();
-                  player15.shiftGain(-8, -8,1000);                  
+                  player15.shiftGain(-5, -5,1000);                  
                 }
                 else if (shield == false) {
-                  player13 = minim13.loadFile("axepunch.mp3", 500);
-                  player13.play();
-                  player13.shiftGain(-18, -18,1000);                   
+                  player17 = minim17.loadFile("giantStrike.mp3", 500);
+                  player17.play();
+                  player17.shiftGain(-13, -13,1000);                   
                 
                   playerAttacked = true;
                   foe9Alive = false;
