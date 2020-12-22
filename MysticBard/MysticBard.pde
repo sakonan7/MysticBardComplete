@@ -5183,9 +5183,147 @@ void mousePressed () {
               }
       
               fill(#FFFFFF);
+              monsterViolin = true;                           
+            } 
+            if (mouseX <= foe9SizeX + foe9CoordX && mouseX >= foe9CoordX
+            && (mouseY <= foe9SizeY + foe9CoordY && mouseY >= foe9CoordY) && foe9HP > 0) { 
+
+              image(foe9, foe9CoordX - 15, foe9CoordY - 30, foe9SizeX * 1.2, foe9SizeY * 1.2);
+          
+              image(musicNote1, foe9CoordX + foe9SizeX/5, foe9CoordY - foe9CoordY/10, 100, 100);
+      
+              noFill();
+              strokeWeight(5);
+              stroke(damageWave);
+              ellipse(cursorX, cursorY, 140, 140);
+              ellipse(cursorX, cursorY , 100, 100);
+              ellipse(cursorX, cursorY , 50, 50);
+              
+              image(violin, cursorX + 10, cursorY - 25, 46.5, 50);
+      
+              foe9HP -= damage;
+              text("  " + damage, foe9CoordX + foe9SizeX/4, foe9CoordY - foe9CoordY/11);
+              fill(#FFFFFF);
+              foe9attacked = true;
               monsterViolin = true;
-                            
+              
+              if (foe9Flash == true && foe9attacked == true) {
+                foe9Attack = false;
+                foe9Alive = true;
+                foe9Interupt = true; 
+                foe9Flash = false;
+                foe9interval = int(millis()/1000) + 5;
+                foe9whiteint = int(millis()/1000) + 3; 
+                foe9flashint = int(millis()/1000) + 3;
+                foe9redint = int(millis()/1000) + 3; 
+                foe9flash2int = int(millis()/1000) + 3;   
+                player7 = minim7.loadFile("violinFlinch.mp3", 500);
+                player7.play(); 
+                player7.shiftGain(-7, -7,1000);
+              }        
+              else if (foe9Flash == false) {
+                player2 = minim2.loadFile("violin.mp3", 400);
+                player2.play();
+                player2.shiftGain(-7, -7,1000);
+              }
+              if (foe9Interupt == true) {
+                foe9Interupt = false;
+                foe9attacked = false;     
+              }              
+            }
+            if (mouseX <= foe10SizeX + foe10CoordX && mouseX >= foe10CoordX
+            && (mouseY <= foe10SizeY + foe10CoordY && mouseY >= foe10CoordY) && foe10HP > 0) { 
+
+              image(foe10, foe10CoordX - 15, foe10CoordY - 30, foe10SizeX * 1.2, foe10SizeY * 1.2);
+          
+              image(musicNote1, foe10CoordX + foe10SizeX/5, foe10CoordY - foe10CoordY/10, 100, 100);
+      
+              noFill();
+              strokeWeight(5);
+              stroke(damageWave);
+              ellipse(cursorX, cursorY, 140, 140);
+              ellipse(cursorX, cursorY , 100, 100);
+              ellipse(cursorX, cursorY , 50, 50);
+              
+              image(violin, cursorX + 10, cursorY - 25, 46.5, 50);
+      
+              foe10HP -= damage;
+              text("  " + damage, foe10CoordX + foe10SizeX/4, foe10CoordY - foe10CoordY/11);
+              fill(#FFFFFF);
+              foe10attacked = true;
+              monsterViolin = true;
+              
+              if (foe10Flash == true && foe10attacked == true) {
+                foe10Attack = false;
+                foe10Alive = true;
+                foe10Interupt = true; 
+                foe10Flash = false;
+                foe10interval = int(millis()/1000) + 5;
+                foe10whiteint = int(millis()/1000) + 3; 
+                foe10flashint = int(millis()/1000) + 3;
+                foe10redint = int(millis()/1000) + 3; 
+                foe10flash2int = int(millis()/1000) + 3;   
+                player7 = minim7.loadFile("violinFlinch.mp3", 500);
+                player7.play(); 
+                player7.shiftGain(-7, -7,1000);
+              }        
+              else if (foe10Flash == false) {
+                player2 = minim2.loadFile("violin.mp3", 400);
+                player2.play();
+                player2.shiftGain(-7, -7,1000);
+              }
+              if (foe10Interupt == true) {
+                foe10Interupt = false;
+                foe10attacked = false;     
+              }              
+            }
+            if (mouseX <= foe11SizeX + foe11CoordX && mouseX >= foe11CoordX
+            && (mouseY <= foe11SizeY + foe11CoordY && mouseY >= foe11CoordY) && foe11HP > 0) { 
+
+              image(foe11, foe11CoordX - 15, foe11CoordY - 30, foe11SizeX * 1.2, foe11SizeY * 1.2);
+          
+              image(musicNote1, foe11CoordX + foe11SizeX/5, foe11CoordY - foe11CoordY/10, 100, 100);
+      
+              noFill();
+              strokeWeight(5);
+              stroke(damageWave);
+              ellipse(cursorX, cursorY, 140, 140);
+              ellipse(cursorX, cursorY , 100, 100);
+              ellipse(cursorX, cursorY , 50, 50);
+              
+              image(violin, cursorX + 10, cursorY - 25, 46.5, 50);
+      
+              foe11HP -= damage;
+              text("  " + damage, foe11CoordX + foe11SizeX/4, foe11CoordY - foe11CoordY/11);
+              fill(#FFFFFF);
+              foe11attacked = true;
+              monsterViolin = true;
+              
+              if (foe11Flash == true && foe11attacked == true) {
+                foe11Attack = false;
+                foe11Alive = true;
+                foe11Interupt = true; 
+                foe11Flash = false;
+                foe11interval = int(millis()/1000) + 5;
+                foe11whiteint = int(millis()/1000) + 3; 
+                foe11flashint = int(millis()/1000) + 3;
+                foe11redint = int(millis()/1000) + 3; 
+                foe11flash2int = int(millis()/1000) + 3;   
+                player7 = minim7.loadFile("violinFlinch.mp3", 500);
+                player7.play(); 
+                player7.shiftGain(-7, -7,1000);
+              }        
+              else if (foe11Flash == false) {
+                player2 = minim2.loadFile("violin.mp3", 400);
+                player2.play();
+                player2.shiftGain(-7, -7,1000);
+              }
+              if (foe11Interupt == true) {
+                foe11Interupt = false;
+                foe11attacked = false;     
+              }              
             }            
+            
           }
           
         }
@@ -5223,7 +5361,18 @@ void mousePressed () {
       }
       if (foeT3HP <= 0) {
         foeT3Alive = false;
+      }
+      
+      if (foe9HP <= 0) {
+        foe9Alive = false;
+      }
+      if (foe10HP <= 0) {
+        foe10Alive = false;
+      }  
+      if (foe11HP <= 0) {
+        foe11Alive = false;
       }      
+      
       if (foeTHP <= 0 && foeT2HP <= 0 && foeT3HP <= 0 && tutorialStage == true && playerAlive == true) {
         tutorialVictory = true;
         tutorialVictoryPage = true;
