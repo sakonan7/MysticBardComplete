@@ -1046,8 +1046,8 @@ void draw() {
       if (giantArmor == true) {
         setGradient(currentArmorBarX, armorBarY - 30, armorBar, 17, c5, c6, 2);
         noFill();
-        stroke(#EAEAEA); 
-        rect(currentArmorBarX - 3, armorBarY - 33, armorBar + 6, 23);          
+        stroke(#DBDBDB); 
+        rect(340 - 3, armorBarY - 33, rGiantSizeX + 6, 23);          
       }
         
       if (rGiantHP > 0) {
@@ -1706,8 +1706,8 @@ void draw() {
         if (giantArmor == true) {
           setGradient(currentArmorBarX, armorBarY - 30, armorBar, 17, c5, c6, 2);
           noFill();
-          stroke(#EAEAEA); 
-          rect(currentArmorBarX - 3, armorBarY - 33, armorBar + 6, 23);          
+          stroke(#DBDBDB); 
+          rect(340 - 3, armorBarY - 33, rGiantSizeX + 6, 23);          
         }
         
         if (rGiantHP > 0) {
@@ -2819,8 +2819,8 @@ void draw() {
             if (giantArmor == true) {
               setGradient(currentArmorBarX, armorBarY - 30, armorBar, 17, c5, c6, 2);
               noFill();
-              stroke(#EAEAEA); 
-              rect(currentArmorBarX - 3, armorBarY - 33, armorBar + 6, 23);          
+              stroke(#DBDBDB); 
+              rect(340 - 3, armorBarY - 33, rGiantSizeX + 6, 23);          
             }
         
             if (rGiantHP > 0) {
@@ -3335,8 +3335,8 @@ void draw() {
          //giantArmor is depleted in mousepress
          setGradient(currentArmorBarX, armorBarY, armorBar, 17, c5, c6, 2);
          noFill();
-         stroke(#EAEAEA); //#DEDEDE //F5F5F5 in the F level
-         rect(currentArmorBarX - 3, armorBarY - 3, armorBar + 6, 23);          
+         stroke(#DBDBDB); //#DEDEDE //F5F5F5 in the F level
+         rect(340 - 3, armorBarY - 3, rGiantSizeX + 6, 23);          
       }
       
       if (foe9Alive == true) {
@@ -3428,6 +3428,11 @@ void draw() {
         }        
       }
       if (rGiantAlive == true) {
+          stroke(#00D7FF);
+          rect(rGiantCoordX, rGiantCoordY, rGiantSizeX, rGiantSizeY);
+          stroke(#FFF700);
+          rect(rGiantCoordX - 140, rGiantCoordY - 140, rGiantSizeX + 280, rGiantSizeY + 280);
+          noFill();      
         if (rGiantdisapp == false) {
           image(rGiant, rGiantCoordX, rGiantCoordY, rGiantSizeX, rGiantSizeY);
         }
@@ -5122,6 +5127,65 @@ void mousePressed () {
                 //player16 = minim16.loadFile("muffled violin.mp3", 400);
                 //player16.play();
                 //player16.shiftGain(-7, -7,1000);            
+          }
+          if (stage3 == true) {
+            if (mouseX <= rGiantSizeX + rGiantCoordX && mouseX >= rGiantCoordX
+            && (mouseY <= rGiantSizeY + rGiantCoordY && mouseY >= rGiantCoordY) && rGiantHP > 0) {
+              //Foe only spasms when armor is broken
+              image(musicNote1, rGiantCoordX + 80, rGiantCoordY - rGiantCoordY/10, 100, 100);
+      
+              noFill();
+              strokeWeight(5);
+              stroke(damageWave);
+              ellipse(cursorX, cursorY, 140, 140);
+              ellipse(cursorX, cursorY , 100, 100);
+              ellipse(cursorX, cursorY , 50, 50);
+              
+              image(violin, cursorX + 10, cursorY - 25, 46.5, 50);              
+              if (giantArmor == true) {
+                rGiantArmor -= 2;
+                armorBar -= 5;
+                currentArmorBarX += 5;
+                text("  " + "2", rGiantCoordX + 95, rGiantCoordY - rGiantCoordY/11);
+              }
+              else if (giantArmor == false) {
+                image(rGiant, rGiantCoordX - 15, rGiantCoordY - 30, rGiantSizeX * 1.2, rGiantSizeY * 1.2);
+                rGiantHP -= damage;
+                text("  " + damage, rGiantCoordX + 95, rGiantCoordY - rGiantCoordY/11);  
+                
+                rGiantattacked = true;
+                if (rGiantFlash == true && rGiantattacked == true) {
+                  rGiantAttack = false;
+                  rGiantAlive = true;
+                  rGiantInterupt = true; 
+                  rGiantFlash = false;
+                  rGiantinterval = int(millis()/1000) + 5;
+                  rGiantwhiteint = int(millis()/1000) + 3; 
+                  rGiantflashint = int(millis()/1000) + 3;
+                  rGiantredint = int(millis()/1000) + 3; 
+                  rGiantflash2int = int(millis()/1000) + 3;   
+                  player7 = minim7.loadFile("violinFlinch.mp3", 500);
+                  player7.play(); 
+                  player7.shiftGain(-7, -7,1000);
+                }        
+                else if (foe8Flash == false) {
+                  player2 = minim2.loadFile("violin.mp3", 400);
+                  player2.play();
+                  player2.shiftGain(-7, -7,1000);
+                }
+                if (rGiantInterupt == true) {
+                  rGiantInterupt = false;
+                  rGiantattacked = false;     
+                }                
+              }
+              if (rGiantArmor <= 0) {
+                giantArmor = false;
+              }
+      
+              fill(#FFFFFF);
+              monsterViolin = true;
+                            
+            }            
           }
           
         }
