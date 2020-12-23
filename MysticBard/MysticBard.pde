@@ -4636,6 +4636,261 @@ void mousePressed () {
               }              
             }            
           } //stage2 end
+          if (stage3 == true) {
+            if (firstBlast == true) {
+            }
+            else if (firstBlast == false) {
+              if (mouseX <= foe9SizeX + foe9CoordX + 140 && mouseX >= foe9CoordX - 140
+              && (mouseY <= foe9SizeY + foe9CoordY + 140 && mouseY >= foe9CoordY - 140) && foe9HP > 0) { 
+
+                image(foe9, foe9CoordX - 10, foe9CoordY - 60, foe9SizeX * 1.1, foe9SizeY * 1.1);
+
+                image(musicNote2, foe9CoordX + 5, foe9CoordY - 60, 100, 100);
+
+                noFill();
+                strokeWeight(7);
+                stroke(#FFC246);
+                ellipse(cursorX, cursorY, 280, 280);
+                ellipse(cursorX, cursorY , 200, 200);
+                ellipse(cursorX, cursorY , 120, 120);
+                ellipse(cursorX, cursorY , 60, 60);
+                
+                image(trombone, cursorX - 30, cursorY - 15, 100, 40);
+      
+                foe9HP -= 15;
+                text("  " + 15, foe9CoordX + foe9SizeX/5 - 10, foe9CoordY - 60);
+                
+                fill(#FFFFFF);
+
+                foe9attacked = true;
+                monsterTrombone = true;
+
+                if (foe9Flash == true && foe9attacked == true) {
+                  foe9Attack = false;
+                  foe9Alive = true;
+                  foe9Interupt = true; 
+                  foe9Flash = false;
+                  foe9interval = int(millis()/1000) + 5;
+                  
+                  foe9whiteint = int(millis()/1000) + 3; 
+                  foe9flashint = int(millis()/1000) + 3;
+                  foe9redint = int(millis()/1000) + 3; 
+                  foe9flash2int = int(millis()/1000) + 3;              
+                  player4 = minim4.loadFile("tromboneFlinching.mp3", 500);
+                  player4.play();
+                  player4.shiftGain(15, 15,1000);             
+                }
+                else if (foe9Flash == false) {
+                  player6 = minim6.loadFile("secondTrumpet.mp3", 500);
+                  player6.play();
+                  player6.shiftGain(-13, -13,1000);                  
+                }
+                if (foe9Interupt == true) {
+                  foe9Interupt = false;
+                  foe9attacked = false;       
+                }                
+              }
+              if (mouseX <= foe10SizeX + foe10CoordX + 140 && mouseX >= foe10CoordX - 140
+              && (mouseY <= foe10SizeY + foe10CoordY + 140 && mouseY >= foe10CoordY - 140) && foe10HP > 0) { 
+                
+                image(foe10, foe10CoordX - 10, foe10CoordY - 60, foe10SizeX * 1.1, foe10SizeY * 1.1);
+          
+                image(musicNote2, foe10CoordX + 5, foe10CoordY - 60, 100, 100);
+
+                noFill();
+                strokeWeight(7);
+                stroke(#FFC246);
+                ellipse(cursorX, cursorY, 280, 280);
+                ellipse(cursorX, cursorY , 200, 200);
+                ellipse(cursorX, cursorY , 120, 120);
+                ellipse(cursorX, cursorY , 60, 60);
+                image(trombone, cursorX - 30, cursorY - 15, 100, 40);
+      
+                foe10HP -= 15;
+                text("  " + 15, foe10CoordX + foe10SizeX/5 - 10, foe10CoordY - 60);
+                
+                fill(#FFFFFF);
+
+                foe10attacked = true;
+                monsterTrombone = true;
+
+                if (foe10Flash == true && foe10attacked == true) {
+                  foe10Attack = false;
+                  foe10Alive = true;
+                  foe10Interupt = true; 
+                  foe10Flash = false;
+                  foe10interval = int(millis()/1000) + 5;
+                  
+                  foe10whiteint = int(millis()/1000) + 3; 
+                  foe10flashint = int(millis()/1000) + 3;
+                  foe10redint = int(millis()/1000) + 3; 
+                  foe10flash2int = int(millis()/1000) + 3;              
+                  player4 = minim4.loadFile("tromboneFlinching.mp3", 500);
+                  player4.play();
+                  player4.shiftGain(15, 15,1000);             
+                } 
+                else if (foe10Flash == false) {
+                  player6 = minim6.loadFile("secondTrumpet.mp3", 500);
+                  player6.play();
+                  player6.shiftGain(-13, -13,1000);                  
+                }
+                if (foe10Interupt == true) {
+                  foe10Interupt = false;
+                  foe10attacked = false;       
+                }                
+              }
+              if (mouseX <= foe11SizeX + foe11CoordX + 140 && mouseX >= foe11CoordX - 140
+              && (mouseY <= foe11SizeY + foe11CoordY + 140 && mouseY >= foe11CoordY - 140) && foe11HP > 0) { 
+
+                image(foe11, foe11CoordX - 10, foe11CoordY - 60, foe11SizeX * 1.1, foe11SizeY * 1.1);
+          
+                image(musicNote2, foe11CoordX + 5, foe11CoordY - 60, 100, 100);
+
+                noFill();
+                strokeWeight(7);
+                stroke(#FFC246);
+                ellipse(cursorX, cursorY, 280, 280);
+                ellipse(cursorX, cursorY , 200, 200);
+                ellipse(cursorX, cursorY , 120, 120);
+                ellipse(cursorX, cursorY , 60, 60);
+                
+                image(trombone, cursorX - 30, cursorY - 15, 100, 40);
+      
+                foe11HP -= 15;
+                text("  " + 15, foe11CoordX + foe11SizeX/5 - 10, foe11CoordY - 60);
+                
+                fill(#FFFFFF);
+              
+                foe11attacked = true;
+                monsterTrombone = true;
+ 
+                if (foe11Flash == true && foe11attacked == true) {
+                  foe11Attack = false;
+                  foe11Alive = true;
+                  foe11Interupt = true; 
+                  foe11Flash = false;
+                  foe11interval = int(millis()/1000) + 5;
+                  
+                  foe11whiteint = int(millis()/1000) + 3; 
+                  foe11flashint = int(millis()/1000) + 3;
+                  foe11redint = int(millis()/1000) + 3; 
+                  foe11flash2int = int(millis()/1000) + 3;              
+                  player4 = minim4.loadFile("tromboneFlinching.mp3", 500);
+                  player4.play();
+                  player4.shiftGain(15, 15,1000);             
+                }
+                else if (foe11Flash == false) {
+                  player6 = minim6.loadFile("secondTrumpet.mp3", 500);
+                  player6.play();
+                  player6.shiftGain(-13, -13,1000);                  
+                }
+                if (foe11Interupt == true) {
+                  foe11Interupt = false;
+                  foe11attacked = false;       
+                }                
+              }
+              if (mouseX <= foe7SizeX + foe7CoordX + 140 && mouseX >= foe7CoordX - 140
+              && (mouseY <= foe7SizeY + foe7CoordY + 140 && mouseY >= foe7CoordY - 140) && foe7HP > 0) { 
+
+                image(foe7, foe7CoordX - 10, foe7CoordY - 60, foe7SizeX * 1.1, foe7SizeY * 1.1);
+          
+                image(musicNote2, foe7CoordX + 5, foe7CoordY - 60, 100, 100);
+
+                noFill();
+                strokeWeight(7);
+                stroke(#FFC246);
+                ellipse(cursorX, cursorY, 280, 280);
+                ellipse(cursorX, cursorY , 200, 200);
+                ellipse(cursorX, cursorY , 120, 120);
+                ellipse(cursorX, cursorY , 60, 60);
+                
+                image(trombone, cursorX - 30, cursorY - 15, 100, 40);
+      
+                foe7HP -= 15;
+                text("  " + 15, foe7CoordX + foe7SizeX/5 - 10, foe7CoordY - 60);
+                
+                fill(#FFFFFF);
+              
+                foe7attacked = true;
+                monsterTrombone = true;
+
+                if (foe7Flash == true && foe7attacked == true) {
+                  foe7Attack = false;
+                  foe7Alive = true;
+                  foe7Interupt = true; 
+                  foe7Flash = false;
+                  foe7interval = int(millis()/1000) + 5;
+                  
+                  foe7whiteint = int(millis()/1000) + 3; 
+                  foe7flashint = int(millis()/1000) + 3;
+                  foe7redint = int(millis()/1000) + 3; 
+                  foe7flash2int = int(millis()/1000) + 3;              
+                  player4 = minim4.loadFile("tromboneFlinching.mp3", 500);
+                  player4.play();
+                  player4.shiftGain(15, 15,1000);             
+                }
+                else if (foe7Flash == false) {
+                  player6 = minim6.loadFile("secondTrumpet.mp3", 500);
+                  player6.play();
+                  player6.shiftGain(-13, -13,1000);                  
+                }
+                if (foe7Interupt == true) {
+                  foe7Interupt = false;
+                  foe7attacked = false;       
+                }                
+              }  
+              if (mouseX <= foe8SizeX + foe8CoordX + 140 && mouseX >= foe8CoordX - 140
+              && (mouseY <= foe8SizeY + foe8CoordY + 140 && mouseY >= foe8CoordY - 140) && foe8HP > 0) { 
+
+                image(foe8, foe8CoordX - 10, foe8CoordY - 60, foe8SizeX * 1.1, foe8SizeY * 1.1);
+          
+                image(musicNote2, foe8CoordX + 5, foe8CoordY - 60, 100, 100);
+
+                noFill();
+                strokeWeight(7);
+                stroke(#FFC246);
+                ellipse(cursorX, cursorY, 280, 280);
+                ellipse(cursorX, cursorY , 200, 200);
+                ellipse(cursorX, cursorY , 120, 120);
+                ellipse(cursorX, cursorY , 60, 60);
+                
+                image(trombone, cursorX - 30, cursorY - 15, 100, 40);
+      
+                foe8HP -= 15;
+                text("  " + 15, foe8CoordX + foe8SizeX/5 - 10, foe8CoordY - 60);
+                
+                fill(#FFFFFF);
+              
+                foe8attacked = true;
+                monsterTrombone = true;
+  
+                if (foe8Flash == true && foe8attacked == true) {
+                  foe8Attack = false;
+                  foe8Alive = true;
+                  foe8Interupt = true; 
+                  foe8Flash = false;
+                  foe8interval = int(millis()/1000) + 5;
+                  
+                  foe8whiteint = int(millis()/1000) + 3; 
+                  foe8flashint = int(millis()/1000) + 3;
+                  foe8redint = int(millis()/1000) + 3; 
+                  foe8flash2int = int(millis()/1000) + 3;              
+                  player4 = minim4.loadFile("tromboneFlinching.mp3", 500);
+                  player4.play();
+                  player4.shiftGain(15, 15,1000);             
+                }
+                else if (foe8Flash == false) {
+                  player6 = minim6.loadFile("secondTrumpet.mp3", 500);
+                  player6.play();
+                  player6.shiftGain(-13, -13,1000);                  
+                }
+                if (foe8Interupt == true) {
+                  foe8Interupt = false;
+                  foe8attacked = false;       
+                }                
+              }              
+            }            
+          }
           
         }
       }
