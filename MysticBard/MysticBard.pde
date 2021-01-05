@@ -4789,12 +4789,13 @@ void mousePressed () {
                   foe11attacked = false;       
                 }                
               }
-              if (mouseX <= foe7SizeX + foe7CoordX + 140 && mouseX >= foe7CoordX - 140
-              && (mouseY <= foe7SizeY + foe7CoordY + 140 && mouseY >= foe7CoordY - 140) && foe7HP > 0) { 
+              //prozd
+              if (mouseX <= rGiantSizeX + rGiantCoordX + 140 && mouseX >= rGiantCoordX - 140
+              && (mouseY <= rGiantSizeY + rGiantCoordY + 140 && mouseY >= rGiantCoordY - 140) && rGiantHP > 0) { 
 
-                image(foe7, foe7CoordX - 10, foe7CoordY - 60, foe7SizeX * 1.1, foe7SizeY * 1.1);
+                image(rGiant, rGiantCoordX - 10, rGiantCoordY - 60, rGiantSizeX * 1.1, rGiantSizeY * 1.1);
           
-                image(musicNote2, foe7CoordX + 5, foe7CoordY - 60, 100, 100);
+                image(musicNote2, rGiantCoordX + 5, rGiantCoordY - 60, 100, 100);
 
                 noFill();
                 strokeWeight(7);
@@ -4805,90 +4806,49 @@ void mousePressed () {
                 ellipse(cursorX, cursorY , 60, 60);
                 
                 image(trombone, cursorX - 30, cursorY - 15, 100, 40);
-      
-                foe7HP -= 15;
-                text("  " + 15, foe7CoordX + foe7SizeX/5 - 10, foe7CoordY - 60);
+                if (giantArmor == true) {
+                  rGiantArmor -= 20;
+                  armorBar -= 47;
+                  currentArmorBarX += 47;
+                  text("  " + "20", rGiantCoordX + 85, rGiantCoordY - rGiantCoordY/11);
+                }
+                else if (giantArmor == false) {                
+                  rGiantHP -= 15;    
+                  text("  " + "15", rGiantCoordX + 85, rGiantCoordY - rGiantCoordY/11);
+                }                       
                 
                 fill(#FFFFFF);
               
-                foe7attacked = true;
+                rGiantattacked = true;
                 monsterTrombone = true;
 
-                if (foe7Flash == true && foe7attacked == true) {
-                  foe7Attack = false;
-                  foe7Alive = true;
-                  foe7Interupt = true; 
-                  foe7Flash = false;
-                  foe7interval = int(millis()/1000) + 5;
+                if (rGiantFlash == true && rGiantattacked == true) {
+                  rGiantAttack = false;
+                  rGiantAlive = true;
+                  rGiantInterupt = true; 
+                  rGiantFlash = false;
+                  rGiantinterval = int(millis()/1000) + 5;
                   
-                  foe7whiteint = int(millis()/1000) + 3; 
-                  foe7flashint = int(millis()/1000) + 3;
-                  foe7redint = int(millis()/1000) + 3; 
-                  foe7flash2int = int(millis()/1000) + 3;              
+                  rGiantwhiteint = int(millis()/1000) + 3; 
+                  rGiantflashint = int(millis()/1000) + 3;
+                  rGiantredint = int(millis()/1000) + 3; 
+                  rGiantflash2int = int(millis()/1000) + 3;              
                   player4 = minim4.loadFile("tromboneFlinching.mp3", 500);
                   player4.play();
                   player4.shiftGain(15, 15,1000);             
                 }
-                else if (foe7Flash == false) {
+                else if (rGiantFlash == false) {
                   player6 = minim6.loadFile("secondTrumpet.mp3", 500);
                   player6.play();
                   player6.shiftGain(-13, -13,1000);                  
                 }
-                if (foe7Interupt == true) {
-                  foe7Interupt = false;
-                  foe7attacked = false;       
-                }                
-              }  
-              if (mouseX <= foe8SizeX + foe8CoordX + 140 && mouseX >= foe8CoordX - 140
-              && (mouseY <= foe8SizeY + foe8CoordY + 140 && mouseY >= foe8CoordY - 140) && foe8HP > 0) { 
-
-                image(foe8, foe8CoordX - 10, foe8CoordY - 60, foe8SizeX * 1.1, foe8SizeY * 1.1);
-          
-                image(musicNote2, foe8CoordX + 5, foe8CoordY - 60, 100, 100);
-
-                noFill();
-                strokeWeight(7);
-                stroke(#FFC246);
-                ellipse(cursorX, cursorY, 280, 280);
-                ellipse(cursorX, cursorY , 200, 200);
-                ellipse(cursorX, cursorY , 120, 120);
-                ellipse(cursorX, cursorY , 60, 60);
-                
-                image(trombone, cursorX - 30, cursorY - 15, 100, 40);
-      
-                foe8HP -= 15;
-                text("  " + 15, foe8CoordX + foe8SizeX/5 - 10, foe8CoordY - 60);
-                
-                fill(#FFFFFF);
-              
-                foe8attacked = true;
-                monsterTrombone = true;
-  
-                if (foe8Flash == true && foe8attacked == true) {
-                  foe8Attack = false;
-                  foe8Alive = true;
-                  foe8Interupt = true; 
-                  foe8Flash = false;
-                  foe8interval = int(millis()/1000) + 5;
-                  
-                  foe8whiteint = int(millis()/1000) + 3; 
-                  foe8flashint = int(millis()/1000) + 3;
-                  foe8redint = int(millis()/1000) + 3; 
-                  foe8flash2int = int(millis()/1000) + 3;              
-                  player4 = minim4.loadFile("tromboneFlinching.mp3", 500);
-                  player4.play();
-                  player4.shiftGain(15, 15,1000);             
+                if (rGiantInterupt == true) {
+                  rGiantInterupt = false;
+                  rGiantattacked = false;       
+                }   
+                if (rGiantArmor <= 0) {
+                  giantArmor = false;
                 }
-                else if (foe8Flash == false) {
-                  player6 = minim6.loadFile("secondTrumpet.mp3", 500);
-                  player6.play();
-                  player6.shiftGain(-13, -13,1000);                  
-                }
-                if (foe8Interupt == true) {
-                  foe8Interupt = false;
-                  foe8attacked = false;       
-                }                
-              }              
             }            
           }
           
