@@ -4638,6 +4638,173 @@ void mousePressed () {
           } //stage2 end
           if (stage3 == true) {
             if (firstBlast == true) {
+              if ((mouseX <= width && mouseX >= 0) && (mouseY <= height && mouseY >= 0)) {
+                textSize(32);
+                image(background, 0, -15, width, height);
+                fill(#FFFFFF);
+                if (foe9HP > 0) {
+                  image(foe9, foe9CoordX - 10, foe9CoordY - 60, foe9SizeX * 1.1, foe9SizeY * 1.1);
+                  image(musicNote2, foe9CoordX + 5, foe9CoordY - 60, 100, 100);
+                  text("  " + 20, foe9CoordX + foe9SizeX/5 - 10, foe9CoordY - 60);
+                  foe9HP -= 20;
+                }
+                if (foe10HP > 0) {
+                  image(foe10, foe10CoordX - 10, foe10CoordY - 60, foe10SizeX * 1.1, foe10SizeY * 1.1);
+                  image(musicNote2, foe10CoordX + 5, foe10CoordY - 60, 100, 100);
+                  text("  " + 20, foe10CoordX + foe10SizeX/5 - 10, foe10CoordY - 60);
+                  foe10HP -= 20;
+                }
+                if (foe11HP > 0) {
+                  image(foe11, foe11CoordX - 10, foe11CoordY - 60, foe11SizeX * 1.1, foe11SizeY * 1.1);
+                  image(musicNote2, foe11CoordX + 5, foe11CoordY - 60, 100, 100);
+                  text("  " + 20, foe11CoordX + foe11SizeX/5 - 10, foe11CoordY - 60);
+                  foe11HP -= 20;
+                }
+                if (rGiantHP > 0) {
+                  image(rGiant, rGiantCoordX - 10, rGiantCoordY - 60, rGiantSizeX * 1.1, rGiantSizeY * 1.1);
+                  image(musicNote2, rGiantCoordX + 5, rGiantCoordY - 60, 100, 100);
+                  text("  " + 20, rGiantCoordX + rGiantSizeX/5 - 10, rGiantCoordY - 60);
+                }  
+                
+                noFill();
+                strokeWeight(7);
+                stroke(#FFC246);
+                ellipse(cursorX, cursorY, width/2 + 250, width/2 + 240);
+                ellipse(cursorX, cursorY, width/2 + 120, width/2 + 110);
+                ellipse(cursorX, cursorY, width/2 - 10, width/2);
+                ellipse(cursorX, cursorY, width/2 - 140, width/2 - 150);
+                image(trombone, cursorX - 30, cursorY - 15, 100, 40);
+
+                //fill(#E505FF);
+                image(violinUI, 251, height - 156, 240, 156);
+                image(tromboneD, 7, height - 157, 250, 156);
+                image(shieldD, width - 253, height - 157, 244, 156);
+                if (potionDrained == false) {
+                  image(potion, 492, height - 157, 214, 156); 
+                }
+                else if (potionDrained == true) {
+                  image(potionD, 492, height - 157, 214, 156);
+                }                
+              
+                setGradient(currentHPX, 50, HPbar, 40, c2, c1, 3);
+                noFill();
+                stroke(#9B9B9B);
+                rect(originalHPX - 3, 50 - 2.5, originalHPbar + 5, 40 + 6);                
+          
+                setGradient(currentShieldBarX, height-105, shieldBar, 15, c3, c4, 2);
+                setGradient(currentViolinBarX, height-105, violinBar, 15, c3, c4, 2); //Violin
+                setGradient(currentTromboneBarX, height-105, tromboneBar, 15, c3, c4, 2);
+                setGradient(currentPotionBarX, height-105, potionBar, 15, c3, c4, 2);
+
+                strokeWeight(3);
+                stroke(#FFCE46);
+          
+                rect(13, height - 148, 235, 135, 8);
+                foe9attacked = true;
+                foe10attacked = true;
+                foe11attacked = true;
+                rGiantattacked = true;
+                
+                monsterTrombone = true;
+                player5 = minim5.loadFile("firstTrumpet.mp3", 500);
+                player5.play();
+                player5.shiftGain(-13, -13,1000); 
+                //Need to add code to all foes
+                if (foe9Flash == true && foe9attacked == true) {
+                  foe9Attack = false;
+                  foe9Alive = true;
+                  foe9Interupt = true; 
+                  foe9Flash = false;
+                  foe9interval = int(millis()/1000) + 5;
+                  
+                  foe9whiteint = int(millis()/1000) + 3; 
+                  foe9flashint = int(millis()/1000) + 3;
+                  foe9redint = int(millis()/1000) + 3; 
+                  foe9flash2int = int(millis()/1000) + 3;              
+             
+                }           
+                if (foe10Flash == true && foe10attacked == true) {
+                  foe10Attack = false;
+                  foe10Alive = true;
+                  foe10Interupt = true; 
+                  foe10Flash = false;
+                  foe10interval = int(millis()/1000) + 5;
+                  
+                  foe10whiteint = int(millis()/1000) + 3; 
+                  foe10flashint = int(millis()/1000) + 3;
+                  foe10redint = int(millis()/1000) + 3; 
+                  foe10flash2int = int(millis()/1000) + 3;              
+             
+                }         
+                if (foe11Flash == true && foe11attacked == true) {
+                  foe11Attack = false;
+                  foe11Alive = true;
+                  foe11Interupt = true; 
+                  foe11Flash = false;
+                  foe11interval = int(millis()/1000) + 5;
+                  
+                  foe11whiteint = int(millis()/1000) + 3; 
+                  foe11flashint = int(millis()/1000) + 3;
+                  foe11redint = int(millis()/1000) + 3; 
+                  foe11flash2int = int(millis()/1000) + 3;              
+             
+                }            
+                if (rGiantFlash == true && rGiantattacked == true) {
+                  rGiantAttack = false;
+                  rGiantAlive = true;
+                  rGiantInterupt = true; 
+                  rGiantFlash = false;
+                  rGiantinterval = int(millis()/1000) + 5;
+                  
+                  rGiantwhiteint = int(millis()/1000) + 3; 
+                  rGiantflashint = int(millis()/1000) + 3;
+                  rGiantredint = int(millis()/1000) + 3; 
+                  rGiantflash2int = int(millis()/1000) + 3;              
+             
+                }
+                if (foe9Interupt == true || foe10Interupt == true || foe11Interupt == true || rGiantInterupt == true) {
+                  player4 = minim4.loadFile("tromboneFlinching.mp3", 500);
+                  player4.play();
+                  player4.shiftGain(15, 15,1000);                  
+                }
+                else if (foe9Interupt == false && foe10Interupt == false && foe11Interupt == false && rGiantInterupt == false) {
+                  player5 = minim5.loadFile("firstTrumpet.mp3", 500);
+                  player5.play();
+                  player5.shiftGain(-13, -13,1000);                  
+                }
+                if (foe9Interupt == true) {
+                  foe9Interupt = false;
+                  foe9attacked = false;       
+                }
+                if (foe10Interupt == true) {
+                  foe10Interupt = false;
+                  foe10attacked = false;       
+                }
+                if (foe11Interupt == true) {
+                  foe11Interupt = false;
+                  foe11attacked = false;       
+                }               
+                if (rGiantInterupt == true) {
+                  rGiantInterupt = false;
+                  rGiantattacked = false;       
+                }
+                
+                if (giantArmor == true) {
+                  rGiantArmor -= 25;
+                  armorBar -= 59;
+                  currentArmorBarX += 59;
+                  text("  " + "25", rGiantCoordX + 85, rGiantCoordY - rGiantCoordY/11);
+                }
+                else if (giantArmor == false) {                
+                  rGiantHP -= 25;    
+                  text("  " + "25", rGiantCoordX + 85, rGiantCoordY - rGiantCoordY/11);
+                }
+                if (rGiantArmor <= 0) {
+                  giantArmor = false;
+                }                
+                
+                firstBlast = false;                
+              }              
             }
             else if (firstBlast == false) {
               if (mouseX <= foe9SizeX + foe9CoordX + 140 && mouseX >= foe9CoordX - 140
@@ -4813,8 +4980,8 @@ void mousePressed () {
                   text("  " + "20", rGiantCoordX + 85, rGiantCoordY - rGiantCoordY/11);
                 }
                 else if (giantArmor == false) {                
-                  rGiantHP -= 15;    
-                  text("  " + "15", rGiantCoordX + 85, rGiantCoordY - rGiantCoordY/11);
+                  rGiantHP -= 20;    
+                  text("  " + "20", rGiantCoordX + 85, rGiantCoordY - rGiantCoordY/11);
                 }                       
                 
                 fill(#FFFFFF);
