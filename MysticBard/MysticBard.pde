@@ -5505,10 +5505,7 @@ void mousePressed () {
                 foe8Interupt = false;
                 foe8attacked = false;     
               }              
-            }//stage2 end            
-                //player16 = minim16.loadFile("muffled violin.mp3", 400);
-                //player16.play();
-                //player16.shiftGain(-7, -7,1000);            
+            }//stage2 end                        
           }
           if (stage3 == true) {
             if (mouseX <= rGiantSizeX + rGiantCoordX && mouseX >= rGiantCoordX
@@ -5529,6 +5526,9 @@ void mousePressed () {
                 armorBar -= 5;
                 currentArmorBarX += 5;
                 text("  " + "2", rGiantCoordX + 95, rGiantCoordY - rGiantCoordY/11);
+                player16 = minim16.loadFile("muffled violin.mp3", 400);
+                player16.play();
+                player16.shiftGain(-7, -7,1000);                
               }
               else if (giantArmor == false) {
                 image(rGiant, rGiantCoordX - 15, rGiantCoordY - 30, rGiantSizeX * 1.2, rGiantSizeY * 1.2);
@@ -6137,4 +6137,5 @@ void setGradient(int x, int y, float w, float h, color c1, color c2, int axis ) 
       line(x, i, x+w, i);
     }
   }
+  
 }
