@@ -59,6 +59,10 @@ Minim minim19;
 AudioPlayer player20;
 Minim minim20;
 
+//Armor Break
+AudioPlayer player21;
+Minim minim21;
+
 static final int FADE = 2200;
 
 PImage background;
@@ -221,6 +225,7 @@ int foe8HP = 150;
 
 int rGiantArmor = 100;
 boolean giantArmor = true;
+boolean armorBreak = false;
 int currentArmorBarX;
 int armorBarY;
 float armorBar;
@@ -732,6 +737,7 @@ void setup() {
   minim18 = new Minim(this);
   minim19 = new Minim(this);
   minim20 = new Minim(this);
+  minim21 = new Minim(this);
   
   foetutorialSizeX = 125 * 1.1;
   foetutorialSizeY = 200 * 1.1;
@@ -4801,7 +4807,13 @@ void mousePressed () {
                 }
                 if (rGiantArmor <= 0) {
                   giantArmor = false;
-                }                
+                }   
+                if (giantArmor == false && armorBreak == false) {
+                  player21 = minim5.loadFile("armorbreak.wav", 500);
+                  player21.play();
+                  player21.shiftGain(-13, -13,1000);     
+                  armorBreak = true;
+                }
                 
                 firstBlast = false;                
               }              
@@ -5016,6 +5028,13 @@ void mousePressed () {
                 if (rGiantArmor <= 0) {
                   giantArmor = false;
                 }
+                
+                if (giantArmor == false && armorBreak == false) {
+                  player21 = minim5.loadFile("armorbreak.wav", 500);
+                  player21.play();
+                  player21.shiftGain(-13, -13,1000);     
+                  armorBreak = true;
+                }                
             }            
           }
           
@@ -5563,6 +5582,13 @@ void mousePressed () {
               if (rGiantArmor <= 0) {
                 giantArmor = false;
               }
+              
+              if (giantArmor == false && armorBreak == false) {
+                player21 = minim5.loadFile("armorbreak.wav", 500);
+                player21.play();
+                player21.shiftGain(-13, -13,1000);     
+                armorBreak = true;
+              }              
       
               fill(#FFFFFF);
               monsterViolin = true;                           
