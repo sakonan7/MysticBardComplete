@@ -63,6 +63,10 @@ Minim minim20;
 AudioPlayer player21;
 Minim minim21;
 
+//Blocked Giant Attack
+AudioPlayer player22;
+Minim minim22;
+
 static final int FADE = 2200;
 
 PImage background;
@@ -738,6 +742,7 @@ void setup() {
   minim19 = new Minim(this);
   minim20 = new Minim(this);
   minim21 = new Minim(this);
+  minim22 = new Minim(this);
   
   foetutorialSizeX = 125 * 1.1;
   foetutorialSizeY = 200 * 1.1;
@@ -2727,9 +2732,9 @@ void draw() {
                   rGiantflashint = int(millis()/1000) + 3;
                   rGiantredint = int(millis()/1000) + 3; 
                   rGiantflash2int = int(millis()/1000) + 3;
-                  player15 = minim15.loadFile("blocked axepunch.mp3", 500);
-                  player15.play();
-                  player15.shiftGain(-5, -5,1000);                  
+                  player21 = minim21.loadFile("muffled giantStrike.mp3", 500);
+                  player21.play();
+                  player21.shiftGain(-5, -5,1000);                  
                 }
                 else if (shield == false) {
                   player17 = minim17.loadFile("giantStrike.mp3", 500);
@@ -4809,7 +4814,7 @@ void mousePressed () {
                   giantArmor = false;
                 }   
                 if (giantArmor == false && armorBreak == false) {
-                  player21 = minim5.loadFile("armorbreak.wav", 500);
+                  player21 = minim21.loadFile("armorbreak.wav", 500);
                   player21.play();
                   player21.shiftGain(-13, -13,1000);     
                   armorBreak = true;
@@ -5030,7 +5035,7 @@ void mousePressed () {
                 }
                 
                 if (giantArmor == false && armorBreak == false) {
-                  player21 = minim5.loadFile("armorbreak.wav", 500);
+                  player21 = minim21.loadFile("armorbreak.wav", 500);
                   player21.play();
                   player21.shiftGain(-13, -13,1000);     
                   armorBreak = true;
@@ -5584,7 +5589,7 @@ void mousePressed () {
               }
               
               if (giantArmor == false && armorBreak == false) {
-                player21 = minim5.loadFile("armorbreak.wav", 500);
+                player21 = minim21.loadFile("armorbreak.wav", 500);
                 player21.play();
                 player21.shiftGain(-13, -13,1000);     
                 armorBreak = true;
