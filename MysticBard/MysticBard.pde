@@ -5736,7 +5736,6 @@ void mousePressed () {
                 foe11attacked = false;     
               }              
             }            
-            
           }
           
         }
@@ -5784,6 +5783,9 @@ void mousePressed () {
       }  
       if (foe11HP <= 0) {
         foe11Alive = false;
+      }   
+      if (rGiantHP <= 0) {
+        rGiantAlive = false;
       }      
       
       if (foeTHP <= 0 && foeT2HP <= 0 && foeT3HP <= 0 && tutorialStage == true && playerAlive == true) {
