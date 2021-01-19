@@ -1050,10 +1050,6 @@ void draw() {
         }        
     }
     if (stage3Dead == true) {
-      rGiantdisapp = true;
-      foe6disapp = true;
-      foe7disapp = true;
-      foe8disapp = true;
       if (giantArmor == true) {
         setGradient(currentArmorBarX, armorBarY - 30, armorBar, 17, c5, c6, 2);
         noFill();
@@ -5740,6 +5736,7 @@ void mousePressed () {
           
         }
       }
+
       if(foe1HP <= 0) {
         foe1Alive = false;
       }
