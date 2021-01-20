@@ -1883,6 +1883,7 @@ void draw() {
         }          
       }      
     }
+    //here
     if (foeTAttack == true) {  
       foeTAlive = false;  
       foeTwhitet = foeTwhiteint-int(millis()/1000); 
@@ -5036,11 +5037,12 @@ void mousePressed () {
                   player21.shiftGain(-13, -13,1000);     
                   armorBreak = true;
                 }                
-            }            
-          }
-          
+              }            
+            }          
+          } //stage3 done
         }
       }
+      //back
       if (weapon == "Violin") {
         if (violinBar > 0 && violinDrained == false) {
           violinBar -= originalWeaponBar/10;
@@ -6146,7 +6148,7 @@ void mousePressed () {
     }
   }
   redraw();
-}
+} //else if message is over but last bracket for method not here
 void setGradient(int x, int y, float w, float h, color c1, color c2, int axis ) {
 
   noFill();
