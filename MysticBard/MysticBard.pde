@@ -5559,15 +5559,7 @@ void mousePressed () {
             && (mouseY <= rGiantSizeY + rGiantCoordY && mouseY >= rGiantCoordY) && rGiantHP > 0) {
               //Foe only spasms when armor is broken
               image(musicNote1, rGiantCoordX + 80, rGiantCoordY - rGiantCoordY/10, 100, 100);
-      
-              noFill();
-              strokeWeight(5);
-              stroke(damageWave);
-              ellipse(cursorX, cursorY, 140, 140);
-              ellipse(cursorX, cursorY , 100, 100);
-              ellipse(cursorX, cursorY , 50, 50);
-              
-              image(violin, cursorX + 10, cursorY - 25, 46.5, 50);              
+                    
               if (giantArmor == true) {
                 rGiantArmor -= 2;
                 armorBar -= 5;
@@ -5607,6 +5599,14 @@ void mousePressed () {
                   rGiantattacked = false;     
                 }                
               }
+              noFill();
+              strokeWeight(5);
+              stroke(damageWave);
+              ellipse(cursorX, cursorY, 140, 140);
+              ellipse(cursorX, cursorY , 100, 100);
+              ellipse(cursorX, cursorY , 50, 50);
+              
+              image(violin, cursorX + 10, cursorY - 25, 46.5, 50);              
               if (rGiantArmor <= 0) {
                 giantArmor = false;
               }
