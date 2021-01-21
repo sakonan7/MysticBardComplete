@@ -4696,7 +4696,15 @@ void mousePressed () {
                 if (rGiantHP > 0) {
                   image(rGiant, rGiantCoordX - 10, rGiantCoordY - 60, rGiantSizeX * 1.1, rGiantSizeY * 1.1);
                   image(musicNote2, rGiantCoordX + 5, rGiantCoordY - 60, 100, 100);
-                  text("  " + 20, rGiantCoordX + rGiantSizeX/5 - 10, rGiantCoordY - 60);
+                  text("  " + "25", rGiantCoordX + 85, rGiantCoordY - rGiantCoordY/11);
+                  if (giantArmor == true) {
+                    rGiantArmor -= 25;
+                    armorBar -= 59;
+                    currentArmorBarX += 59;
+                  }
+                  else if (giantArmor == false) {                
+                    rGiantHP -= 25;    
+                  }                  
                 }  
                 
                 noFill();
@@ -4822,16 +4830,6 @@ void mousePressed () {
                   rGiantattacked = false;       
                 }
                 
-                if (giantArmor == true) {
-                  rGiantArmor -= 25;
-                  armorBar -= 59;
-                  currentArmorBarX += 59;
-                  text("  " + "25", rGiantCoordX + 85, rGiantCoordY - rGiantCoordY/11);
-                }
-                else if (giantArmor == false) {                
-                  rGiantHP -= 25;    
-                  text("  " + "25", rGiantCoordX + 85, rGiantCoordY - rGiantCoordY/11);
-                }
                 if (rGiantArmor <= 0) {
                   giantArmor = false;
                 }   
