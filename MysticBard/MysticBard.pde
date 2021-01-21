@@ -2821,15 +2821,9 @@ void draw() {
           }
           if (stage3 == true) {
             rGiantdisapp = true;
-            foe6disapp = true;
-            foe7disapp = true;
-            foe8disapp = true;
-            if (giantArmor == true) {
-              setGradient(currentArmorBarX, armorBarY - 30, armorBar, 17, c5, c6, 2);
-              noFill();
-              stroke(#DBDBDB); 
-              rect(340 - 3, armorBarY - 33, rGiantSizeX + 6, 23);          
-            }
+            foe9disapp = true;
+            foe10disapp = true;
+            foe11disapp = true;
         
             if (rGiantHP > 0) {
               image(rGiant, rGiantCoordX, rGiantCoordY - 30, rGiantSizeX, rGiantSizeY);
@@ -2934,9 +2928,9 @@ void draw() {
           } 
           if (stage3 == true) {
             rGiantdisapp = true;
-            foe6disapp = true;
-            foe7disapp = true;
-            foe8disapp = true;
+            foe9disapp = true;
+            foe10disapp = true;
+            foe11disapp = true;
             if (giantArmor == true) {
               setGradient(currentArmorBarX, armorBarY - 30, armorBar, 17, c5, c6, 2);
               noFill();
