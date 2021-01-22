@@ -1711,6 +1711,8 @@ void draw() {
         foe6disapp = true;
         foe7disapp = true;
         foe8disapp = true;
+        
+        gaugeDisapp = true;
         if (giantArmor == true) {
           setGradient(currentArmorBarX, armorBarY - 30, armorBar, 17, c5, c6, 2);
           noFill();
@@ -1869,7 +1871,8 @@ void draw() {
         rGiantdisapp = false;
         foe9disapp = false;
         foe10disapp = false; 
-        foe11disapp = false; 
+        foe11disapp = false;
+        gaugeDisapp = false;
         if (rGiantHP > 0) {
           rGiantAlive = true;
         }
