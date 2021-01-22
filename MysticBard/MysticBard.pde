@@ -230,6 +230,7 @@ int foe8HP = 150;
 int rGiantArmor = 100;
 boolean giantArmor = true;
 boolean armorBreak = false;
+boolean gaugeDisapp = false;
 int currentArmorBarX;
 int armorBarY;
 float armorBar;
@@ -3357,14 +3358,6 @@ void draw() {
       }      
     }
     else if (stage3 == true) {
-      if (giantArmor == true) {
-        //llok back at HP Bar art
-         //giantArmor is depleted in mousepress
-         setGradient(currentArmorBarX, armorBarY, armorBar, 17, c5, c6, 2);
-         noFill();
-         stroke(#DBDBDB); //#DEDEDE //F5F5F5 in the F level
-         rect(340 - 3, armorBarY - 3, rGiantSizeX + 6, 23);          
-      }
       
       if (foe9Alive == true) {
         if (foe9disapp == false) {
@@ -3455,11 +3448,14 @@ void draw() {
         }        
       }
       if (rGiantAlive == true) {
-          stroke(#00D7FF);
-          rect(rGiantCoordX, rGiantCoordY, rGiantSizeX, rGiantSizeY);
-          stroke(#FFF700);
-          rect(rGiantCoordX - 140, rGiantCoordY - 140, rGiantSizeX + 280, rGiantSizeY + 280);
-          noFill();      
+        if (giantArmor == true && gaugeDisapp == false) {
+          //llok back at HP Bar art
+           //giantArmor is depleted in mousepress
+          setGradient(currentArmorBarX, armorBarY, armorBar, 17, c5, c6, 2);
+          noFill();
+          stroke(#DBDBDB); //#DEDEDE //F5F5F5 in the F level
+          rect(340 - 3, armorBarY - 3, rGiantSizeX + 6, 23);          
+        }          
         if (rGiantdisapp == false) {
           image(rGiant, rGiantCoordX, rGiantCoordY, rGiantSizeX, rGiantSizeY);
         }
@@ -4690,11 +4686,16 @@ void mousePressed () {
                 if (rGiantHP > 0) {
                   image(rGiant, rGiantCoordX - 10, rGiantCoordY - 60, rGiantSizeX * 1.1, rGiantSizeY * 1.1);
                   image(musicNote2, rGiantCoordX + 5, rGiantCoordY - 60, 100, 100);
-                  text("  " + "25", rGiantCoordX + 85, rGiantCoordY - rGiantCoordY/11);
+                  text("  " + "25", rGiantCoordX + 85, rGiantCoordY - rGiantCoordY/11);                  
                   if (giantArmor == true) {
+                    gaugeDisapp = true;
                     rGiantArmor -= 25;
                     armorBar -= 59;
                     currentArmorBarX += 59;
+         setGradient(currentArmorBarX, armorBarY - 60, armorBar, 17, c5, c6, 2);
+         noFill();
+         stroke(#DBDBDB); //#DEDEDE //F5F5F5 in the F level
+         rect(340 - 3, armorBarY - 63, rGiantSizeX + 6, 23);                    
                   }
                   else if (giantArmor == false) {                
                     rGiantHP -= 25;    
@@ -4834,7 +4835,8 @@ void mousePressed () {
                   armorBreak = true;
                 }
                 
-                firstBlast = false;                
+                firstBlast = false;  
+                gaugeDisapp = false;
               }              
             }
             else if (firstBlast == false) {
