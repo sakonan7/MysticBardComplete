@@ -2706,24 +2706,29 @@ void draw() {
       if (rGiantHP > 0) {
         if (rGiantwhitet > 0) {
           image(rGiantWhite, rGiantCoordX, rGiantCoordY, rGiantSizeX, rGiantSizeY);
+          println("fine2");
         }
         else if (rGiantwhitet <= 0) {
           rGiantflasht = rGiantflashint - int(millis()/1000);
+          println("fine3");
           if (rGiantflasht > 0) {
             image(rGiant, rGiantCoordX, rGiantCoordY, rGiantSizeX, rGiantSizeY);
           }
           else if (rGiantflasht <= 0) {
+            println("fine4");
             rGiantredt = rGiantredint-int(millis()/1000);
             if (rGiantredt > 0) {
               image(rGiantRed, rGiantCoordX, rGiantCoordY, rGiantSizeX, rGiantSizeY);
             }
             else if (rGiantredt <= 0) {
+              println("fine5");
               rGiantflash2t = rGiantflash2int - int(millis()/1000);
               if (rGiantflash2t > 0) {
                 image(rGiant, rGiantCoordX, rGiantCoordY, rGiantSizeX, rGiantSizeY);
                 rGiantFlash = true;
               }
               else if (rGiantflash2t <= 0 && rGiantInterupt == false) {
+                println("fine6");
                 if (shield == true) {
                   rGiantAttack = false;
                   attackBlocked = true;
@@ -3499,7 +3504,8 @@ void draw() {
         if (rGiantdisapp == false) {
           image(rGiant, rGiantCoordX, rGiantCoordY, rGiantSizeX, rGiantSizeY);
         }
-        if (rGiantAttack == false && rGiantHP > 0 && noAttack == false) {
+        if (rGiantAttack == false && rGiantHP > 0) {
+          println("fine");
           rGiantt = rGiantinterval-int(millis()/1000);
             
           if(rGiantt <= 0){
@@ -4871,7 +4877,7 @@ void mousePressed () {
                 if (giantArmor == false && armorBreak == false) {
                   player21 = minim21.loadFile("armorbreak.wav", 500);
                   player21.play();
-                  player21.shiftGain(-13, -13,1000);     
+                  player21.shiftGain(0, 0,1000);     
                   armorBreak = true;
                 }
                 
@@ -5881,6 +5887,22 @@ void mousePressed () {
         stage2 = false;
         stage2V = true;
         
+        playerAlive = false; 
+        minim.stop();
+        
+        player3 = minim3.loadFile("Victory.mp3", 800);
+        player3.play();    
+        player3.shiftGain(-20,-20,1000);
+        player3.loop();
+        redraw();
+      }
+      if (foe9HP <= 0 && foe10HP <= 0 && foe11HP <= 0 && rGiantHP <= 0
+      && stage3 == true && playerAlive == true) {
+        victory = true;
+        victoryPage = true;
+        stage3 = false;
+        //stage3V = true;
+        
         lastStageV = true;
         
         playerAlive = false; 
@@ -5954,6 +5976,9 @@ void mousePressed () {
       if (stage1V == true) {
         stage2 = true;
       }
+      if (stage2V == true) {
+        stage3 = true;
+      }      
       warmUp = true;
       
       playerHP = 100;
@@ -6019,6 +6044,11 @@ void mousePressed () {
       foe7HP = 150;
       foe8HP = 150;
       
+      foe9HP = 150;
+      foe10HP = 150;
+      foe11HP = 150;
+      rGiantHP = 250;
+      
       violinBar = 0;
       tromboneBar = 0;
       currentViolinBarX = 465;
@@ -6041,6 +6071,14 @@ void mousePressed () {
       foe6Alive = true;
       foe7Alive = true;
       foe8Alive = true;
+      
+      foe9Alive = true;
+      foe10Alive = true;
+      foe11Alive = true;
+      rGiantAlive = true; 
+      
+      giantArmor = true;
+      rGiantArmor = 100;
       
       playerAlive = true;
       weapon = "Violin";      
