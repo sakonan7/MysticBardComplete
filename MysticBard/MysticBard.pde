@@ -3509,14 +3509,14 @@ void draw() {
           rGiantt = rGiantinterval-int(millis()/1000);
             
           if(rGiantt <= 0){
-            if (rGiantAttack == true) {
+            if (rGiantFirstAttack == true) {
                rGiantwhiteint = int(millis()/1000) + 1;
                rGiantflashint = int(millis()/1000) + 2;
                rGiantredint = int(millis()/1000) + 3;
                rGiantflash2int = int(millis()/1000) + 4;              
                
             }
-            else if (rGiantAttack == false) {
+            else if (rGiantFirstAttack == false) {
               rGiantwhiteint += 3;
               rGiantflashint += 4;
               rGiantredint += 5;
@@ -3526,7 +3526,7 @@ void draw() {
             rGiantdisapp = true;
             rGiantAttack = true;
             rGiantAlive = false;
-            rGiantAttack = false;
+            rGiantFirstAttack = false;
           }
         }        
       }      
@@ -6079,6 +6079,7 @@ void mousePressed () {
       
       giantArmor = true;
       rGiantArmor = 100;
+      armorBreak = false;
       
       playerAlive = true;
       weapon = "Violin";      
@@ -6233,6 +6234,26 @@ void mousePressed () {
         foe6Alive = true;  
         foe7Alive = true;
         foe8Alive = true;
+      }
+      if (stage3Dead == true) {       
+        
+        stage3Dead = false;
+        stage3 = true;
+        first9Attack = true;
+        first10Attack = true;
+        first11Attack = true;
+        rGiantFirstAttack = true;
+        foe9HP = 150;
+        foe10HP = 150;
+        foe11HP = 150; 
+        rGiantHP = 250;
+        rGiantArmor = 150;
+        foe4Alive = true;
+        foe5Alive = true;
+        foe6Alive = true;  
+        foe7Alive = true;
+        giantArmor = true;
+        armorBreak = false;
       }      
       
       minim3.stop();
