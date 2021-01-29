@@ -588,6 +588,9 @@ boolean messageShield = false;
 boolean messageShield2 = false;
 boolean messageAttacked = false;
 boolean messageInterupt = false;
+
+boolean messagePotion = false;
+
 boolean messageLast = false;
 boolean messageOver = false;
 
@@ -1523,7 +1526,35 @@ void draw() {
     text("\n" + "\n" + clickRight, width - 385, height - 165);
     text("\n" + "\n" + clickLeft, 50, height - 165);
     text("\n" + "\n" + clickSkip, width - 625, height - 165);
-  }  
+  }
+  if (messagePotion == true) {
+    fill(#000096);
+    rect(25, 25, width - 50, height - 50);
+    
+    textFont(Font2);
+    fill(#FFFFFF);
+    text("Battle" + "\n", 50, height - height + 90);     
+    textFont(Font3);
+    fill(#FFFFFF);
+    text("Combat" + "\n", 50, height - height + 150);
+    textFont(Font1);
+    fill(#FFF300);
+    fill(#FFFFFF);
+    text("Foes will attack in intervals of 4 seconds, indicated by their flashing", 50, 210);
+    text("You can restore your HP by pressing D to use a Potion", 50, 210);
+
+    image(nonAttack, 140, 350, 188, 246);
+    image(attack, 343, 350, 188, 246);
+    image(HP, 566, 403, 401, 67);
+    image(HPdamage, 566, 478, 401, 67);
+    
+    text("But be careful. You can only heal yourself twice in a battle", 50, 719); 
+    fill(#FFF300);
+    textFont(Font1);
+    text("\n" + "\n" + clickRight, width - 385, height - 165);
+    text("\n" + "\n" + clickLeft, 50, height - 165);
+    text("\n" + "\n" + clickSkip, width - 625, height - 165);
+  }   
   if (messageLast == true) {
     fill(#000096);
     rect(25, 25, width - 50, height - 50);
