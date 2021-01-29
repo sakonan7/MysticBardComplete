@@ -2701,27 +2701,26 @@ void draw() {
       }
     }
     if (rGiantAttack == true) {  
-      rGiantAlive = false;  
+      rGiantAlive = false;
+      
+      
+      
       rGiantwhitet = rGiantwhiteint-int(millis()/1000); 
       if (rGiantHP > 0) {
         if (rGiantwhitet > 0) {
           image(rGiantWhite, rGiantCoordX, rGiantCoordY, rGiantSizeX, rGiantSizeY);
-          println("fine2");
         }
         else if (rGiantwhitet <= 0) {
           rGiantflasht = rGiantflashint - int(millis()/1000);
-          println("fine3");
           if (rGiantflasht > 0) {
             image(rGiant, rGiantCoordX, rGiantCoordY, rGiantSizeX, rGiantSizeY);
           }
           else if (rGiantflasht <= 0) {
-            println("fine4");
             rGiantredt = rGiantredint-int(millis()/1000);
             if (rGiantredt > 0) {
               image(rGiantRed, rGiantCoordX, rGiantCoordY, rGiantSizeX, rGiantSizeY);
             }
             else if (rGiantredt <= 0) {
-              println("fine5");
               rGiantflash2t = rGiantflash2int - int(millis()/1000);
               if (rGiantflash2t > 0) {
                 image(rGiant, rGiantCoordX, rGiantCoordY, rGiantSizeX, rGiantSizeY);
@@ -2740,12 +2739,12 @@ void draw() {
                   rGiantflash2int = int(millis()/1000) + 3;
                   player21 = minim21.loadFile("muffled giantStrike.mp3", 500);
                   player21.play();
-                  player21.shiftGain(-5, -5,1000);                  
+                  player21.shiftGain(0, 0,1000);                  
                 }
                 else if (shield == false) {
                   player17 = minim17.loadFile("giantStrike.mp3", 500);
                   player17.play();
-                  player17.shiftGain(-13, -13,1000);                   
+                  player17.shiftGain(-8, -8,1000);                   
                 
                   playerAttacked = true;
                   foe9Alive = false;
@@ -3505,7 +3504,6 @@ void draw() {
           image(rGiant, rGiantCoordX, rGiantCoordY, rGiantSizeX, rGiantSizeY);
         }
         if (rGiantAttack == false && rGiantHP > 0) {
-          println("fine");
           rGiantt = rGiantinterval-int(millis()/1000);
             
           if(rGiantt <= 0){
@@ -3555,7 +3553,7 @@ void keyPressed () {
     minim.stop();
     player = minim.loadFile("Battle.mp3", 800);
     player.play();
-    player.shiftGain(-20,-20,1000);
+    player.shiftGain(-23,-23,1000);
     player.loop();
     redraw();
   }  
@@ -3729,7 +3727,7 @@ void mousePressed () {
       minim.stop();
       player = minim.loadFile("Battle.mp3", 800);
       player.play();
-      player.shiftGain(player.getGain(),-20,1000);
+      player.shiftGain(-23,-23,1000);
       player.loop();
       redraw();
     }  
@@ -5951,7 +5949,7 @@ void mousePressed () {
       
       player = minim.loadFile("Battle.mp3", 800);
       player.play();
-      player.shiftGain(-20,-20,1000);
+      player.shiftGain(-23,-23,1000);
       player.loop();
       redraw();
     }
