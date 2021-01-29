@@ -2703,7 +2703,14 @@ void draw() {
     if (rGiantAttack == true) {  
       rGiantAlive = false;
       
-      
+        if (giantArmor == true && gaugeDisapp == false) {
+          //llok back at HP Bar art
+           //giantArmor is depleted in mousepress
+          setGradient(currentArmorBarX, armorBarY, armorBar, 17, c5, c6, 2);
+          noFill();
+          stroke(#DBDBDB); //#DEDEDE //F5F5F5 in the F level
+          rect(340 - 3, armorBarY - 3, rGiantSizeX + 6, 23);          
+        }
       
       rGiantwhitet = rGiantwhiteint-int(millis()/1000); 
       if (rGiantHP > 0) {
@@ -2727,7 +2734,7 @@ void draw() {
                 rGiantFlash = true;
               }
               else if (rGiantflash2t <= 0 && rGiantInterupt == false) {
-                println("fine6");
+                gaugeDisapp = true;
                 if (shield == true) {
                   rGiantAttack = false;
                   attackBlocked = true;
@@ -2762,6 +2769,7 @@ void draw() {
                 } 
                 rGiantFlash = false;
                 rGiantAttack = false;
+                gaugeDisapp = false;
               }
             }                  
           }
