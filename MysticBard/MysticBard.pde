@@ -6284,7 +6284,7 @@ void mousePressed () {
         foe10HP = 150;
         foe11HP = 150; 
         rGiantHP = 250;
-        rGiantArmor = 150;
+        rGiantArmor = 100;
         foe4Alive = true;
         foe5Alive = true;
         foe6Alive = true;  
