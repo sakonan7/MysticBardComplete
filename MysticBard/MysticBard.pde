@@ -1537,7 +1537,7 @@ void draw() {
     text("Battle" + "\n", 50, height - height + 90);     
     textFont(Font3);
     fill(#FFFFFF);
-    text("Combat" + "\n", 50, height - height + 150);
+    text("Healing" + "\n", 50, height - height + 150);
     textFont(Font1);
     fill(#FFF300);
     fill(#FFFFFF);
@@ -3619,7 +3619,7 @@ void keyPressed () {
     messageLast = false;
 
     messageOver = true;
-    stage3 = true;
+    tutorialStage = true;
     minim.stop();
     player = minim.loadFile("Battle.mp3", 800);
     player.play();
