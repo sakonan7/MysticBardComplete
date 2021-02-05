@@ -147,6 +147,9 @@ PImage victoryS;
 
 PImage point;
 
+PImage bigDamage;
+PImage restore;
+
 float foe1SizeX;
 float foe1SizeY;
 float foe2SizeX;
@@ -718,6 +721,9 @@ void setup() {
   
   potion = loadImage("potionBox.png");
   potionD = loadImage("potionD.png");
+  
+  bigDamage = loadImage("heavyDamage.png");
+  restore = loadImage("recover.png");
   
   minim = new Minim(this);
   player = minim.loadFile("Title Theme.mp3", 800);
@@ -1541,15 +1547,15 @@ void draw() {
     textFont(Font1);
     fill(#FFF300);
     fill(#FFFFFF);
-    text("Foes will attack in intervals of 4 seconds, indicated by their flashing", 50, 210);
-    text("You can restore your HP by pressing D to use a Potion", 50, 210);
-
+    text("Press D to restore your HP using a Potion", 50, 210);
+       
+    image(bigDamage, 100, 200, 401, 67);
+    image(restore, 100, 300, 401, 67);
     image(nonAttack, 140, 350, 188, 246);
     image(attack, 343, 350, 188, 246);
-    image(HP, 566, 403, 401, 67);
     image(HPdamage, 566, 478, 401, 67);
     
-    text("But be careful. You can only heal yourself twice in a battle", 50, 719); 
+    text("But be careful. You can only heal yourself twice in one battle", 50, 772); 
     fill(#FFF300);
     textFont(Font1);
     text("\n" + "\n" + clickRight, width - 385, height - 165);
@@ -3682,7 +3688,7 @@ void mousePressed () {
   if (messageOver == false) {
     if (mouseButton == RIGHT && titlePage == true) {
       titlePage = false;
-      message1 = true;
+      messagePotion = true;
       minim.stop();
       player = minim.loadFile("Intro and Tutorial.mp3", 700);
       player.play();
