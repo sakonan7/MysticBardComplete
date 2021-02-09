@@ -1564,8 +1564,6 @@ void draw() {
     fill(#FFF300);
     textFont(Font1);
     text("\n" + "\n" + clickRight, width - 385, height - 165);
-    text("\n" + "\n" + clickLeft, 50, height - 165);
-    text("\n" + "\n" + clickSkip, width - 625, height - 165);
   }
   if (messageArmor == true) {
     fill(#000096);
@@ -1583,19 +1581,19 @@ void draw() {
     textFont(Font1);
     fill(#FFF300);
     fill(#FFFFFF); 
-    text("When an foe has a blue bar or there is a blue bar, "
-    + "\n" + "the Violin will do reduced damage", 50, height - height + 210);
+    text("When an foe has a blue bar or there is a blue bar, the Violin"
+    + "\n" + "will do reduced damage", 50, height - height + 210);
+    
+    image(tromboneUse, 650, 233, 244, 156); 
+    image(violinUse, 650, 402, 244, 156);
 
-    image(tromboneFirst, 155, 325, 461, 248);
-    image(tromboneUse, 631, 375, 244, 156);
     text("The foe or foes won't take damage until the gauge is depleted"
-    + "\n" + "The Trombone will not and will do more damage", 50, 652);    
+    + "\n" + "The Trombone will not and will do more damage", 50, 719);    
  
     fill(#FFF300);
     textFont(Font1);
     text("\n" + "\n" + clickRight, width - 385, height - 165);
     text("\n" + "\n" + clickLeft, 50, height - 165);  
-    text("\n" + "\n" + clickSkip, width - 625, height - 165);
   }  
   if (messageLast == true) {
     fill(#000096);
@@ -3693,7 +3691,7 @@ void mousePressed () {
   if (messageOver == false) {
     if (mouseButton == RIGHT && titlePage == true) {
       titlePage = false;
-      messagePotion = true;
+      messageArmor = true;
       minim.stop();
       player = minim.loadFile("Intro and Tutorial.mp3", 700);
       player.play();
