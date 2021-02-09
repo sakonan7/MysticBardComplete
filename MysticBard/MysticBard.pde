@@ -136,6 +136,8 @@ PImage tutorialD;
 
 PImage potion;
 PImage potionD;
+PImage potionT;
+PImage potionUse;
 
 PImage title;
 
@@ -721,6 +723,8 @@ void setup() {
   
   potion = loadImage("potionBox.png");
   potionD = loadImage("potionD.png");
+  potionT = loadImage("potionT.png");
+  potionUse = loadImage("potionUse.png");
   
   bigDamage = loadImage("heavyDamage.png");
   restore = loadImage("recover.png");
@@ -1549,11 +1553,12 @@ void draw() {
     fill(#FFFFFF);
     text("Press D to restore your HP using a Potion", 50, 210);
        
-    image(bigDamage, 100, 200, 401, 67);
-    image(restore, 100, 300, 401, 67);
-    image(nonAttack, 140, 350, 188, 246);
-    image(attack, 343, 350, 188, 246);
-    image(HPdamage, 566, 478, 401, 67);
+    image(bigDamage, 220, 278, 401, 67);
+    image(potionT, 650, 233, 214, 156);
+    image(restore, 220, 447, 401, 67);
+    image(potionUse, 650, 402, 214, 156);
+    image(potionUse, 310, 571, 214, 156);
+    image(potionD, 554, 571, 214, 156);
     
     text("But be careful. You can only heal yourself twice in one battle", 50, 772); 
     fill(#FFF300);
