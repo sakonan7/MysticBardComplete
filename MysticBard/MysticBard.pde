@@ -152,6 +152,9 @@ PImage point;
 PImage bigDamage;
 PImage restore;
 
+PImage armorViolin;
+PImage armorTrombone;
+
 float foe1SizeX;
 float foe1SizeY;
 float foe2SizeX;
@@ -728,6 +731,9 @@ void setup() {
   
   bigDamage = loadImage("heavyDamage.png");
   restore = loadImage("recover.png");
+  
+  armorViolin = loadImage("armorViolin.png");
+  armorTrombone= loadImage("armorTrombone.png");
   
   minim = new Minim(this);
   player = minim.loadFile("Title Theme.mp3", 800);
@@ -1581,14 +1587,16 @@ void draw() {
     textFont(Font1);
     fill(#FFF300);
     fill(#FFFFFF); 
-    text("When an foe has a blue bar or there is a blue bar, the Violin"
-    + "\n" + "will do reduced damage", 50, height - height + 210);
+    text("When an foe has a blue bar or there is a blue bar, the Violin will"
+    + "\n" + "do reduced damage", 50, height - height + 210);
     
-    image(tromboneUse, 650, 233, 244, 156); 
-    image(violinUse, 650, 402, 244, 156);
+    image(armorViolin, 260, 369, 285, 57);
+    image(violinUse, 580, 313, 244, 156);
+    image(armorTrombone, 260, 534, 285, 57);
+    image(tromboneUse, 580, 482, 244, 156); 
 
     text("The foe or foes won't take damage until the gauge is depleted"
-    + "\n" + "The Trombone will not and will do more damage", 50, 719);    
+    + "\n" + "The Trombone will not do less damage and will do more damage", 50, 719);    
  
     fill(#FFF300);
     textFont(Font1);
