@@ -3699,7 +3699,7 @@ void mousePressed () {
   if (messageOver == false) {
     if (mouseButton == RIGHT && titlePage == true) {
       titlePage = false;
-      messageArmor = true;
+      message1 = true;
       minim.stop();
       player = minim.loadFile("Intro and Tutorial.mp3", 700);
       player.play();
@@ -6005,9 +6005,21 @@ void mousePressed () {
   if (tutorialVictory == true) {
     if (mouseButton == RIGHT && tutorialVictoryPage == true) {
       tutorialVictoryPage = false;
-      tutorialConclude = true;
+      messagePotion = true;
       //tutorialEnd = true;
     }
+    else if (mouseButton == RIGHT && messagePotion == true) {
+      messagePotion = false;
+      messageArmor = true;
+    }
+    else if (mouseButton == RIGHT && messageArmor == true) {
+      messageArmor = false;
+      tutorialConclude = true;
+    }
+    else if (mouseButton == LEFT && messageArmor == true) {
+      messageArmor = false;
+      messagePotion = true;
+    }    
     else if (mouseButton == RIGHT && tutorialConclude == true) {
       tutorialVictory = false;
       tutorialConclude = false;
