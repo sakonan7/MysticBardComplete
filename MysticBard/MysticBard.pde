@@ -67,6 +67,10 @@ Minim minim21;
 AudioPlayer player22;
 Minim minim22;
 
+//next battle
+AudioPlayer player23;
+Minim minim23;
+
 static final int FADE = 2200;
 
 PImage background;
@@ -764,6 +768,7 @@ void setup() {
   minim20 = new Minim(this);
   minim21 = new Minim(this);
   minim22 = new Minim(this);
+  minim23 = new Minim(this);
   
   foetutorialSizeX = 125 * 1.1;
   foetutorialSizeY = 200 * 1.1;
@@ -6015,6 +6020,9 @@ void mousePressed () {
     else if (mouseButton == RIGHT && messageArmor == true) {
       messageArmor = false;
       tutorialConclude = true;
+      player22 = minim22.loadFile("progress.mp3", 500);
+      player22.play();
+      player22.shiftGain(0, 0,1000);      
     }
     else if (mouseButton == LEFT && messageArmor == true) {
       messageArmor = false;
@@ -6062,6 +6070,9 @@ void mousePressed () {
       }
       else {
         victoryConclude = true;
+        player22 = minim22.loadFile("progress.mp3", 500);
+        player22.play();
+        player22.shiftGain(0, 0,1000);        
       }
       //tutorialEnd = true;
     }
