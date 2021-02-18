@@ -96,11 +96,6 @@ PImage foe10;
 PImage foe11;
 PImage rGiant;
 
-PImage foeWhite;
-PImage foeRed;
-PImage rGiantWhite;
-PImage rGiantRed;
-
 PImage village;
 PImage monsters;
 PImage loss;
@@ -673,12 +668,6 @@ void setup() {
   foe9 = loadImage("goblin.png");
   foe10 = loadImage("goblin.png");
   foe11 = loadImage("goblin.png");  
-  
-  foeWhite = loadImage("goblinwhite.png");
-  foeRed = loadImage("goblinred.png");
-  
-  rGiantWhite = loadImage("redgiantwhite.png");
-  rGiantRed = loadImage("redgiantpurp.png");
   
   village = loadImage("village.png");
   monsters = loadImage("monsters2.png");
