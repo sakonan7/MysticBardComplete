@@ -2050,29 +2050,34 @@ void draw() {
       }
     }    
     if (foe1Attack == true) {  
-      foe1Alive = false;  
+      //foe1Alive = false;  
       foe1whitet = foe1whiteint-int(millis()/1000); 
       if (foe1HP > 0) {
         if (foe1whitet > 0) {
-          image(foeWhite, foe1CoordX, foe1CoordY, foe1SizeX, foe1SizeY);
+          //image(foeWhite, foe1CoordX, foe1CoordY, foe1SizeX, foe1SizeY);
+          foe1.filter(GRAY);
         }
         else if (foe1whitet <= 0) {
           foe1flasht = foe1flashint - int(millis()/1000);
           if (foe1flasht > 0) {
-            image(foe1, foe1CoordX, foe1CoordY, foe1SizeX, foe1SizeY);
+            //image(foe1, foe1CoordX, foe1CoordY, foe1SizeX, foe1SizeY);
+            foe1 = loadImage("goblin.png");
           }
           else if (foe1flasht <= 0) {
             foe1redt = foe1redint-int(millis()/1000);
             if (foe1redt > 0) {
-              image(foeRed, foe1CoordX, foe1CoordY, foe1SizeX, foe1SizeY);
+              //image(foeRed, foe1CoordX, foe1CoordY, foe1SizeX, foe1SizeY);
+              foe1.filter(GRAY);
             }
             else if (foe1redt <= 0) {
               foe1flash2t = foe1flash2int - int(millis()/1000);
               if (foe1flash2t > 0) {
-                image(foe1, foe1CoordX, foe1CoordY, foe1SizeX, foe1SizeY);
+                //image(foe1, foe1CoordX, foe1CoordY, foe1SizeX, foe1SizeY);
+                foe1 = loadImage("goblin.png");
                 foe1Flash = true;
               }
               else if (foe1flash2t <= 0 && foe1Interupt == false) {
+                foe1Alive = false;
                 if (shield == true) {
                   foe1Attack = false;
                   attackBlocked = true;
@@ -2117,29 +2122,34 @@ void draw() {
     }  
     //foe2a
     if (foe2Attack == true) {  
-      foe2Alive = false;  
+      //foe2Alive = false;  
       foe2whitet = foe2whiteint-int(millis()/1000); 
       if (foe2HP > 0) {
         if (foe2whitet > 0) {
-          image(foeWhite, foe2CoordX, foe2CoordY, foe2SizeX, foe2SizeY);
+          //image(foeWhite, foe2CoordX, foe2CoordY, foe2SizeX, foe2SizeY);
+          foe2.filter(GRAY);
         }
         else if (foe2whitet <= 0) {
           foe2flasht = foe2flashint - int(millis()/1000);
           if (foe2flasht > 0) {
-            image(foe2, foe2CoordX, foe2CoordY, foe2SizeX, foe2SizeY);
+            //image(foe2, foe2CoordX, foe2CoordY, foe2SizeX, foe2SizeY);
+            foe2 = loadImage("goblin.png");
           }
           else if (foe2flasht <= 0) {
             foe2redt = foe2redint-int(millis()/1000);
             if (foe2redt > 0) {
-              image(foeRed, foe2CoordX, foe2CoordY, foe2SizeX, foe2SizeY);
+              //image(foeRed, foe2CoordX, foe2CoordY, foe2SizeX, foe2SizeY);
+              foe2.filter(GRAY);
             }
             else if (foe2redt <= 0) {
               foe2flash2t = foe2flash2int - int(millis()/1000);
               if (foe2flash2t > 0) {
-                image(foe2, foe2CoordX, foe2CoordY, foe2SizeX, foe2SizeY);
+                //image(foe2, foe2CoordX, foe2CoordY, foe2SizeX, foe2SizeY);
+                foe2 = loadImage("goblin.png");
                 foe2Flash = true;
               }
               else if (foe2flash2t <= 0 && foe2Interupt == false) {
+                foe2Alive = false;
                 if (shield == true) {
                   foe2Attack = false;
                   attackBlocked = true;
@@ -2184,29 +2194,34 @@ void draw() {
     }
     //foe3a
     if (foe3Attack == true) {  
-      foe3Alive = false;  
+      //foe3Alive = false;  
       foe3whitet = foe3whiteint-int(millis()/1000); 
       if (foe3HP > 0) {
         if (foe3whitet > 0) {
-          image(foeWhite, foe3CoordX, foe3CoordY, foe3SizeX, foe3SizeY);
+          //image(foeWhite, foe3CoordX, foe3CoordY, foe3SizeX, foe3SizeY);
+          foe3.filter(GRAY);
         }
         else if (foe3whitet <= 0) {
           foe3flasht = foe3flashint - int(millis()/1000);
           if (foe3flasht > 0) {
-            image(foe3, foe3CoordX, foe3CoordY, foe3SizeX, foe3SizeY);
+            //image(foe3, foe3CoordX, foe3CoordY, foe3SizeX, foe3SizeY);
+            foe3 = loadImage("goblin.png");
           }
           else if (foe3flasht <= 0) {
             foe3redt = foe3redint-int(millis()/1000);
             if (foe3redt > 0) {
-              image(foeRed, foe3CoordX, foe3CoordY, foe3SizeX, foe3SizeY);
+              //image(foeRed, foe3CoordX, foe3CoordY, foe3SizeX, foe3SizeY);
+              foe3.filter(GRAY);
             }
             else if (foe3redt <= 0) {
               foe3flash2t = foe3flash2int - int(millis()/1000);
               if (foe3flash2t > 0) {
-                image(foe3, foe3CoordX, foe3CoordY, foe3SizeX, foe3SizeY);
+                //image(foe3, foe3CoordX, foe3CoordY, foe3SizeX, foe3SizeY);
+                foe3 = loadImage("goblin.png");
                 foe3Flash = true;
               }
               else if (foe3flash2t <= 0 && foe3Interupt == false) {
+                foe3Alive = false;
                 if (shield == true) {
                   foe3Attack = false;
                   attackBlocked = true;
@@ -2251,16 +2266,18 @@ void draw() {
     }    
 //stage2
     if (foe4Attack == true) {  
-      foe4Alive = false;  
+      //foe4Alive = false;  
       foe4whitet = foe4whiteint-int(millis()/1000); 
       if (foe4HP > 0) {
         if (foe4whitet > 0) {
-          image(foeWhite, foe4CoordX, foe4CoordY, foe4SizeX, foe4SizeY);
+          //image(foeWhite, foe4CoordX, foe4CoordY, foe4SizeX, foe4SizeY);
+          foe4.filter(GRAY);
         }
         else if (foe4whitet <= 0) {
           foe4flasht = foe4flashint - int(millis()/1000);
           if (foe4flasht > 0) {
-            image(foe4, foe4CoordX, foe4CoordY, foe4SizeX, foe4SizeY);
+            //image(foe4, foe4CoordX, foe4CoordY, foe4SizeX, foe4SizeY);
+            foe4 = loadImage("goblin.png");
           }
           else if (foe4flasht <= 0) {
             foe4redt = foe4redint-int(millis()/1000);
