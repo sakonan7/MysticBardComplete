@@ -1982,7 +1982,7 @@ void draw() {
             foeTredt = foeTredint-int(millis()/1000);
             if (foeTredt > 0) {
               //image(foeRed, foetutorialX, foetutorialY, foetutorialSizeX, foetutorialSizeY);
-              foetutorial.filter(GRAY);
+              foetutorial.filter(INVERT);
             }
             else if (foeTredt <= 0) {
               foeTflash2t = foeTflash2int - int(millis()/1000);
@@ -2056,7 +2056,7 @@ void draw() {
             foe1redt = foe1redint-int(millis()/1000);
             if (foe1redt > 0) {
               //image(foeRed, foe1CoordX, foe1CoordY, foe1SizeX, foe1SizeY);
-              foe1.filter(GRAY);
+              foe1.filter(INVERT);
             }
             else if (foe1redt <= 0) {
               foe1flash2t = foe1flash2int - int(millis()/1000);
@@ -2128,7 +2128,7 @@ void draw() {
             foe2redt = foe2redint-int(millis()/1000);
             if (foe2redt > 0) {
               //image(foeRed, foe2CoordX, foe2CoordY, foe2SizeX, foe2SizeY);
-              foe2.filter(GRAY);
+              foe2.filter(INVERT);
             }
             else if (foe2redt <= 0) {
               foe2flash2t = foe2flash2int - int(millis()/1000);
@@ -2200,7 +2200,7 @@ void draw() {
             foe3redt = foe3redint-int(millis()/1000);
             if (foe3redt > 0) {
               //image(foeRed, foe3CoordX, foe3CoordY, foe3SizeX, foe3SizeY);
-              foe3.filter(GRAY);
+              foe3.filter(INVERT);
             }
             else if (foe3redt <= 0) {
               foe3flash2t = foe3flash2int - int(millis()/1000);
@@ -2272,7 +2272,7 @@ void draw() {
             foe4redt = foe4redint-int(millis()/1000);
             if (foe4redt > 0) {
               //image(foeRed, foe4CoordX, foe4CoordY, foe4SizeX, foe4SizeY);
-              foe4.filter(GRAY);
+              foe4.filter(INVERT);
             }
             else if (foe4redt <= 0) {
               foe4flash2t = foe4flash2int - int(millis()/1000);
@@ -2345,7 +2345,7 @@ void draw() {
             foe5redt = foe5redint-int(millis()/1000);
             if (foe5redt > 0) {
               //image(foeRed, foe5CoordX, foe5CoordY, foe5SizeX, foe5SizeY);
-              foe5.filter(GRAY);
+              foe5.filter(INVERT);
             }
             else if (foe5redt <= 0) {
               foe5flash2t = foe5flash2int - int(millis()/1000);
@@ -2418,7 +2418,7 @@ void draw() {
             foe6redt = foe6redint-int(millis()/1000);
             if (foe6redt > 0) {
               //image(foeRed, foe6CoordX, foe6CoordY, foe6SizeX, foe6SizeY);
-              foe6.filter(GRAY);
+              foe6.filter(INVERT);
             }
             else if (foe6redt <= 0) {
               foe6flash2t = foe6flash2int - int(millis()/1000);
@@ -2491,7 +2491,7 @@ void draw() {
             foe7redt = foe7redint-int(millis()/1000);
             if (foe7redt > 0) {
               //image(foeRed, foe7CoordX, foe7CoordY, foe7SizeX, foe7SizeY);
-              foe7.filter(GRAY);
+              foe7.filter(INVERT);
             }
             else if (foe7redt <= 0) {
               foe7flash2t = foe7flash2int - int(millis()/1000);
@@ -2564,7 +2564,7 @@ void draw() {
             foe8redt = foe8redint-int(millis()/1000);
             if (foe8redt > 0) {
               //image(foeRed, foe8CoordX, foe8CoordY, foe8SizeX, foe8SizeY);
-              foe8.filter(GRAY);
+              foe8.filter(INVERT);
             }
             else if (foe8redt <= 0) {
               foe8flash2t = foe8flash2int - int(millis()/1000);
@@ -2637,7 +2637,7 @@ void draw() {
             foe9redt = foe9redint-int(millis()/1000);
             if (foe9redt > 0) {
               //image(foeRed, foe9CoordX, foe9CoordY, foe9SizeX, foe9SizeY);
-              foe9.filter(GRAY);
+              foe9.filter(INVERT);
             }
             else if (foe9redt <= 0) {
               foe9flash2t = foe9flash2int - int(millis()/1000);
@@ -2709,7 +2709,7 @@ void draw() {
             foe10redt = foe10redint-int(millis()/1000);
             if (foe10redt > 0) {
               //image(foeRed, foe10CoordX, foe10CoordY, foe10SizeX, foe10SizeY);
-              foe10.filter(GRAY);
+              foe10.filter(INVERT);
             }
             else if (foe10redt <= 0) {
               foe10flash2t = foe10flash2int - int(millis()/1000);
@@ -2781,7 +2781,7 @@ void draw() {
             foe11redt = foe11redint-int(millis()/1000);
             if (foe11redt > 0) {
               //image(foeRed, foe11CoordX, foe11CoordY, foe11SizeX, foe11SizeY);
-              foe11.filter(GRAY);
+              foe11.filter(INVERT);
             }
             else if (foe11redt <= 0) {
               foe11flash2t = foe11flash2int - int(millis()/1000);
@@ -2863,7 +2863,7 @@ void draw() {
             rGiantredt = rGiantredint-int(millis()/1000);
             if (rGiantredt > 0) {
               //image(rGiantRed, rGiantCoordX, rGiantCoordY, rGiantSizeX, rGiantSizeY);
-              rGiant.filter(GRAY);
+              rGiant.filter(INVERT);
             }
             else if (rGiantredt <= 0) {
               rGiantflash2t = rGiantflash2int - int(millis()/1000);
