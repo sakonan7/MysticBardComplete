@@ -74,6 +74,7 @@ Minim minim23;
 static final int FADE = 2200;
 
 PImage background;
+int backgroundY = 0;
 
 PImage musicNote1;
 PImage musicNote2;
@@ -645,7 +646,7 @@ void setup() {
   Font1 = createFont("TimesNewRomanPSMT-48", 33);
   Font2 = createFont("TimesNewRomanPS-ItalicMT-48", 50);
   Font3 = createFont("TimesNewRomanPS-ItalicMT-48", 40);
-  
+  background(#000000);
   background = loadImage("forestcurrent.png");
   
   musicNote1 = loadImage("note1.png");
@@ -847,7 +848,7 @@ void setup() {
   frameRate(60);
 }
 void draw() {
-  image(background, 0, 0, width, height);
+  image(background, 0, backgroundY, width, height);
   String clickRight = "Click Right to Continue";
   String clickLeft = "Click Left to Go Back";
   String clickSkip = "S to Skip";
@@ -1731,7 +1732,8 @@ void draw() {
     }
     //foe2b  
     if (playerAttacked == true) {
-      image(background, 0, -40, width, height);
+      //image(background, 0, -40, width, height);
+      backgroundY = -40;
       if (tutorialStage == true) {
         foeT2disapp = true;
         foeT3disapp = true;
@@ -1890,6 +1892,7 @@ void draw() {
       }      
     }
     else if (playerAttacked == false) {
+      backgroundY = 0;
       if (tutorialStage == true) {
         foeTdisapp = false;
         foeT2disapp = false;
