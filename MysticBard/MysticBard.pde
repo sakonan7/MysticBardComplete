@@ -3558,7 +3558,7 @@ void draw() {
         if (foe9disapp == false) {
           image(foe9, foe9CoordX, foe9CoordY, foe9SizeX, foe9SizeY);
         }
-        if (foe9Attack == false && foe9HP > 0 && noAttack == false) {
+        if (foe9Attack == false && foe9HP > 0) {
           foe9t = foe9interval-int(millis()/1000);
             
           if(foe9t <= 0){
@@ -3588,7 +3588,7 @@ void draw() {
         if (foe10disapp == false) {
           image(foe10, foe10CoordX, foe10CoordY, foe10SizeX, foe10SizeY);          
         }
-        if (foe10Attack == false && foe10HP > 0 && noAttack == false) {
+        if (foe10Attack == false && foe10HP > 0) {
           foe10t = foe10interval-int(millis()/1000);
             
           if(foe10t <= 0){
@@ -3617,7 +3617,7 @@ void draw() {
         if (foe11disapp == false) {
           image(foe11, foe11CoordX, foe11CoordY, foe11SizeX, foe11SizeY);
         }
-        if (foe11Attack == false && foe11HP > 0 && noAttack == false) {
+        if (foe11Attack == false && foe11HP > 0) {
           foe11t = foe11interval-int(millis()/1000);
             
           if(foe11t <= 0){
@@ -3700,7 +3700,7 @@ void keyPressed () {
     messageLast = false;
 
     messageOver = true;
-    tutorialStage = true;
+    stage3 = true;
     minim.stop();
     player = minim.loadFile("Battle.mp3", 800);
     player.play();
