@@ -5276,23 +5276,23 @@ void mousePressed () {
               violinReplenish = int(millis()/1000) + 10;
             }
             //restore monster sizes here
-            if (foeTattacked == true) {
-              foeTattacked = false;
-              foetutorialX += 15;
-              foetutorialY += 30;
-              foetutorialSizeX = foetutorialSizeX / 1.2;
-              foetutorialSizeY = foetutorialSizeY / 1.2;              
-            }
+            //if (foeTattacked == true) {
+              //foeTattacked = false;
+              //foetutorialX += 15;
+              //foetutorialY += 30;
+              //foetutorialSizeX = foetutorialSizeX / 1.2;
+              //foetutorialSizeY = foetutorialSizeY / 1.2;              
+            //}
           }
           if (tutorialStage == true) {
             if (mouseX <= foetutorialSizeX + foetutorialX && mouseX >= foetutorialX
             && (mouseY <= foetutorialSizeY + foetutorialY && mouseY >= foetutorialY) && foeTHP > 0) { 
 
-              //image(foetutorial, foetutorialX - 15, foetutorialY - 30, foetutorialSizeX * 1.2, foetutorialSizeY * 1.2);
-              foetutorialX -= 15;
-              foetutorialY -= 30;
-              foetutorialSizeX = foetutorialSizeX * 1.2;
-              foetutorialSizeY = foetutorialSizeY * 1.2;
+              image(foetutorial, foetutorialX - 15, foetutorialY - 30, foetutorialSizeX * 1.2, foetutorialSizeY * 1.2);
+              //foetutorialX -= 15;
+              //foetutorialY -= 30;
+              //foetutorialSizeX = foetutorialSizeX * 1.2;
+              //foetutorialSizeY = foetutorialSizeY * 1.2;
           
               image(musicNote1, foetutorialX + foetutorialSizeX/5, foetutorialY - foetutorialY/10, 100, 100);
       
@@ -5325,14 +5325,14 @@ void mousePressed () {
                 player7.shiftGain(-7, -7,1000);
               }        
               else if (foeTFlash == false) {
-                //foeTattacked = false;
+                foeTattacked = false;
                 player2 = minim2.loadFile("violin.mp3", 400);
                 player2.play();
                 player2.shiftGain(-7, -7,1000);
               }
               if (foeTInterupt == true) {
                 foeTInterupt = false;
-                //foeTattacked = false;     
+                foeTattacked = false;     
               }   
               
             }
