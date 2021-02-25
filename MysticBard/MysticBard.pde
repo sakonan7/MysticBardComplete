@@ -3043,7 +3043,8 @@ void draw() {
         }
         if(attackBlocked == true) {
           fill(70, 100, 0, 190);
-          image(background, 0, -15, width, height);
+          //image(background, 0, -15, width, height);
+          backgroundY = -15;
           if (tutorialStage == true) {
             foeTdisapp = true;
             foeT2disapp = true;
@@ -3203,6 +3204,7 @@ void draw() {
    
        } 
        if (shieldt == 0) {
+         backgroundY = 0;
          shield = false;
          if (foeTHP > 0) {
            foeTAlive = true;
@@ -3245,7 +3247,7 @@ void draw() {
          }         
        }
     }
-    else if (shield == false) {
+    else if (shield == false) { 
       if (tutorialStage == true) {
         foeTdisapp = false;
         foeT2disapp = false;
@@ -3700,7 +3702,7 @@ void keyPressed () {
     messageLast = false;
 
     messageOver = true;
-    stage3 = true;
+    tutorialStage = true;
     minim.stop();
     player = minim.loadFile("Battle.mp3", 800);
     player.play();
