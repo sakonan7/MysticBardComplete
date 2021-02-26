@@ -6158,9 +6158,11 @@ void mousePressed () {
       //use boolean stagexvictory to determine victory
       if (stage1V == true) {
         stage2 = true;
+        stage1V = false;
       }
       if (stage2V == true) {
         stage3 = true;
+        stage2V = false;
       }      
       warmUp = true;
       
@@ -6186,7 +6188,7 @@ void mousePressed () {
       
       player = minim.loadFile("Battle.mp3", 800);
       player.play();
-      player.shiftGain(-20,-20,1000);
+      player.shiftGain(-23,-23,1000);
       player.loop();
       redraw();
     }
@@ -6340,7 +6342,7 @@ void mousePressed () {
       
       player = minim.loadFile("Battle.mp3", 800);
       player.play();
-      player.shiftGain(-20,-20,1000);
+      player.shiftGain(-23,-23,1000);
       player.loop();
       redraw();
     }
@@ -6443,7 +6445,7 @@ void mousePressed () {
       
       player = minim.loadFile("Battle.mp3", 800);
       player.play();
-      player.shiftGain(-20,-20,1000);
+      player.shiftGain(-23,-23,1000);
       player.loop();
       redraw();
     }
