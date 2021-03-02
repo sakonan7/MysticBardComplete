@@ -1070,7 +1070,7 @@ void draw() {
         setGradient(currentArmorBarX, armorBarY - 30, armorBar, 17, c5, c6, 2);
         noFill();
         stroke(#DBDBDB); 
-        rect(340 - 3, armorBarY - 33, rGiantSizeX + 6, 23);          
+        rect(340 - 3 + 20, armorBarY - 33, rGiantSizeX + 6, 23);          
       }
         
       if (rGiantHP > 0) {
@@ -2922,7 +2922,7 @@ void draw() {
         rGiantAttack = false;
       }
     }    
-    
+    //new fix
     if (shield == true) {
       shieldt = shieldInterval - int(millis()/1000);
       if (shieldt > 0) {
@@ -3702,7 +3702,7 @@ void keyPressed () {
     messageLast = false;
 
     messageOver = true;
-    tutorialStage = true;
+    stage3 = true;
     minim.stop();
     player = minim.loadFile("Battle.mp3", 800);
     player.play();
@@ -6264,6 +6264,8 @@ void mousePressed () {
       
       giantArmor = true;
       rGiantArmor = 100;
+      currentArmorBarX = (int)rGiantCoordX;
+      armorBar = rGiantSizeX;      
       armorBreak = false;
       
       playerAlive = true;
@@ -6433,6 +6435,9 @@ void mousePressed () {
         foe11HP = 150; 
         rGiantHP = 250;
         rGiantArmor = 100;
+        //new fix 2
+        currentArmorBarX = (int)rGiantCoordX;
+        armorBar = rGiantSizeX;
         foe4Alive = true;
         foe5Alive = true;
         foe6Alive = true;  
