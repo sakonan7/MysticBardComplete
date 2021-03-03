@@ -2984,14 +2984,14 @@ void draw() {
             foe10disapp = true;
             foe11disapp = true;
             
-            gaugeDisapp = true;
-            if (giantArmor == true) {
-              setGradient(currentArmorBarX, armorBarY, armorBar, 17, c5, c6, 2);
-              noFill();
-              stroke(#DBDBDB); 
-              rect(340 - 3 + 20, armorBarY - 3, rGiantSizeX + 6, 23);
-              fill(70, 100, 0, 190);
-            }        
+            //gaugeDisapp = true;
+            //if (giantArmor == true) {
+              //setGradient(currentArmorBarX, armorBarY, armorBar, 17, c5, c6, 2);
+              //noFill();
+              //stroke(#DBDBDB); 
+              //rect(340 - 3 + 20, armorBarY - 3, rGiantSizeX + 6, 23);
+              //fill(70, 100, 0, 190);
+            //}        
             if (rGiantHP > 0) {
               image(rGiant, rGiantCoordX, rGiantCoordY, rGiantSizeX, rGiantSizeY);
             }        
@@ -3039,7 +3039,7 @@ void draw() {
             stroke(#FFCE46);
             rect(13, height - 148, 235, 135, 8);
           }
-          gaugeDisapp = false;
+          //gaugeDisapp = false;
         }
         if(attackBlocked == true) {
           fill(70, 100, 0, 190);
@@ -3100,13 +3100,14 @@ void draw() {
             foe9disapp = true;
             foe10disapp = true;
             foe11disapp = true;
-            
+            //new fix 3
             gaugeDisapp = true;
             if (giantArmor == true) {
-              setGradient(currentArmorBarX, armorBarY - 20, armorBar, 17, c5, c6, 2);
-              noFill();
-              stroke(#DBDBDB); 
-              rect(340 - 3 + 20, armorBarY - 33, rGiantSizeX + 6, 23);          
+              //setGradient(currentArmorBarX, armorBarY - 20, armorBar, 17, c5, c6, 2);
+              //noFill();
+              //stroke(#DBDBDB); 
+              //rect(340 - 3 + 20, armorBarY - 23, rGiantSizeX + 6, 23);     
+              armorBarY = (int)rGiantCoordY - 20 - 4 - 20;
             }
         
             if (rGiantHP > 0) {
@@ -3121,6 +3122,7 @@ void draw() {
             if (foe11HP > 0) {
               image(foe11, foe11CoordX, foe11CoordY - 20, foe11SizeX, foe11SizeY);
             }        
+            //fill(70, 100, 0, 190);
           }          
           image(violinUI, 251, height - 156, 240, 156);
           image(tromboneD, 7, height - 157, 250, 156);
@@ -3158,7 +3160,7 @@ void draw() {
           }                
              
           attackBlocked = false;
-          gaugeDisapp = false;
+          //gaugeDisapp = false;
         }
         if (foe1Attack == true) {
           attackBlocked = true;
@@ -3265,6 +3267,14 @@ void draw() {
         foe7disapp = false;
         foe8disapp = false;
       }      
+      if (stage3 == true) {
+        foe9disapp = false;
+        foe10disapp = false;
+        foe11disapp = false;
+        rGiantdisapp = false;
+        gaugeDisapp = false;
+        armorBarY = (int)rGiantCoordY - 20 - 4;
+      }            
     }
     
     if (tutorialStage == true) {
