@@ -768,12 +768,12 @@ void setup() {
   foeT2SizeX = 125 * 1.1;
   foeT2SizeY = 200 * 1.1;
   foeT2X = width/2 - 230 - 50;
-  foeT2Y = height - 380 - 130 - 50;
+  foeT2Y = 340;
 
   foeT3SizeX = 125 * 1.1;
   foeT3SizeY = 200 * 1.1;
   foeT3X = width/2 + 30 + 50;
-  foeT3Y = height - 380 - 130 - 50;  
+  foeT3Y = 340;  
   
   foe1SizeX = 125 * 1.1;
   foe1SizeY = 200 * 1.1;
@@ -1735,14 +1735,17 @@ void draw() {
       //image(background, 0, -40, width, height);
       backgroundY = -40;
       if (tutorialStage == true) {
-        foeT2disapp = true;
-        foeT3disapp = true;
-        image(foetutorial, foetutorialX, foetutorialY - 30, foetutorialSizeX, foetutorialSizeY);
+        //foeT2disapp = true;
+        //foeT3disapp = true;
+        //image(foetutorial, foetutorialX, foetutorialY - 30, foetutorialSizeX, foetutorialSizeY);
+        foetutorialY = 440;
         if (foeT2HP > 0) {
-          image(foeT2, foeT2X, foeT2Y - 30, foeT2SizeX, foeT2SizeY);
+          //image(foeT2, foeT2X, foeT2Y - 30, foeT2SizeX, foeT2SizeY);
+          foeT2Y = 310;
         }
         if (foeT3HP > 0) {
-          image(foeT3, foeT3X, foeT3Y - 30, foeT3SizeX, foeT3SizeY);
+          //image(foeT3, foeT3X, foeT3Y - 30, foeT3SizeX, foeT3SizeY);
+          foeT3Y = 310;
         }
       }
       if (stage1 == true) {
@@ -1894,17 +1897,17 @@ void draw() {
     else if (playerAttacked == false) {
       backgroundY = 0;
       if (tutorialStage == true) {
-        foeTdisapp = false;
-        foeT2disapp = false;
-        foeT3disapp = false;   
+        //foeTdisapp = false;
+        //foeT2disapp = false;
+        //foeT3disapp = false;   
         if (foeTHP > 0) {
-          foeTAlive = true;
+          foetutorialY = 470;
         }
         if (foeT2HP > 0) {
-          foeT2Alive = true;
+          foeT2Y = 340;
         }
         if (foeT3HP > 0) {
-          foeT3Alive = true;
+          foeT3Y = 340;
         }        
       }
       if (stage1 == true) {
@@ -1995,7 +1998,7 @@ void draw() {
                 foeTFlash = true;
               }
               else if (foeTflash2t <= 0 && foeTInterupt == false) {
-                foeTAlive = false;
+                //foeTAlive = false;
                 if (shield == true) {
                   foeTAttack = false;
                   attackBlocked = true;
@@ -2016,8 +2019,8 @@ void draw() {
                   player9.shiftGain(-18, -18,1000);                   
                 
                   playerAttacked = true;
-                  foeT2Alive = false;
-                  foeT3Alive = false;                 
+                  //foeT2Alive = false;
+                  //foeT3Alive = false;                 
                     
                   foeTinterval = int(millis()/1000) + 5;
                   foeTwhiteint = int(millis()/1000) + 3;
@@ -3279,9 +3282,9 @@ void draw() {
     
     if (tutorialStage == true) {
       if(foeTAlive == true) {  
-        if (foeTdisapp == false) {
+        //if (foeTdisapp == false) {
           image(foetutorial, foetutorialX, foetutorialY, foetutorialSizeX, foetutorialSizeY);
-        }
+        //}
         if (foeTAttack == false && foeTHP > 0) {
           foeTt = foeTinterval-int(millis()/1000);
             
@@ -3302,22 +3305,22 @@ void draw() {
               foeTflash2int += 6;              
             }           
               
-            foeTdisapp = true;
+            //foeTdisapp = true;
             foeTAttack = true;
-            foeTAlive = false;
+            //foeTAlive = false;
             firstTAttack = false;
           }
         }
       }   
       if(foeT2Alive == true) {
-        if (foeT2disapp == false) {
+        //if (foeT2disapp == false) {
           image(foeT2, foeT2X, foeT2Y, foeT2SizeX, foeT2SizeY);
-        }
+        //}
       }
       if(foeT3Alive == true) {
-        if (foeT3disapp == false) {
+        //if (foeT3disapp == false) {
           image(foeT3, foeT3X, foeT3Y, foeT3SizeX, foeT3SizeY);
-        } 
+        //} 
       }        
     }
     else if (stage1 == true) {
@@ -3712,7 +3715,7 @@ void keyPressed () {
     messageLast = false;
 
     messageOver = true;
-    stage3 = true;
+    tutorialStage = true;
     minim.stop();
     player = minim.loadFile("Battle.mp3", 800);
     player.play();
