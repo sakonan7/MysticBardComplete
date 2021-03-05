@@ -1766,25 +1766,20 @@ void draw() {
         }
       }      
       if (stage2 == true) {
-        foe4disapp = true;
-        foe5disapp = true;
-        foe6disapp = true;
-        foe7disapp = true;
-        foe8disapp = true;
         if (foe4HP > 0) {
-          image(foe4, foe4CoordX, foe4CoordY - 30, foe4SizeX, foe4SizeY);
+          foe4CoordY = 380;
         }
         if (foe5HP > 0) {
-          image(foe5, foe5CoordX, foe5CoordY - 30, foe5SizeX, foe5SizeY);
+          foe5CoordY = 445;
         }
         if (foe6HP > 0) {
-          image(foe6, foe6CoordX, foe6CoordY - 30, foe6SizeX, foe6SizeY);
+          foe6CoordY = 420;
         }
         if (foe7HP > 0) {
-          image(foe7, foe7CoordX, foe7CoordY - 30, foe7SizeX, foe7SizeY);
+          foe7CoordY = 405;
         }        
         if (foe8HP > 0) {
-          image(foe8, foe8CoordX, foe8CoordY - 30, foe8SizeX, foe8SizeY);
+          foe8CoordY = 325;
         }        
       }
       if (stage3 == true) {
@@ -1928,25 +1923,20 @@ void draw() {
         }        
       }
       if (stage2 == true) {
-        foe4disapp = false;
-        foe5disapp = false;
-        foe6disapp = false;
-        foe7disapp = false; 
-        foe8disapp = false; 
         if (foe4HP > 0) {
-          foe4Alive = true;
+          foe4CoordY = 410;
         }
         if (foe5HP > 0) {
-          foe5Alive = true;
+          foe5CoordY = 475;
         }
         if (foe6HP > 0) {
-          foe6Alive = true;
+          foe6CoordY = 450;
         }       
         if (foe7HP > 0) {
-          foe7Alive = true;
+          foe7CoordY = 435;
         }         
         if (foe8HP > 0) {
-          foe8Alive = true;
+          foe8CoordY = 355;
         }          
       } 
       if (stage3 == true) {
@@ -2094,9 +2084,7 @@ void draw() {
                   player9.play();
                   player9.shiftGain(-18, -18,1000);                   
                 
-                  playerAttacked = true;
-                  foe2Alive = false;
-                  foe3Alive = false;                 
+                  playerAttacked = true;           
                     
                   foe1interval = int(millis()/1000) + 5;
                   foe1whiteint = int(millis()/1000) + 3;
@@ -2166,9 +2154,7 @@ void draw() {
                   player10.play();
                   player10.shiftGain(-18, -18,1000);                   
                 
-                  playerAttacked = true;
-                  foe1Alive = false;
-                  foe3Alive = false;                 
+                  playerAttacked = true;          
                     
                   foe2interval = int(millis()/1000) + 5;
                   foe2whiteint = int(millis()/1000) + 3;
@@ -2238,9 +2224,7 @@ void draw() {
                   player11.play();
                   player11.shiftGain(-18, -18,1000);                   
                 
-                  playerAttacked = true;
-                  foe2Alive = false;
-                  foe1Alive = false;                 
+                  playerAttacked = true;        
                     
                   foe3interval = int(millis()/1000) + 5;
                   foe3whiteint = int(millis()/1000) + 3;
@@ -2291,7 +2275,7 @@ void draw() {
                 foe4Flash = true;
               }
               else if (foe4flash2t <= 0 && foe4Interupt == false) {
-                foe4Alive = false;
+                //foe4Alive = false;
                 if (shield == true) {
                   foe4Attack = false;
                   attackBlocked = true;
@@ -2311,10 +2295,6 @@ void draw() {
                   player9.shiftGain(-18, -18,1000);                  
                 
                   playerAttacked = true;
-                  foe5Alive = false;
-                  foe6Alive = false;  
-                  foe7Alive = false;
-                  foe8Alive = false;
                     
                   foe4interval = int(millis()/1000) + 5;
                   foe4whiteint = int(millis()/1000) + 3;
@@ -2364,7 +2344,7 @@ void draw() {
                 foe5Flash = true;
               }
               else if (foe5flash2t <= 0 && foe5Interupt == false) {
-                foe5Alive = false;
+                
                 if (shield == true) {
                   foe5Attack = false;
                   attackBlocked = true;
@@ -2384,10 +2364,6 @@ void draw() {
                   player10.shiftGain(-18, -18,1000);                   
                 
                   playerAttacked = true;
-                  foe4Alive = false;
-                  foe6Alive = false;  
-                  foe7Alive = false;
-                  foe8Alive = false;
                     
                   foe5interval = int(millis()/1000) + 5;
                   foe5whiteint = int(millis()/1000) + 3;
@@ -2437,7 +2413,7 @@ void draw() {
                 foe6Flash = true;
               }
               else if (foe6flash2t <= 0 && foe6Interupt == false) {
-                foe6Alive = false;
+
                 if (shield == true) {
                   foe6Attack = false;
                   attackBlocked = true;
@@ -2457,10 +2433,6 @@ void draw() {
                   player11.shiftGain(-18, -18,1000);                   
                 
                   playerAttacked = true;
-                  foe4Alive = false;
-                  foe5Alive = false;  
-                  foe7Alive = false;
-                  foe8Alive = false;
                     
                   foe6interval = int(millis()/1000) + 5;
                   foe6whiteint = int(millis()/1000) + 3;
@@ -2510,7 +2482,6 @@ void draw() {
                 foe7Flash = true;
               }
               else if (foe7flash2t <= 0 && foe7Interupt == false) {
-                foe7Alive = false;
                 if (shield == true) {
                   foe7Attack = false;
                   attackBlocked = true;
@@ -2530,10 +2501,6 @@ void draw() {
                   player12.shiftGain(-18, -18,1000);                   
                 
                   playerAttacked = true;
-                  foe4Alive = false;
-                  foe5Alive = false;  
-                  foe6Alive = false;
-                  foe8Alive = false;
                     
                   foe7interval = int(millis()/1000) + 5;
                   foe7whiteint = int(millis()/1000) + 3;
@@ -2583,7 +2550,7 @@ void draw() {
                 foe8Flash = true;
               }
               else if (foe8flash2t <= 0 && foe8Interupt == false) {
-                foe8Alive = false;
+                
                 if (shield == true) {
                   foe8Attack = false;
                   attackBlocked = true;
@@ -2603,10 +2570,6 @@ void draw() {
                   player13.shiftGain(-18, -18,1000);                   
                 
                   playerAttacked = true;
-                  foe4Alive = false;
-                  foe5Alive = false;  
-                  foe6Alive = false;
-                  foe7Alive = false;
                     
                   foe8interval = int(millis()/1000) + 5;
                   foe8whiteint = int(millis()/1000) + 3;
@@ -2628,6 +2591,7 @@ void draw() {
         foe8Attack = false;
       }
     } 
+    //started work on this
     if (foe9Attack == true) {  
       //foe9Alive = false;  
       foe9whitet = foe9whiteint-int(millis()/1000); 
@@ -2656,7 +2620,7 @@ void draw() {
                 foe9Flash = true;
               }
               else if (foe9flash2t <= 0 && foe9Interupt == false) {
-                foe9Alive = false;
+                
                 if (shield == true) {
                   foe9Attack = false;
                   attackBlocked = true;
@@ -2676,9 +2640,6 @@ void draw() {
                   player18.shiftGain(-18, -18,1000);                   
                 
                   playerAttacked = true;
-                  foe10Alive = false;
-                  foe11Alive = false;  
-                  rGiantAlive = false;
                     
                   foe9interval = int(millis()/1000) + 5;
                   foe9whiteint = int(millis()/1000) + 3;
@@ -3342,9 +3303,9 @@ void draw() {
     }
     else if (stage2 == true) {
       if (foe4Alive == true) {
-        if (foe4disapp == false) {
+        //if (foe4disapp == false) {
           image(foe4, foe4CoordX, foe4CoordY, foe4SizeX, foe4SizeY);
-        }
+        //}
         if (foe4Attack == false && foe4HP > 0) {
           foe4t = foe4interval-int(millis()/1000);
             
@@ -3364,17 +3325,17 @@ void draw() {
               foe4flash2int += 6;              
             }           
               
-            foe4disapp = true;
+            //foe4disapp = true;
             foe4Attack = true;
-            foe4Alive = false;
+            //foe4Alive = false;
             first4Attack = false;
           }
         }        
       }
       if (foe5Alive == true) {
-        if (foe5disapp == false) {
+        //if (foe5disapp == false) {
           image(foe5, foe5CoordX, foe5CoordY, foe5SizeX, foe5SizeY);          
-        }
+        //}
         if (foe5Attack == false && foe5HP > 0) {
           foe5t = foe5interval-int(millis()/1000);
             
@@ -3393,17 +3354,17 @@ void draw() {
               foe5flash2int += 6;              
             }           
               
-            foe5disapp = true;
+            //foe5disapp = true;
             foe5Attack = true;
-            foe5Alive = false;
+            //foe5Alive = false;
             first5Attack = false;
           }
         }        
       }  
       if (foe6Alive == true) {
-        if (foe6disapp == false) {
+        //if (foe6disapp == false) {
           image(foe6, foe6CoordX, foe6CoordY, foe6SizeX, foe6SizeY);
-        }
+        //}
         if (foe6Attack == false && foe6HP > 0) {
           foe6t = foe6interval-int(millis()/1000);
             
@@ -3422,17 +3383,17 @@ void draw() {
               foe6flash2int += 6;              
             }           
               
-            foe6disapp = true;
+            //foe6disapp = true;
             foe6Attack = true;
-            foe6Alive = false;
+            //foe6Alive = false;
             first6Attack = false;
           }
         }        
       }
       if (foe7Alive == true) {
-        if (foe7disapp == false) {
+        //if (foe7disapp == false) {
           image(foe7, foe7CoordX, foe7CoordY, foe7SizeX, foe7SizeY);
-        }
+        //}
         if (foe7Attack == false && foe7HP > 0) {
           foe7t = foe7interval-int(millis()/1000);
             
@@ -3451,17 +3412,17 @@ void draw() {
               foe7flash2int += 6;              
             }           
               
-            foe7disapp = true;
+            //foe7disapp = true;
             foe7Attack = true;
-            foe7Alive = false;
+            //foe7Alive = false;
             first7Attack = false;
           }
         }        
       }  
       if (foe8Alive == true) {
-        if (foe8disapp == false) {
+        //if (foe8disapp == false) {
           image(foe8, foe8CoordX, foe8CoordY, foe8SizeX, foe8SizeY);
-        }
+        //}
         if (foe8Attack == false && foe8HP > 0) {
           foe8t = foe8interval-int(millis()/1000);
             
@@ -3480,9 +3441,9 @@ void draw() {
               foe8flash2int += 6;              
             }           
               
-            foe8disapp = true;
+            //foe8disapp = true;
             foe8Attack = true;
-            foe8Alive = false;
+            //foe8Alive = false;
             first8Attack = false;
           }
         }        
