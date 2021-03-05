@@ -2075,7 +2075,7 @@ void draw() {
                 foe1Flash = true;
               }
               else if (foe1flash2t <= 0 && foe1Interupt == false) {
-                foe1Alive = false;
+                //foe1Alive = false;
                 if (shield == true) {
                   foe1Attack = false;
                   attackBlocked = true;
@@ -2147,7 +2147,7 @@ void draw() {
                 foe2Flash = true;
               }
               else if (foe2flash2t <= 0 && foe2Interupt == false) {
-                foe2Alive = false;
+                //foe2Alive = false;
                 if (shield == true) {
                   foe2Attack = false;
                   attackBlocked = true;
@@ -2219,7 +2219,7 @@ void draw() {
                 foe3Flash = true;
               }
               else if (foe3flash2t <= 0 && foe3Interupt == false) {
-                foe3Alive = false;
+                //foe3Alive = false;
                 if (shield == true) {
                   foe3Attack = false;
                   attackBlocked = true;
@@ -2987,17 +2987,14 @@ void draw() {
             }
           } 
           if (stage1 == true) {
-            foe1disapp = true;
-            foe2disapp = true;
-            foe3disapp = true;
             if (foe1HP > 0) {
-              image(foe1, foe1CoordX, foe1CoordY - 20, foe1SizeX, foe1SizeY);
+              foe1CoordY = 450;
             }
             if (foe2HP > 0) {
-              image(foe2, foe2CoordX, foe2CoordY - 20, foe2SizeX, foe2SizeY);
+              foe2CoordY = 320;
             }
             if (foe3HP > 0) {
-              image(foe3, foe3CoordX, foe3CoordY - 20, foe3SizeX, foe3SizeY);
+              foe3CoordY = 320;
             }
           }  
           if (stage2 == true) {
@@ -3183,9 +3180,9 @@ void draw() {
         foeT3Y = 340;
       }
       if (stage1 == true) {
-        foe1disapp = false;
-        foe2disapp = false;
-        foe3disapp = false;
+        foe1CoordY = 470;
+        foe2CoordY = 340;
+        foe3CoordY = 340;
       } 
       if (stage2 == true) {
         foe4disapp = false;
