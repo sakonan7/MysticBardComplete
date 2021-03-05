@@ -1749,17 +1749,20 @@ void draw() {
         }
       }
       if (stage1 == true) {
-        foe1disapp = true;
-        foe2disapp = true;
-        foe3disapp = true;
+        //foe1disapp = true;
+        //foe2disapp = true;
+        //foe3disapp = true;
         if (foe1HP > 0) {
-          image(foe1, foe1CoordX, foe1CoordY - 30, foe1SizeX, foe1SizeY);
+          //image(foe1, foe1CoordX, foe1CoordY - 30, foe1SizeX, foe1SizeY);
+          foe1CoordY = 440;
         }
         if (foe2HP > 0) {
-          image(foe2, foe2CoordX, foe2CoordY - 30, foe2SizeX, foe2SizeY);
+          //image(foe2, foe2CoordX, foe2CoordY - 30, foe2SizeX, foe2SizeY);
+          foe2CoordY = 310;
         }
         if (foe3HP > 0) {
-          image(foe3, foe3CoordX, foe3CoordY - 30, foe3SizeX, foe3SizeY);
+          //image(foe3, foe3CoordX, foe3CoordY - 30, foe3SizeX, foe3SizeY);
+          foe3CoordY = 310;
         }
       }      
       if (stage2 == true) {
@@ -1911,17 +1914,17 @@ void draw() {
         }        
       }
       if (stage1 == true) {
-        foe1disapp = false;
-        foe2disapp = false;
-        foe3disapp = false;        
+        //foe1disapp = false;
+        //foe2disapp = false;
+        //foe3disapp = false;        
         if (foe1HP > 0) {
-          foe1Alive = true;
+          foe1CoordY = 470;
         }
         if (foe2HP > 0) {
-          foe2Alive = true;
+          foe2CoordY = 340;
         }
         if (foe3HP > 0) {
-          foe3Alive = true;
+          foe3CoordY = 340;
         }        
       }
       if (stage2 == true) {
@@ -3246,9 +3249,9 @@ void draw() {
     }
     else if (stage1 == true) {
       if(foe1Alive == true) {
-        if (foe1disapp == false) {
+        //if (foe1disapp == false) {
           image(foe1, foe1CoordX, foe1CoordY, foe1SizeX, foe1SizeY);
-        }
+        //}
         if (foe1Attack == false && foe1HP > 0) {
           foe1t = foe1interval-int(millis()/1000);
             
@@ -3270,17 +3273,17 @@ void draw() {
               foe1flash2int += 6;              
             }           
               
-            foe1disapp = true;
+            //foe1disapp = true;
             foe1Attack = true;
-            foe1Alive = false;
+            //foe1Alive = false;
             first1Attack = false;
           }
         }        
       }  
       if (foe2Alive == true) {
-        if (foe2disapp == false) {
+        //if (foe2disapp == false) {
           image(foe2, foe2CoordX, foe2CoordY, foe2SizeX, foe2SizeY);
-        }    
+        //}    
         //foe2c
         if (foe2Attack == false && foe2HP > 0) {
           foe2t = foe2interval-int(millis()/1000);
@@ -3302,17 +3305,17 @@ void draw() {
               foe2flash2int += 6;              
             }           
               
-            foe2disapp = true;
+            //foe2disapp = true;
             foe2Attack = true;
-            foe2Alive = false;
+            //foe2Alive = false;
             first2Attack = false;
           }
         }        
       }
       if(foe3Alive == true) {
-        if (foe3disapp == false) {
+        //if (foe3disapp == false) {
           image(foe3, foe3CoordX, foe3CoordY, foe3SizeX, foe3SizeY);
-        }    
+        //}    
         if (foe3Attack == false && foe3HP > 0) {
           foe3t = foe3interval-int(millis()/1000);
             
@@ -3332,9 +3335,9 @@ void draw() {
               foe3flash2int += 6;              
             }           
               
-            foe3disapp = true;
+            //foe3disapp = true;
             foe3Attack = true;
-            foe3Alive = false;
+            //foe3Alive = false;
             first3Attack = false;
           }
         }
