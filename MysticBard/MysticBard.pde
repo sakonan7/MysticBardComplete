@@ -1783,11 +1783,6 @@ void draw() {
         }        
       }
       if (stage3 == true) {
-        rGiantdisapp = true;
-        foe6disapp = true;
-        foe7disapp = true;
-        foe8disapp = true;
-        
         gaugeDisapp = true;
         if (giantArmor == true) {
           setGradient(currentArmorBarX, armorBarY - 30, armorBar, 17, c5, c6, 2);
@@ -1797,16 +1792,16 @@ void draw() {
         }
         
         if (rGiantHP > 0) {
-          image(rGiant, rGiantCoordX, rGiantCoordY - 30, rGiantSizeX, rGiantSizeY);
+          rGiantCoordY = 325;
         }        
         if (foe9HP > 0) {
-          image(foe9, foe9CoordX, foe9CoordY - 30, foe9SizeX, foe9SizeY);
+          foe9CoordY = 395;
         }
         if (foe10HP > 0) {
-          image(foe10, foe10CoordX, foe10CoordY - 30, foe10SizeX, foe10SizeY);
+          foe10CoordY = 380;
         }        
         if (foe11HP > 0) {
-          image(foe11, foe11CoordX, foe11CoordY - 30, foe11SizeX, foe11SizeY);
+          foe11CoordY = 300;
         }        
       }      
       fill(117,0,0,145);
@@ -1940,23 +1935,18 @@ void draw() {
         }          
       } 
       if (stage3 == true) {
-        rGiantdisapp = false;
-        foe9disapp = false;
-        foe10disapp = false; 
-        foe11disapp = false;
-        gaugeDisapp = false;
         if (rGiantHP > 0) {
-          rGiantAlive = true;
-        }
+          rGiantCoordY = 355;
+        }        
         if (foe9HP > 0) {
-          foe9Alive = true;
-        }       
+          foe9CoordY = 425;
+        }
         if (foe10HP > 0) {
-          foe10Alive = true;
-        }         
+          foe10CoordY = 410;
+        }        
         if (foe11HP > 0) {
-          foe11Alive = true;
-        }          
+          foe11CoordY = 330;
+        }                
       }      
     }
     //here
@@ -2689,7 +2679,6 @@ void draw() {
                 foe10Flash = true;
               }
               else if (foe10flash2t <= 0 && foe10Interupt == false) {
-                foe10Alive = false;
                 if (shield == true) {
                   foe10Attack = false;
                   attackBlocked = true;
@@ -2709,10 +2698,7 @@ void draw() {
                   player19.shiftGain(-18, -18,1000);                   
                 
                   playerAttacked = true;
-                  foe9Alive = false;
-                  foe11Alive = false;  
-                  rGiantAlive = false;
-                    
+                  
                   foe10interval = int(millis()/1000) + 5;
                   foe10whiteint = int(millis()/1000) + 3;
                   foe10flashint = int(millis()/1000) + 3;
@@ -2761,7 +2747,6 @@ void draw() {
                 foe11Flash = true;
               }
               else if (foe11flash2t <= 0 && foe11Interupt == false) {
-                foe11Alive = false;
                 if (shield == true) {
                   foe11Attack = false;
                   attackBlocked = true;
@@ -2781,10 +2766,6 @@ void draw() {
                   player20.shiftGain(-18, -18,1000);                   
                 
                   playerAttacked = true;
-                  foe9Alive = false;
-                  foe10Alive = false;  
-                  rGiantAlive = false;
-                    
                   foe11interval = int(millis()/1000) + 5;
                   foe11whiteint = int(millis()/1000) + 3;
                   foe11flashint = int(millis()/1000) + 3;
@@ -2843,7 +2824,6 @@ void draw() {
                 rGiantFlash = true;
               }
               else if (rGiantflash2t <= 0 && rGiantInterupt == false) {
-                rGiantAlive = false;
                 gaugeDisapp = true;
                 if (shield == true) {
                   rGiantAttack = false;
@@ -2864,9 +2844,6 @@ void draw() {
                   player17.shiftGain(-8, -8,1000);                   
                 
                   playerAttacked = true;
-                  foe9Alive = false;
-                  foe10Alive = false;
-                  foe11Alive = false; 
                     
                   rGiantinterval = int(millis()/1000) + 5;
                   rGiantwhiteint = int(millis()/1000) + 3;
