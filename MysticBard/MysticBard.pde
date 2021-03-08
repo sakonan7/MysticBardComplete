@@ -2936,26 +2936,21 @@ void draw() {
             }
           }  
           if (stage2 == true) {
-            foe4disapp = true;
-            foe5disapp = true;
-            foe6disapp = true;
-            foe7disapp = true;
-            foe8disapp = true;
             if (foe4HP > 0) {
-              image(foe4, foe4CoordX, foe4CoordY - 20, foe4SizeX, foe4SizeY);
+              foe4CoordY = 390;
             }
             if (foe5HP > 0) {
-              image(foe5, foe5CoordX, foe5CoordY - 20, foe5SizeX, foe5SizeY);
+              foe5CoordY = 455;
             }
             if (foe6HP > 0) {
-              image(foe6, foe6CoordX, foe6CoordY - 20, foe6SizeX, foe6SizeY);
-            }
+              foe6CoordY = 430;
+            }       
             if (foe7HP > 0) {
-              image(foe7, foe7CoordX, foe7CoordY - 20, foe7SizeX, foe7SizeY);
-            }
+              foe7CoordY = 415;
+            }         
             if (foe8HP > 0) {
-              image(foe8, foe8CoordX, foe8CoordY - 20, foe8SizeX, foe8SizeY);
-            }            
+              foe8CoordY = 335;
+            } 
           } 
           if (stage3 == true) {
             rGiantdisapp = true;
@@ -2973,17 +2968,17 @@ void draw() {
             }
         
             if (rGiantHP > 0) {
-              image(rGiant, rGiantCoordX, rGiantCoordY - 20, rGiantSizeX, rGiantSizeY);
+              rGiantCoordY = 335;
             }        
             if (foe9HP > 0) {
-              image(foe9, foe9CoordX, foe9CoordY - 20, foe9SizeX, foe9SizeY);
+              foe9CoordY = 405;
             }
             if (foe10HP > 0) {
-              image(foe10, foe10CoordX, foe10CoordY - 20, foe10SizeX, foe10SizeY);
+              foe10CoordY = 390;
             }        
             if (foe11HP > 0) {
-              image(foe11, foe11CoordX, foe11CoordY - 20, foe11SizeX, foe11SizeY);
-            }        
+              foe11CoordY = 310;
+            }             
             //fill(70, 100, 0, 190);
           }          
           image(violinUI, 251, height - 156, 240, 156);
@@ -3123,19 +3118,19 @@ void draw() {
         foe3CoordY = 340;
       } 
       if (stage2 == true) {
-        foe4disapp = false;
-        foe5disapp = false;
-        foe6disapp = false;
-        foe7disapp = false;
-        foe8disapp = false;
+        foe4CoordY = 410;
+        foe5CoordY = 475;
+        foe6CoordY = 450;
+        foe7CoordY = 435;
+        foe8CoordY = 355;
       }      
       if (stage3 == true) {
-        foe9disapp = false;
-        foe10disapp = false;
-        foe11disapp = false;
-        rGiantdisapp = false;
         gaugeDisapp = false;
         armorBarY = (int)rGiantCoordY - 20 - 4;
+        rGiantCoordY = 355;
+        foe9CoordY = 425;
+        foe10CoordY = 410;
+        foe11CoordY = 330;
       }            
     }
     
@@ -3429,9 +3424,7 @@ void draw() {
     else if (stage3 == true) {
       
       if (foe9Alive == true) {
-        if (foe9disapp == false) {
           image(foe9, foe9CoordX, foe9CoordY, foe9SizeX, foe9SizeY);
-        }
         if (foe9Attack == false && foe9HP > 0) {
           foe9t = foe9interval-int(millis()/1000);
             
@@ -3451,17 +3444,13 @@ void draw() {
               foe9flash2int += 6;              
             }           
               
-            foe9disapp = true;
             foe9Attack = true;
-            foe9Alive = false;
             first9Attack = false;
           }
         }        
       }
       if (foe10Alive == true) {
-        if (foe10disapp == false) {
-          image(foe10, foe10CoordX, foe10CoordY, foe10SizeX, foe10SizeY);          
-        }
+          image(foe10, foe10CoordX, foe10CoordY, foe10SizeX, foe10SizeY);   
         if (foe10Attack == false && foe10HP > 0) {
           foe10t = foe10interval-int(millis()/1000);
             
@@ -3480,17 +3469,13 @@ void draw() {
               foe10flash2int += 6;              
             }           
               
-            foe10disapp = true;
             foe10Attack = true;
-            foe10Alive = false;
             first10Attack = false;
           }
         }        
       }  
       if (foe11Alive == true) {
-        if (foe11disapp == false) {
           image(foe11, foe11CoordX, foe11CoordY, foe11SizeX, foe11SizeY);
-        }
         if (foe11Attack == false && foe11HP > 0) {
           foe11t = foe11interval-int(millis()/1000);
             
@@ -3509,9 +3494,7 @@ void draw() {
               foe11flash2int += 6;              
             }           
               
-            foe11disapp = true;
             foe11Attack = true;
-            foe11Alive = false;
             first11Attack = false;
           }
         }        
@@ -3525,9 +3508,7 @@ void draw() {
           stroke(#DBDBDB); //#DEDEDE //F5F5F5 in the F level
           rect(340 - 3 + 20, armorBarY - 3, rGiantSizeX + 6, 23);          
         }          
-        if (rGiantdisapp == false) {
           image(rGiant, rGiantCoordX, rGiantCoordY, rGiantSizeX, rGiantSizeY);
-        }
         if (rGiantAttack == false && rGiantHP > 0) {
           rGiantt = rGiantinterval-int(millis()/1000);
             
@@ -3546,14 +3527,13 @@ void draw() {
               rGiantflash2int += 6;              
             }           
               
-            rGiantdisapp = true;
             rGiantAttack = true;
-            rGiantAlive = false;
             rGiantFirstAttack = false;
           }
         }        
       }      
     }
+    //monsterHit Resetter
   }
 }
 void keyPressed () {
