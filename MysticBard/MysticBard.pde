@@ -543,6 +543,8 @@ boolean foe5Interupt = false;
 
 boolean foeTattacked = false;
 boolean foeTInterupt = false;
+boolean foeT2attacked = false;
+boolean foeT3attacked = false;
 
 boolean foe6attacked = false;
 boolean foe6Interupt = false;
@@ -3535,12 +3537,39 @@ void draw() {
     }
     //monsterHit Resetter
     if (monsterViolin == true) {
-      if (foeTattacked == true) {
-        foetutorialX += 15;
-        foetutorialY += 30;
-        foetutorialSizeX = foetutorialSizeX / 1.2;
-        foetutorialSizeY = foetutorialSizeY / 1.2;              
+      //maybe do monsterViolin == false here
+      monsterViolin = false;
+      if (shield == true) {
+        shield = false;
+        if (shieldt == 1) {
+          shieldInterval += 2;
+        }
       }
+      if (violinBar == 0) {
+        violinDrained = true;
+        violinReplenish = int(millis()/1000) + 10;
+      }
+      if (foeTattacked == true) {
+        foetutorialX = 450;
+        foetutorialY = 470;
+        foetutorialSizeX = 137.5;
+        foetutorialSizeY = 220;       
+        foeTattacked = false;
+      }
+      if (foeT2attacked == true) {
+        foeT2X = 270;
+        foeT2Y = 340;
+        foeT2SizeX = 137.5;
+        foeT2SizeY = 220;       
+        foeT2attacked = false;
+      }   
+      if (foeT3attacked == true) {
+        foeT3X = 630;
+        foeT3Y = 340;
+        foeT3SizeX = 137.5;
+        foeT3SizeY = 220;       
+        foeT3attacked = false;
+      }        
     }
   }
 }
@@ -5125,18 +5154,8 @@ void mousePressed () {
           currentViolinBarX += originalWeaponBar/10;
           
           if (monsterViolin == true) {
-            monsterViolin = false;
-            if (shield == true) {
-              shield = false;
-              if (shieldt == 1) {
-                shieldInterval += 2;
-              }
-            }
+            //monsterViolin = false;
 
-            if (violinBar == 0) {
-              violinDrained = true;
-              violinReplenish = int(millis()/1000) + 10;
-            }
             //restore monster sizes here
             //if (foeTattacked == true) {
               //foeTattacked = false;
@@ -5152,11 +5171,11 @@ void mousePressed () {
 
               //image(foetutorial, foetutorialX - 15, foetutorialY - 30, foetutorialSizeX * 1.2, foetutorialSizeY * 1.2);
               foetutorialX -= 15;
-              foetutorialY -= 30;
+              foetutorialY -= 650;
               foetutorialSizeX = foetutorialSizeX * 1.2;
               foetutorialSizeY = foetutorialSizeY * 1.2;
           
-              image(musicNote1, foetutorialX + foetutorialSizeX/5, foetutorialY - foetutorialY/10, 100, 100);
+              image(musicNote1, foetutorialX + foetutorialSizeX/5, foetutorialY - foetutorialY/10 + 550, 100, 100);
       
               noFill();
               strokeWeight(5);
@@ -5167,7 +5186,7 @@ void mousePressed () {
               image(violin, cursorX + 10, cursorY - 25, 46.5, 50);
       
               foeTHP -= damage;
-              text("  " + damage, foetutorialX + foetutorialSizeX/4, foetutorialY - foetutorialY/11);
+              text("  " + damage, foetutorialX + foetutorialSizeX/4, foetutorialY - foetutorialY/11 + 550);
               fill(#FFFFFF);
               foeTattacked = true;
               monsterViolin = true;
@@ -5187,23 +5206,27 @@ void mousePressed () {
                 player7.shiftGain(-7, -7,1000);
               }        
               else if (foeTFlash == false) {
-                foeTattacked = false;
+                //foeTattacked = false;
                 player2 = minim2.loadFile("violin.mp3", 400);
                 player2.play();
                 player2.shiftGain(-7, -7,1000);
               }
               if (foeTInterupt == true) {
                 foeTInterupt = false;
-                foeTattacked = false;     
+                //foeTattacked = false;     
               }   
               
             }
             if (mouseX <= foeT2SizeX + foeT2X && mouseX >= foeT2X
             && (mouseY <= foeT2SizeY + foeT2Y && mouseY >= foeT2Y) && foeT2HP > 0) { 
 
-              image(foeT2, foeT2X - 15, foeT2Y - 30, foeT2SizeX * 1.2, foeT2SizeY * 1.2);
+              //image(foeT2, foeT2X - 15, foeT2Y - 30, foeT2SizeX * 1.2, foeT2SizeY * 1.2);
+              foeT2X -= 15;
+              foeT2Y -= 650;
+              foeT2SizeX = foeT2SizeX * 1.2;
+              foeT2SizeY = foeT2SizeY * 1.2;              
           
-              image(musicNote1, foeT2X + foeT2SizeX/5, foeT2Y - foeT2Y/10, 100, 100);
+              image(musicNote1, foeT2X + foeT2SizeX/5, foeT2Y - foeT2Y/10 + 550, 100, 100);
       
               noFill();
               strokeWeight(5);
@@ -5215,19 +5238,24 @@ void mousePressed () {
               image(violin, cursorX + 10, cursorY - 25, 46.5, 50);
               
               foeT2HP -= damage;
-              text("  " + damage, foeT2X + foeT2SizeX/4, foeT2Y - foeT2Y/11);
+              text("  " + damage, foeT2X + foeT2SizeX/4, foeT2Y - foeT2Y/11 + 550);
               fill(#FFFFFF);
               monsterViolin = true;
               player2 = minim2.loadFile("violin.mp3", 400);
               player2.play();
               player2.shiftGain(-7, -7,1000);
+              foeT2attacked = true;
             } 
             if (mouseX <= foeT3SizeX + foeT3X && mouseX >= foeT3X
             && (mouseY <= foeT3SizeY + foeT3Y && mouseY >= foeT3Y) && foeT3HP > 0) { 
 
-              image(foeT3, foeT3X - 15, foeT3Y - 30, foeT3SizeX * 1.2, foeT3SizeY * 1.2);
+              //image(foeT3, foeT3X - 15, foeT3Y - 30, foeT3SizeX * 1.2, foeT3SizeY * 1.2);
+              foeT3X -= 15;
+              foeT3Y -= 650;
+              foeT3SizeX = foeT3SizeX * 1.2;
+              foeT3SizeY = foeT3SizeY * 1.2;                
           
-              image(musicNote1, foeT3X + foeT3SizeX/5, foeT3Y - foeT3Y/10, 100, 100);
+              image(musicNote1, foeT3X + foeT3SizeX/5, foeT3Y - foeT3Y/10 + 550, 100, 100);
       
               noFill();
               strokeWeight(5);
@@ -5239,12 +5267,13 @@ void mousePressed () {
               image(violin, cursorX + 10, cursorY - 25, 46.5, 50);
       
               foeT3HP -= damage;
-              text("  " + damage, foeT3X + foeT3SizeX/4, foeT3Y - foeT3Y/11);
+              text("  " + damage, foeT3X + foeT3SizeX/4, foeT3Y - foeT3Y/11 + 550);
               fill(#FFFFFF);
               monsterViolin = true;
               player2 = minim2.loadFile("violin.mp3", 400);
               player2.play();
               player2.shiftGain(-7, -7,1000);
+              foeT3attacked = true;
             }            
           }
           //stage1 
