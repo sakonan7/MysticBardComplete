@@ -3534,6 +3534,14 @@ void draw() {
       }      
     }
     //monsterHit Resetter
+    if (monsterViolin == true) {
+      if (foeTattacked == true) {
+        foetutorialX += 15;
+        foetutorialY += 30;
+        foetutorialSizeX = foetutorialSizeX / 1.2;
+        foetutorialSizeY = foetutorialSizeY / 1.2;              
+      }
+    }
   }
 }
 void keyPressed () {
@@ -5142,11 +5150,11 @@ void mousePressed () {
             if (mouseX <= foetutorialSizeX + foetutorialX && mouseX >= foetutorialX
             && (mouseY <= foetutorialSizeY + foetutorialY && mouseY >= foetutorialY) && foeTHP > 0) { 
 
-              image(foetutorial, foetutorialX - 15, foetutorialY - 30, foetutorialSizeX * 1.2, foetutorialSizeY * 1.2);
-              //foetutorialX -= 15;
-              //foetutorialY -= 30;
-              //foetutorialSizeX = foetutorialSizeX * 1.2;
-              //foetutorialSizeY = foetutorialSizeY * 1.2;
+              //image(foetutorial, foetutorialX - 15, foetutorialY - 30, foetutorialSizeX * 1.2, foetutorialSizeY * 1.2);
+              foetutorialX -= 15;
+              foetutorialY -= 30;
+              foetutorialSizeX = foetutorialSizeX * 1.2;
+              foetutorialSizeY = foetutorialSizeY * 1.2;
           
               image(musicNote1, foetutorialX + foetutorialSizeX/5, foetutorialY - foetutorialY/10, 100, 100);
       
