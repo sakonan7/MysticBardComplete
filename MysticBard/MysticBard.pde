@@ -3625,6 +3625,34 @@ void draw() {
         foe8SizeX = 137.5;
         foe8SizeY = 220;       
         foe8attacked = false;
+      }  
+      if (rGiantattacked == true) {
+        rGiantCoordX = 360;
+        rGiantCoordY = 355;
+        rGiantSizeX = 234;
+        rGiantSizeY = 288;       
+        rGiantattacked = false;
+      }   
+      if (foe9attacked == true) {
+        foe9CoordX = 145;
+        foe9CoordY = 425;
+        foe9SizeX = 137.5;
+        foe9SizeY = 220;       
+        foe9attacked = false;
+      } 
+      if (foe10attacked == true) {
+        foe10CoordX = 605;
+        foe10CoordY = 410;
+        foe10SizeX = 137.5;
+        foe10SizeY = 220;       
+        foe10attacked = false;
+      }   
+      if (foe11attacked == true) {
+        foe11CoordX = 815;
+        foe11CoordY = 330;
+        foe11SizeX = 137.5;
+        foe11SizeY = 220;       
+        foe11attacked = false;
       }      
     }
   }
@@ -5753,10 +5781,14 @@ void mousePressed () {
                 image(musicNote1, rGiantCoordX + 80, rGiantCoordY - rGiantCoordY/10, 100, 100);
               }
               else if (giantArmor == false) {
-                image(rGiant, rGiantCoordX - 15, rGiantCoordY - 30, rGiantSizeX * 1.2, rGiantSizeY * 1.2);
+                //image(rGiant, rGiantCoordX - 15, rGiantCoordY - 30, rGiantSizeX * 1.2, rGiantSizeY * 1.2);
+                rGiantCoordX -= 15;
+                rGiantCoordY -= 650;
+                rGiantSizeX = rGiantSizeX * 1.1;
+                rGiantSizeY = rGiantSizeY * 1.1;                
                 rGiantHP -= damage;
-                image(musicNote1, rGiantCoordX + 80, rGiantCoordY - rGiantCoordY/10, 100, 100);
-                text("  " + damage, rGiantCoordX + 95, rGiantCoordY - rGiantCoordY/11);  
+                image(musicNote1, rGiantCoordX + 80, rGiantCoordY - rGiantCoordY/10 + 550, 100, 100);
+                text("  " + damage, rGiantCoordX + 95, rGiantCoordY - rGiantCoordY/11 + 550);  
                 
                 rGiantattacked = true;
                 if (rGiantFlash == true && rGiantattacked == true) {
@@ -5780,7 +5812,7 @@ void mousePressed () {
                 }
                 if (rGiantInterupt == true) {
                   rGiantInterupt = false;
-                  rGiantattacked = false;     
+                  //rGiantattacked = false;     
                 }                
               }
               noFill();
@@ -5808,9 +5840,13 @@ void mousePressed () {
             if (mouseX <= foe9SizeX + foe9CoordX && mouseX >= foe9CoordX
             && (mouseY <= foe9SizeY + foe9CoordY && mouseY >= foe9CoordY) && foe9HP > 0) { 
 
-              image(foe9, foe9CoordX - 15, foe9CoordY - 30, foe9SizeX * 1.2, foe9SizeY * 1.2);
+              //image(foe9, foe9CoordX - 15, foe9CoordY - 30, foe9SizeX * 1.2, foe9SizeY * 1.2);
+              foe9CoordX -= 15;
+              foe9CoordY -= 650;
+              foe9SizeX = foe3SizeX * 1.1;
+              foe9SizeY = foe3SizeY * 1.1;              
           
-              image(musicNote1, foe9CoordX + foe9SizeX/5, foe9CoordY - foe9CoordY/10, 100, 100);
+              image(musicNote1, foe9CoordX + foe9SizeX/5, foe9CoordY - foe9CoordY/10 + 550, 100, 100);
       
               noFill();
               strokeWeight(5);
@@ -5822,7 +5858,7 @@ void mousePressed () {
               image(violin, cursorX + 10, cursorY - 25, 46.5, 50);
       
               foe9HP -= damage;
-              text("  " + damage, foe9CoordX + foe9SizeX/4, foe9CoordY - foe9CoordY/11);
+              text("  " + damage, foe9CoordX + foe9SizeX/4, foe9CoordY - foe9CoordY/11 + 550);
               fill(#FFFFFF);
               foe9attacked = true;
               monsterViolin = true;
@@ -5848,13 +5884,17 @@ void mousePressed () {
               }
               if (foe9Interupt == true) {
                 foe9Interupt = false;
-                foe9attacked = false;     
+                //foe9attacked = false;     
               }              
             }
             if (mouseX <= foe10SizeX + foe10CoordX && mouseX >= foe10CoordX
             && (mouseY <= foe10SizeY + foe10CoordY && mouseY >= foe10CoordY) && foe10HP > 0) { 
 
-              image(foe10, foe10CoordX - 15, foe10CoordY - 30, foe10SizeX * 1.2, foe10SizeY * 1.2);
+              //image(foe10, foe10CoordX - 15, foe10CoordY - 30, foe10SizeX * 1.2, foe10SizeY * 1.2);
+              foe10CoordX -= 15;
+              foe10CoordY -= 650;
+              foe10SizeX = foe10SizeX * 1.1;
+              foe10SizeY = foe10SizeY * 1.1;              
           
               image(musicNote1, foe10CoordX + foe10SizeX/5, foe10CoordY - foe10CoordY/10, 100, 100);
       
@@ -5900,9 +5940,13 @@ void mousePressed () {
             if (mouseX <= foe11SizeX + foe11CoordX && mouseX >= foe11CoordX
             && (mouseY <= foe11SizeY + foe11CoordY && mouseY >= foe11CoordY) && foe11HP > 0) { 
 
-              image(foe11, foe11CoordX - 15, foe11CoordY - 30, foe11SizeX * 1.2, foe11SizeY * 1.2);
+              //image(foe11, foe11CoordX - 15, foe11CoordY - 30, foe11SizeX * 1.2, foe11SizeY * 1.2);
+              foe11CoordX -= 15;
+              foe11CoordY -= 650;
+              foe11SizeX = foe11SizeX * 1.1;
+              foe11SizeY = foe11SizeY * 1.1;              
           
-              image(musicNote1, foe11CoordX + foe11SizeX/5, foe11CoordY - foe11CoordY/10, 100, 100);
+              image(musicNote1, foe11CoordX + foe11SizeX/5, foe11CoordY - foe11CoordY/10 + 550, 100, 100);
       
               noFill();
               strokeWeight(5);
@@ -5914,7 +5958,7 @@ void mousePressed () {
               image(violin, cursorX + 10, cursorY - 25, 46.5, 50);
       
               foe11HP -= damage;
-              text("  " + damage, foe11CoordX + foe11SizeX/4, foe11CoordY - foe11CoordY/11);
+              text("  " + damage, foe11CoordX + foe11SizeX/4, foe11CoordY - foe11CoordY/11 + 550);
               fill(#FFFFFF);
               foe11attacked = true;
               monsterViolin = true;
@@ -5940,7 +5984,7 @@ void mousePressed () {
               }
               if (foe11Interupt == true) {
                 foe11Interupt = false;
-                foe11attacked = false;     
+                //foe11attacked = false;     
               }              
             }            
           }
