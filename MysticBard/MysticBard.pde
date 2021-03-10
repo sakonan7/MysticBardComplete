@@ -5279,8 +5279,8 @@ void mousePressed () {
               //image(foeT2, foeT2X - 15, foeT2Y - 30, foeT2SizeX * 1.2, foeT2SizeY * 1.2);
               foeT2X -= 15;
               foeT2Y -= 650;
-              foeT2SizeX = foeT2SizeX * 1.2;
-              foeT2SizeY = foeT2SizeY * 1.2;              
+              foeT2SizeX = foeT2SizeX * 1.1;
+              foeT2SizeY = foeT2SizeY * 1.1;              
           
               image(musicNote1, foeT2X + foeT2SizeX/5, foeT2Y - foeT2Y/10 + 550, 100, 100);
       
@@ -5308,8 +5308,8 @@ void mousePressed () {
               //image(foeT3, foeT3X - 15, foeT3Y - 30, foeT3SizeX * 1.2, foeT3SizeY * 1.2);
               foeT3X -= 15;
               foeT3Y -= 650;
-              foeT3SizeX = foeT3SizeX * 1.2;
-              foeT3SizeY = foeT3SizeY * 1.2;                
+              foeT3SizeX = foeT3SizeX * 1.1;
+              foeT3SizeY = foeT3SizeY * 1.1;                
           
               image(musicNote1, foeT3X + foeT3SizeX/5, foeT3Y - foeT3Y/10 + 550, 100, 100);
       
@@ -5340,8 +5340,8 @@ void mousePressed () {
               //image(foe1, foe1CoordX - 15, foe1CoordY - 30, foe1SizeX * 1.2, foe1SizeY * 1.2);
               foe1CoordX -= 15;
               foe1CoordY -= 650;
-              foe1SizeX = foe1SizeX * 1.2;
-              foe1SizeY = foe1SizeY * 1.2;              
+              foe1SizeX = foe1SizeX * 1.1;
+              foe1SizeY = foe1SizeY * 1.1;              
           
               image(musicNote1, foe1CoordX + foe1SizeX/5, foe1CoordY - foe1CoordY/10 + 550, 100, 100);
       
@@ -5389,8 +5389,8 @@ void mousePressed () {
               //image(foe2, foe2CoordX - 15, foe2CoordY - 30, foe2SizeX * 1.2, foe2SizeY * 1.2);
               foe2CoordX -= 15;
               foe2CoordY -= 650;
-              foe2SizeX = foe2SizeX * 1.2;
-              foe2SizeY = foe2SizeY * 1.2;              
+              foe2SizeX = foe2SizeX * 1.1;
+              foe2SizeY = foe2SizeY * 1.1;              
           
               image(musicNote1, foe2CoordX + foe2SizeX/5, foe2CoordY - foe2CoordY/10 + 550, 100, 100);
       
@@ -5439,8 +5439,8 @@ void mousePressed () {
               //image(foe3, foe3CoordX - 15, foe3CoordY - 30, foe3SizeX * 1.2, foe3SizeY * 1.2);
               foe3CoordX -= 15;
               foe3CoordY -= 650;
-              foe3SizeX = foe3SizeX * 1.2;
-              foe3SizeY = foe3SizeY * 1.2;              
+              foe3SizeX = foe3SizeX * 1.1;
+              foe3SizeY = foe3SizeY * 1.1;              
           
               image(musicNote1, foe3CoordX + foe3SizeX/5, foe3CoordY - foe3CoordY/10 + 550, 100, 100);
       
@@ -5491,8 +5491,8 @@ void mousePressed () {
               //image(foe4, foe4CoordX - 15, foe4CoordY - 30, foe4SizeX * 1.2, foe4SizeY * 1.2);
               foe4CoordX -= 15;
               foe4CoordY -= 650;
-              foe4SizeX = foe4SizeX * 1.2;
-              foe4SizeY = foe4SizeY * 1.2;                  
+              foe4SizeX = foe4SizeX * 1.1;
+              foe4SizeY = foe4SizeY * 1.1;                  
           
               image(musicNote1, foe4CoordX + foe4SizeX/5, foe4CoordY - foe4CoordY/10 + 550, 100, 100);
       
@@ -5541,8 +5541,8 @@ void mousePressed () {
               //image(foe5, foe5CoordX - 15, foe5CoordY - 30, foe5SizeX * 1.2, foe5SizeY * 1.2);
               foe5CoordX -= 15;
               foe5CoordY -= 650;
-              foe5SizeX = foe5SizeX * 1.2;
-              foe5SizeY = foe5SizeY * 1.2;                  
+              foe5SizeX = foe5SizeX * 1.1;
+              foe5SizeY = foe5SizeY * 1.1;                  
           
               image(musicNote1, foe5CoordX + foe5SizeX/5, foe5CoordY - foe5CoordY/10 + 550, 100, 100);
       
@@ -5591,8 +5591,8 @@ void mousePressed () {
               //image(foe6, foe6CoordX - 15, foe6CoordY - 30, foe6SizeX * 1.2, foe6SizeY * 1.2);
               foe6CoordX -= 15;
               foe6CoordY -= 650;
-              foe6SizeX = foe6SizeX * 1.2;
-              foe6SizeY = foe6SizeY * 1.2;                  
+              foe6SizeX = foe6SizeX * 1.1;
+              foe6SizeY = foe6SizeY * 1.1;                  
           
               image(musicNote1, foe6CoordX + foe6SizeX/5, foe6CoordY - foe6CoordY/10 + 550, 100, 100);
       
@@ -5641,8 +5641,8 @@ void mousePressed () {
               //image(foe7, foe7CoordX - 15, foe7CoordY - 30, foe7SizeX * 1.2, foe7SizeY * 1.2);
               foe7CoordX -= 15;
               foe7CoordY -= 650;
-              foe7SizeX = foe7SizeX * 1.2;
-              foe7SizeY = foe3SizeY * 1.2;                  
+              foe7SizeX = foe7SizeX * 1.1;
+              foe7SizeY = foe3SizeY * 1.1;                  
           
               image(musicNote1, foe7CoordX + foe7SizeX/5, foe7CoordY - foe7CoordY/10 + 550, 100, 100);
       
@@ -5691,8 +5691,8 @@ void mousePressed () {
               //image(foe8, foe8CoordX - 15, foe8CoordY - 30, foe8SizeX * 1.2, foe8SizeY * 1.2);
               foe8CoordX -= 15;
               foe8CoordY -= 650;
-              foe8SizeX = foe3SizeX * 1.2;
-              foe8SizeY = foe3SizeY * 1.2;                  
+              foe8SizeX = foe3SizeX * 1.1;
+              foe8SizeY = foe3SizeY * 1.1;                  
           
               image(musicNote1, foe8CoordX + foe8SizeX/5, foe8CoordY - foe8CoordY/10 + 550, 100, 100);
       
@@ -5740,7 +5740,7 @@ void mousePressed () {
             if (mouseX <= rGiantSizeX + rGiantCoordX && mouseX >= rGiantCoordX
             && (mouseY <= rGiantSizeY + rGiantCoordY && mouseY >= rGiantCoordY) && rGiantHP > 0) {
               //Foe only spasms when armor is broken
-              image(musicNote1, rGiantCoordX + 80, rGiantCoordY - rGiantCoordY/10, 100, 100);
+              
                     
               if (giantArmor == true) {
                 rGiantArmor -= 2;
@@ -5750,10 +5750,12 @@ void mousePressed () {
                 player16 = minim16.loadFile("muffled violin.mp3", 400);
                 player16.play();
                 player16.shiftGain(-7, -7,1000);                
+                image(musicNote1, rGiantCoordX + 80, rGiantCoordY - rGiantCoordY/10, 100, 100);
               }
               else if (giantArmor == false) {
                 image(rGiant, rGiantCoordX - 15, rGiantCoordY - 30, rGiantSizeX * 1.2, rGiantSizeY * 1.2);
                 rGiantHP -= damage;
+                image(musicNote1, rGiantCoordX + 80, rGiantCoordY - rGiantCoordY/10, 100, 100);
                 text("  " + damage, rGiantCoordX + 95, rGiantCoordY - rGiantCoordY/11);  
                 
                 rGiantattacked = true;
