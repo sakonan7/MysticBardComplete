@@ -3545,7 +3545,7 @@ void draw() {
           shieldInterval += 2;
         }
       }
-      if (violinBar == 0) {
+      if (violinBar <= 0) {
         violinDrained = true;
         violinReplenish = int(millis()/1000) + 10;
       }
@@ -3698,7 +3698,7 @@ void keyPressed () {
 void mouseMoved() {
   cursorX = mouseX;
   cursorY = mouseY;  
-  if (weapon == "Trombone" && firstBlast == false) {
+  if (weapon == "Trombone" && firstBlast == false && tutorialVictory == false && victory == false && redDead == false && redTDead == false) {
     //fill(#FFC246);
     fill(255,194,70,65);
     stroke(255,194,70,65);
