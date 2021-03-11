@@ -3691,6 +3691,90 @@ void draw() {
         foeT3SizeX = 137.5;
         foeT3SizeY = 220;       
         foeT3attacked = false;
+      }  
+      if (foe1attacked == true) {
+        foe1CoordX = 450;
+        foe1CoordY = 470;
+        foe1SizeX = 137.5;
+        foe1SizeY = 220;       
+        foe1attacked = false;
+      }
+      if (foe2attacked == true) {
+        foe2CoordX = 270;
+        foe2CoordY = 340;
+        foe2SizeX = 137.5;
+        foe2SizeY = 220;       
+        foe2attacked = false;
+      }   
+      if (foe3attacked == true) {
+        foe3CoordX = 630;
+        foe3CoordY = 340;
+        foe3SizeX = 137.5;
+        foe3SizeY = 220;       
+        foe3attacked = false;
+      }         
+      if (foe4attacked == true) {
+        foe4CoordX = 105;
+        foe4CoordY = 405;
+        foe4SizeX = 137.5;
+        foe4SizeY = 220;       
+        foe4attacked = false;
+      }
+      if (foe5attacked == true) {
+        foe5CoordX = 315;
+        foe5CoordY = 475;
+        foe5SizeX = 137.5;
+        foe5SizeY = 220;       
+        foe5attacked = false;
+      }   
+      if (foe6attacked == true) {
+        foe6CoordX = 525;
+        foe6CoordY = 450;
+        foe6SizeX = 137.5;
+        foe6SizeY = 220;       
+        foe6attacked = false;
+      } 
+      if (foe7attacked == true) {
+        foe7CoordX = 725;
+        foe7CoordY = 435;
+        foe7SizeX = 137.5;
+        foe7SizeY = 220;       
+        foe7attacked = false;
+      }   
+      if (foe8attacked == true) {
+        foe8CoordX = 875;
+        foe8CoordY = 355;
+        foe8SizeX = 137.5;
+        foe8SizeY = 220;       
+        foe8attacked = false;
+      }  
+      if (rGiantattacked == true) {
+        rGiantCoordX = 360;
+        rGiantCoordY = 355;
+        rGiantSizeX = 234;
+        rGiantSizeY = 288;       
+        rGiantattacked = false;
+      }   
+      if (foe9attacked == true) {
+        foe9CoordX = 145;
+        foe9CoordY = 425;
+        foe9SizeX = 137.5;
+        foe9SizeY = 220;       
+        foe9attacked = false;
+      } 
+      if (foe10attacked == true) {
+        foe10CoordX = 605;
+        foe10CoordY = 410;
+        foe10SizeX = 137.5;
+        foe10SizeY = 220;       
+        foe10attacked = false;
+      }   
+      if (foe11attacked == true) {
+        foe11CoordX = 815;
+        foe11CoordY = 330;
+        foe11SizeX = 137.5;
+        foe11SizeY = 220;       
+        foe11attacked = false;
       }      
     }
   }
