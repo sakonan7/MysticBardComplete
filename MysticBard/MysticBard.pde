@@ -4721,8 +4721,8 @@ void mousePressed () {
                 
                 foe5CoordX -= 15;
                 foe5CoordY -= 650;
-                foe5SizeX = foe5SizeX * 1.15;
-                foe5SizeY = foe5SizeY * 1.15;                
+                foe5SizeX = foe5SizeX * 1.1;
+                foe5SizeY = foe5SizeY * 1.1;                
           
                 image(musicNote2, foe5CoordX + 5, foe5CoordY - 60 + 550, 100, 100);
 
@@ -4772,8 +4772,8 @@ void mousePressed () {
 
                 foe6CoordX -= 15;
                 foe6CoordY -= 650;
-                foe6SizeX = foe6SizeX * 1.15;
-                foe6SizeY = foe6SizeY * 1.15;                
+                foe6SizeX = foe6SizeX * 1.1;
+                foe6SizeY = foe6SizeY * 1.1;                
           
                 image(musicNote2, foe6CoordX + 5, foe6CoordY - 60 + 550, 100, 100);
 
@@ -4824,8 +4824,8 @@ void mousePressed () {
 
                 foe7CoordX -= 15;
                 foe7CoordY -= 650;
-                foe7SizeX = foe7SizeX * 1.15;
-                foe7SizeY = foe7SizeY * 1.15;                
+                foe7SizeX = foe7SizeX * 1.1;
+                foe7SizeY = foe7SizeY * 1.1;                
           
                 image(musicNote2, foe7CoordX + 5, foe7CoordY - 60 + 550, 100, 100);
 
@@ -4876,8 +4876,8 @@ void mousePressed () {
 
                 foe8CoordX -= 15;
                 foe8CoordY -= 650;
-                foe8SizeX = foe8SizeX * 1.15;
-                foe8SizeY = foe8SizeY * 1.15;                
+                foe8SizeX = foe8SizeX * 1.1;
+                foe8SizeY = foe8SizeY * 1.1;                
           
                 image(musicNote2, foe8CoordX + 5, foe8CoordY - 60 + 550, 100, 100);
 
@@ -4929,39 +4929,51 @@ void mousePressed () {
             if (firstBlast == true) {
               if ((mouseX <= width && mouseX >= 0) && (mouseY <= height && mouseY >= 0)) {
                 textSize(32);
-                image(background, 0, -15, width, height);
+                backgroundY = -15;
                 fill(#FFFFFF);
                 if (foe9HP > 0) {
-                  image(foe9, foe9CoordX - 10, foe9CoordY - 60, foe9SizeX * 1.1, foe9SizeY * 1.1);
-                  image(musicNote2, foe9CoordX + 5, foe9CoordY - 60, 100, 100);
-                  text("  " + 20, foe9CoordX + foe9SizeX/5 - 10, foe9CoordY - 60);
+                  foe9CoordX -= 15;
+                  foe9CoordY -= 650;
+                  foe9SizeX = foe9SizeX * 1.15;
+                  foe9SizeY = foe9SizeY * 1.15;                  
+                  image(musicNote2, foe9CoordX + 5, foe9CoordY - 60 + 550, 100, 100);
+                  text("  " + 20, foe9CoordX + foe9SizeX/5 - 10, foe9CoordY - 60 + 550);
                   foe9HP -= 20;
                 }
                 if (foe10HP > 0) {
-                  image(foe10, foe10CoordX - 10, foe10CoordY - 60, foe10SizeX * 1.1, foe10SizeY * 1.1);
-                  image(musicNote2, foe10CoordX + 5, foe10CoordY - 60, 100, 100);
-                  text("  " + 20, foe10CoordX + foe10SizeX/5 - 10, foe10CoordY - 60);
+                  foe10CoordX -= 15;
+                  foe10CoordY -= 650;
+                  foe10SizeX = foe10SizeX * 1.15;
+                  foe10SizeY = foe10SizeY * 1.15;                  
+                  image(musicNote2, foe10CoordX + 5, foe10CoordY - 60 + 550, 100, 100);
+                  text("  " + 20, foe10CoordX + foe10SizeX/5 - 10, foe10CoordY - 60 + 550);
                   foe10HP -= 20;
                 }
                 if (foe11HP > 0) {
-                  image(foe11, foe11CoordX - 10, foe11CoordY - 60, foe11SizeX * 1.1, foe11SizeY * 1.1);
-                  image(musicNote2, foe11CoordX + 5, foe11CoordY - 60, 100, 100);
-                  text("  " + 20, foe11CoordX + foe11SizeX/5 - 10, foe11CoordY - 60);
+                  foe11CoordX -= 15;
+                  foe11CoordY -= 650;
+                  foe11SizeX = foe11SizeX * 1.15;
+                  foe11SizeY = foe11SizeY * 1.15;                  
+                  image(musicNote2, foe11CoordX + 5, foe11CoordY - 60 + 550, 100, 100);
+                  text("  " + 20, foe11CoordX + foe11SizeX/5 - 10, foe11CoordY - 60 + 550);
                   foe11HP -= 20;
                 }
                 if (rGiantHP > 0) {
-                  image(rGiant, rGiantCoordX - 10, rGiantCoordY - 60, rGiantSizeX * 1.1, rGiantSizeY * 1.1);
-                  image(musicNote2, rGiantCoordX + 5, rGiantCoordY - 60, 100, 100);
-                  text("  " + "25", rGiantCoordX + 85, rGiantCoordY - rGiantCoordY/11);                  
+                  rGiantCoordX -= 15;
+                  rGiantCoordY -= 650;
+                  rGiantSizeX = rGiantSizeX * 1.15;
+                  rGiantSizeY = rGiantSizeY * 1.15;                  
+                  image(musicNote2, rGiantCoordX + 5, rGiantCoordY - 60 + 550, 100, 100);
+                  text("  " + "25", rGiantCoordX + 85, rGiantCoordY - rGiantCoordY/11 + 550);                  
                   if (giantArmor == true) {
                     gaugeDisapp = true;
                     rGiantArmor -= 25;
                     armorBar -= 59;
                     currentArmorBarX += 59;
-         setGradient(currentArmorBarX, armorBarY - 60, armorBar, 17, c5, c6, 2);
-         noFill();
-         stroke(#DBDBDB); //#DEDEDE //F5F5F5 in the F level
-         rect(340 - 3 + 20, armorBarY - 63, rGiantSizeX + 6, 23);                    
+                    setGradient(currentArmorBarX, armorBarY - 60, armorBar, 17, c5, c6, 2);
+                    noFill();
+                    stroke(#DBDBDB); //#DEDEDE //F5F5F5 in the F level
+                    rect(340 - 3 + 20, armorBarY - 63, rGiantSizeX + 6, 23);                    
                   }
                   else if (giantArmor == false) {                
                     rGiantHP -= 25;    
@@ -4977,31 +4989,7 @@ void mousePressed () {
                 ellipse(cursorX, cursorY, width/2 - 140, width/2 - 150);
                 image(trombone, cursorX - 30, cursorY - 15, 100, 40);
 
-                //fill(#E505FF);
-                image(violinUI, 251, height - 156, 240, 156);
-                image(tromboneD, 7, height - 157, 250, 156);
-                image(shieldD, width - 253, height - 157, 244, 156);
-                if (potionDrained == false) {
-                  image(potion, 492, height - 157, 214, 156); 
-                }
-                else if (potionDrained == true) {
-                  image(potionD, 492, height - 157, 214, 156);
-                }                
-              
-                setGradient(currentHPX, 50, HPbar, 40, c2, c1, 3);
-                noFill();
-                stroke(#9B9B9B);
-                rect(originalHPX - 3, 50 - 2.5, originalHPbar + 5, 40 + 6);                
-          
-                setGradient(currentShieldBarX, height-105, shieldBar, 15, c3, c4, 2);
-                setGradient(currentViolinBarX, height-105, violinBar, 15, c3, c4, 2); //Violin
-                setGradient(currentTromboneBarX, height-105, tromboneBar, 15, c3, c4, 2);
-                setGradient(currentPotionBarX, height-105, potionBar, 15, c3, c4, 2);
 
-                strokeWeight(3);
-                stroke(#FFCE46);
-          
-                rect(13, height - 148, 235, 135, 8);
                 foe9attacked = true;
                 foe10attacked = true;
                 foe11attacked = true;
@@ -5075,20 +5063,16 @@ void mousePressed () {
                   player5.shiftGain(-13, -13,1000);                  
                 }
                 if (foe9Interupt == true) {
-                  foe9Interupt = false;
-                  foe9attacked = false;       
+                  foe9Interupt = false;  
                 }
                 if (foe10Interupt == true) {
-                  foe10Interupt = false;
-                  foe10attacked = false;       
+                  foe10Interupt = false;   
                 }
                 if (foe11Interupt == true) {
-                  foe11Interupt = false;
-                  foe11attacked = false;       
+                  foe11Interupt = false;    
                 }               
                 if (rGiantInterupt == true) {
-                  rGiantInterupt = false;
-                  rGiantattacked = false;       
+                  rGiantInterupt = false;  
                 }
                 
                 if (rGiantArmor <= 0) {
@@ -5101,7 +5085,6 @@ void mousePressed () {
                   armorBreak = true;
                 }
                 
-                firstBlast = false;  
                 gaugeDisapp = false;
               }              
             }
@@ -5109,9 +5092,12 @@ void mousePressed () {
               if (mouseX <= foe9SizeX + foe9CoordX + 140 && mouseX >= foe9CoordX - 140
               && (mouseY <= foe9SizeY + foe9CoordY + 140 && mouseY >= foe9CoordY - 140) && foe9HP > 0) { 
 
-                image(foe9, foe9CoordX - 10, foe9CoordY - 60, foe9SizeX * 1.1, foe9SizeY * 1.1);
+                foe9CoordX -= 15;
+                foe9CoordY -= 650;
+                foe9SizeX = foe9SizeX * 1.15;
+                foe9SizeY = foe9SizeY * 1.15;                
 
-                image(musicNote2, foe9CoordX + 5, foe9CoordY - 60, 100, 100);
+                image(musicNote2, foe9CoordX + 5, foe9CoordY - 60 + 550, 100, 100);
 
                 noFill();
                 strokeWeight(7);
@@ -5124,7 +5110,7 @@ void mousePressed () {
                 image(trombone, cursorX - 30, cursorY - 15, 100, 40);
       
                 foe9HP -= 15;
-                text("  " + 15, foe9CoordX + foe9SizeX/5 - 10, foe9CoordY - 60);
+                text("  " + 15, foe9CoordX + foe9SizeX/5 - 10, foe9CoordY - 60 + 550);
                 
                 fill(#FFFFFF);
 
@@ -5152,16 +5138,18 @@ void mousePressed () {
                   player6.shiftGain(-13, -13,1000);                  
                 }
                 if (foe9Interupt == true) {
-                  foe9Interupt = false;
-                  foe9attacked = false;       
+                  foe9Interupt = false;       
                 }                
               }
               if (mouseX <= foe10SizeX + foe10CoordX + 140 && mouseX >= foe10CoordX - 140
               && (mouseY <= foe10SizeY + foe10CoordY + 140 && mouseY >= foe10CoordY - 140) && foe10HP > 0) { 
                 
-                image(foe10, foe10CoordX - 10, foe10CoordY - 60, foe10SizeX * 1.1, foe10SizeY * 1.1);
+                foe10CoordX -= 15;
+                foe10CoordY -= 650;
+                foe10SizeX = foe10SizeX * 1.15;
+                foe10SizeY = foe10SizeY * 1.15;                
           
-                image(musicNote2, foe10CoordX + 5, foe10CoordY - 60, 100, 100);
+                image(musicNote2, foe10CoordX + 5, foe10CoordY - 60 + 550, 100, 100);
 
                 noFill();
                 strokeWeight(7);
@@ -5173,7 +5161,7 @@ void mousePressed () {
                 image(trombone, cursorX - 30, cursorY - 15, 100, 40);
       
                 foe10HP -= 15;
-                text("  " + 15, foe10CoordX + foe10SizeX/5 - 10, foe10CoordY - 60);
+                text("  " + 15, foe10CoordX + foe10SizeX/5 - 10, foe10CoordY - 60 + 550);
                 
                 fill(#FFFFFF);
 
@@ -5201,16 +5189,18 @@ void mousePressed () {
                   player6.shiftGain(-13, -13,1000);                  
                 }
                 if (foe10Interupt == true) {
-                  foe10Interupt = false;
-                  foe10attacked = false;       
+                  foe10Interupt = false;       
                 }                
               }
               if (mouseX <= foe11SizeX + foe11CoordX + 140 && mouseX >= foe11CoordX - 140
               && (mouseY <= foe11SizeY + foe11CoordY + 140 && mouseY >= foe11CoordY - 140) && foe11HP > 0) { 
 
-                image(foe11, foe11CoordX - 10, foe11CoordY - 60, foe11SizeX * 1.1, foe11SizeY * 1.1);
+                foe11CoordX -= 15;
+                foe11CoordY -= 650;
+                foe11SizeX = foe11SizeX * 1.15;
+                foe11SizeY = foe11SizeY * 1.15;                
           
-                image(musicNote2, foe11CoordX + 5, foe11CoordY - 60, 100, 100);
+                image(musicNote2, foe11CoordX + 5, foe11CoordY - 60 + 550, 100, 100);
 
                 noFill();
                 strokeWeight(7);
@@ -5223,7 +5213,7 @@ void mousePressed () {
                 image(trombone, cursorX - 30, cursorY - 15, 100, 40);
       
                 foe11HP -= 15;
-                text("  " + 15, foe11CoordX + foe11SizeX/5 - 10, foe11CoordY - 60);
+                text("  " + 15, foe11CoordX + foe11SizeX/5 - 10, foe11CoordY - 60 + 550);
                 
                 fill(#FFFFFF);
               
@@ -5251,17 +5241,19 @@ void mousePressed () {
                   player6.shiftGain(-13, -13,1000);                  
                 }
                 if (foe11Interupt == true) {
-                  foe11Interupt = false;
-                  foe11attacked = false;       
+                  foe11Interupt = false;       
                 }                
               }
               //prozd
               if (mouseX <= rGiantSizeX + rGiantCoordX + 140 && mouseX >= rGiantCoordX - 140
               && (mouseY <= rGiantSizeY + rGiantCoordY + 140 && mouseY >= rGiantCoordY - 140) && rGiantHP > 0) { 
 
-                image(rGiant, rGiantCoordX - 10, rGiantCoordY - 60, rGiantSizeX * 1.1, rGiantSizeY * 1.1);
+                rGiantCoordX -= 15;
+                rGiantCoordY -= 650;
+                rGiantSizeX = rGiantSizeX * 1.15;
+                rGiantSizeY = rGiantSizeY * 1.15;                
           
-                image(musicNote2, rGiantCoordX + 5, rGiantCoordY - 60, 100, 100);
+                image(musicNote2, rGiantCoordX + 5, rGiantCoordY - 60 + 550, 100, 100);
 
                 noFill();
                 strokeWeight(7);
@@ -5276,12 +5268,11 @@ void mousePressed () {
                   rGiantArmor -= 20;
                   armorBar -= 47;
                   currentArmorBarX += 47;
-                  text("  " + "20", rGiantCoordX + 85, rGiantCoordY - rGiantCoordY/11);
                 }
                 else if (giantArmor == false) {                
-                  rGiantHP -= 20;    
-                  text("  " + "20", rGiantCoordX + 85, rGiantCoordY - rGiantCoordY/11);
+                  rGiantHP -= 20; 
                 }                       
+                text("  " + "20", rGiantCoordX + 85, rGiantCoordY - rGiantCoordY/11 + 550);
                 
                 fill(#FFFFFF);
               
@@ -5309,8 +5300,7 @@ void mousePressed () {
                   player6.shiftGain(-13, -13,1000);                  
                 }
                 if (rGiantInterupt == true) {
-                  rGiantInterupt = false;
-                  rGiantattacked = false;       
+                  rGiantInterupt = false;       
                 }   
                 if (rGiantArmor <= 0) {
                   giantArmor = false;
