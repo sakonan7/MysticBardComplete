@@ -2873,43 +2873,10 @@ void draw() {
       shieldt = shieldInterval - int(millis()/1000);
       if (shieldt > 0) {
         if (attackBlocked == false) {
-          fill(70, 100, 0, 190);
-          
-          image(violinUI, 251, height - 156, 240, 156);
-          image(tromboneD, 7, height - 157, 250, 156);
-          image(shieldD, width - 253, height - 157, 244, 156);
-          if (potionDrained == false) {
-            image(potion, 492, height - 157, 214, 156); 
-          }
-          else if (potionDrained == true) {
-            image(potionD, 492, height - 157, 214, 156);
-          }          
+          fill(70, 100, 0, 190);         
               
           rect(0, 0, 1100, 900);              
-          setGradient(currentHPX, 50, HPbar, 40, c2, c1, 3);
-          noFill();
-          stroke(#9B9B9B);
-          rect(originalHPX - 3, 50 - 2.5, originalHPbar + 5, 40 + 6);                   
-       
-          setGradient(currentShieldBarX, height-105, shieldBar, 15, c3, c4, 2);
-          setGradient(currentViolinBarX, height-105, violinBar, 15, c3, c4, 2); 
-          setGradient(currentTromboneBarX, height-105, tromboneBar, 15, c3, c4, 2);
-          setGradient(currentPotionBarX, height-105, potionBar, 15, c3, c4, 2);
-        
-          strokeWeight(3);
-          noFill();
-  
-          strokeWeight(3);
-        
-          if (weapon == "Violin") {
-            stroke(#FFCE46);
-            rect(252, height - 148, 235, 135, 8);          
-          }
-          if (weapon == "Trombone") {
-            stroke(#FFCE46);
-            rect(13, height - 148, 235, 135, 8);
-          }
-          //gaugeDisapp = false;
+
         }
         if(attackBlocked == true) {
           fill(70, 100, 0, 190);
@@ -2983,40 +2950,8 @@ void draw() {
             }             
             //fill(70, 100, 0, 190);
           }          
-          image(violinUI, 251, height - 156, 240, 156);
-          image(tromboneD, 7, height - 157, 250, 156);
-          image(shieldD, width - 253, height - 157, 244, 156);
-          if (potionDrained == false) {
-            image(potion, 492, height - 157, 214, 156); 
-          }
-          else if (potionDrained == true) {
-            image(potionD, 492, height - 157, 214, 156);
-          }          
-              
+
           rect(0, 0, 1100, 900);
-          setGradient(currentHPX, 50, HPbar, 40, c2, c1, 3);
-          noFill();
-          stroke(#9B9B9B);
-          rect(originalHPX - 3, 50 - 2.5, originalHPbar + 5, 40 + 6);    
-          
-          setGradient(currentShieldBarX, height-105, shieldBar, 15, c3, c4, 2);
-          setGradient(currentViolinBarX, height-105, violinBar, 15, c3, c4, 2);
-          setGradient(currentTromboneBarX, height-105, tromboneBar, 15, c3, c4, 2);
-          setGradient(currentPotionBarX, height-105, potionBar, 15, c3, c4, 2);
-        
-          strokeWeight(3);
-          noFill();
-              
-          strokeWeight(3);
-        
-          if (weapon == "Violin") {
-            stroke(#FFCE46);
-            rect(252, height - 148, 235, 135, 8);          
-          }
-          if (weapon == "Trombone") {
-            stroke(#FFCE46);
-            rect(13, height - 148, 235, 135, 8);
-          }                
              
           attackBlocked = false;
           //gaugeDisapp = false;
@@ -3067,45 +3002,7 @@ void draw() {
        if (shieldt == 0) {
          backgroundY = 0;
          shield = false;
-         if (foeTHP > 0) {
-           foeTAlive = true;
-         }   
-         if (foe1HP > 0) {
-           foe1Alive = true;
-         }        
-         if (foe2HP > 0) {
-           foe2Alive = true;
-         }
-         if (foe3HP > 0) {
-           foe3Alive = true;
-         }     
-         if (foe4HP > 0) {
-           foe4Alive = true;
-         }   
-         if (foe5HP > 0) {
-           foe5Alive = true;
-         }   
-         if (foe6HP > 0) {
-           foe6Alive = true;
-         }  
-         if (foe7HP > 0) {
-           foe7Alive = true;
-         }  
-         if (foe8HP > 0) {
-           foe8Alive = true;
-         }
-         if (rGiantHP > 0) {
-           rGiantAlive = true;
-         }   
-         if (foe9HP > 0) {
-           foe9Alive = true;
-         }  
-         if (foe10HP > 0) {
-           foe10Alive = true;
-         }  
-         if (foe11HP > 0) {
-           foe11Alive = true;
-         }         
+
        }
     }
     else if (shield == false) { 
@@ -4041,8 +3938,8 @@ void mousePressed () {
                   foetutorialY -= 650;
                   foetutorialSizeX = foetutorialSizeX * 1.15;
                   foetutorialSizeY = foetutorialSizeY * 1.15;                  
-                  image(musicNote2, foetutorialX + 5, foetutorialY - 60 + 550, 100, 100);
-                  text("  " + 20, foetutorialX + foetutorialSizeX/5 - 10, foetutorialY - 60 + 550);
+                  image(musicNote2, foetutorialX + 5, foetutorialY - 60 + 640, 100, 100);
+                  text("  " + 20, foetutorialX + foetutorialSizeX/5 - 10, foetutorialY - 60 + 610);
                   foeTHP -= 20;
                 }
                 if (foeT2HP > 0) {
@@ -5344,7 +5241,7 @@ void mousePressed () {
               image(violin, cursorX + 10, cursorY - 25, 46.5, 50);
       
               foeTHP -= damage;
-              text("  " + damage, foetutorialX + foetutorialSizeX/4, foetutorialY - foetutorialY/11);
+              text("  " + damage, foetutorialX + foetutorialSizeX/4, foetutorialY - foetutorialY/11 + 550);
               fill(#FFFFFF);
               foeTattacked = true;
               monsterViolin = true;
