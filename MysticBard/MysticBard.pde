@@ -3924,8 +3924,7 @@ void mousePressed () {
                   foetutorialY -= 650;
                   foetutorialSizeX = foetutorialSizeX * 1.15;
                   foetutorialSizeY = foetutorialSizeY * 1.15;                  
-                  image(musicNote2, foetutorialX + 5, foetutorialY - 60 + 640, 100, 100);
-                  text("  " + 20, foetutorialX + foetutorialSizeX/5 - 10, foetutorialY - 60 + 610);
+                  text("  " + 20, foetutorialX + foetutorialSizeX/5, foetutorialY - 60 + 700);
                   foeTHP -= 20;
                 }
                 if (foeT2HP > 0) {
@@ -3934,8 +3933,7 @@ void mousePressed () {
                   foeT2Y -= 650;
                   foeT2SizeX = foeT2SizeX * 1.15;
                   foeT2SizeY = foeT2SizeY * 1.15;                   
-                  image(musicNote2, foeT2X + 5, foeT2Y - 60 + 640, 100, 100);
-                  text("  " + 20, foeT2X + foeT2SizeX/5 - 10, foeT2Y - 60 + 610);
+                  text("  " + 20, foeT2X + foeT2SizeX/5, foeT2Y - 60 + 700);
                   foeT2HP -= 20;
                 }
                 if (foeT3HP > 0) {
@@ -3944,8 +3942,7 @@ void mousePressed () {
                   foeT3Y -= 650;
                   foeT3SizeX = foeT3SizeX * 1.15;
                   foeT3SizeY = foeT3SizeY * 1.15;                   
-                  image(musicNote2, foeT3X + 5, foeT3Y - 60 + 640, 100, 100);
-                  text("  " + 20, foeT3X + foeT3SizeX/5 - 10, foeT3Y - 60 + 610);
+                  text("  " + 20, foeT3X + foeT3SizeX/5, foeT3Y - 60 + 700);
                   foeT3HP -= 20;
                 }
 
@@ -4001,7 +3998,6 @@ void mousePressed () {
                 foetutorialSizeX = foetutorialSizeX * 1.1;
                 foetutorialSizeY = foetutorialSizeY * 1.1;                
 
-                image(musicNote2, foetutorialX + 5, foetutorialY - 60 + 640, 100, 100);
 
                 noFill();
                 strokeWeight(7);
@@ -4013,7 +4009,7 @@ void mousePressed () {
                 
       
                 foeTHP -= 15;
-                text("  " + 15, foetutorialX + foetutorialSizeX/5 - 10, foetutorialY - 60 + 610);
+                text("  " + 15, foetutorialX + foetutorialSizeX/5, foetutorialY - 60 + 700);
                 
                 fill(#FFFFFF);
 
@@ -4053,7 +4049,6 @@ void mousePressed () {
                 foeT2SizeX = foeT2SizeX * 1.1;
                 foeT2SizeY = foeT2SizeY * 1.1;                
           
-                image(musicNote2, foeT2X + 5, foeT2Y - 60 + 640, 100, 100);
 
                 noFill();
                 strokeWeight(7);
@@ -4064,7 +4059,7 @@ void mousePressed () {
                 ellipse(cursorX, cursorY , 60, 60);
       
                 foeT2HP -= 15;
-                text("  " + 15, foeT2X + foeT2SizeX/5 - 10, foeT2Y - 60 + 610);
+                text("  " + 15, foeT2X + foeT2SizeX/5, foeT2Y - 60 + 700);
                 
                 fill(#FFFFFF);
 
@@ -4083,7 +4078,6 @@ void mousePressed () {
                 foeT3SizeX = foeT3SizeX * 1.1;
                 foeT3SizeY = foeT3SizeY * 1.1;                 
           
-                image(musicNote2, foeT3X + 5, foeT3Y - 60 + 640, 100, 100);
 
                 noFill();
                 strokeWeight(7);
@@ -4095,7 +4089,7 @@ void mousePressed () {
                 
       
                 foeT3HP -= 15;
-                text("  " + 15, foeT3X + foeT3SizeX/5 - 10, foeT3Y - 60 + 610);
+                text("  " + 15, foeT3X + foeT3SizeX/5, foeT3Y - 60 + 700);
                 
                 fill(#FFFFFF);
               
@@ -4119,8 +4113,7 @@ void mousePressed () {
                   foe1CoordY -= 650;
                   foe1SizeX = foe1SizeX * 1.15;
                   foe1SizeY = foe1SizeY * 1.15;                  
-                  image(musicNote2, foe1CoordX + 5, foe1CoordY - 60 + 640, 100, 100);
-                  text("  " + 20, foe1CoordX + foe1SizeX/5 - 10, foe1CoordY - 60 + 610);
+                  text("  " + 20, foe1CoordX + foe1SizeX/5, foe1CoordY - 60 + 700);
                   foe1HP -= 20;
                 }
                 if (foe2HP > 0) {
@@ -4128,8 +4121,7 @@ void mousePressed () {
                   foe2CoordY -= 650;
                   foe2SizeX = foe2SizeX * 1.15;
                   foe2SizeY = foe2SizeY * 1.15;                  
-                  image(musicNote2, foe2CoordX + 5, foe2CoordY - 60 + 640, 100, 100);
-                  text("  " + 20, foe2CoordX + foe2SizeX/5 - 10, foe2CoordY - 60 + 610);
+                  text("  " + 20, foe2CoordX + foe2SizeX/5, foe2CoordY - 60 + 700);
                   foe2HP -= 20;
                 }
                 if (foe3HP > 0) {
@@ -4137,8 +4129,7 @@ void mousePressed () {
                   foe3CoordY -= 650;
                   foe3SizeX = foe3SizeX * 1.15;
                   foe3SizeY = foe3SizeY * 1.15;                  
-                  image(musicNote2, foe3CoordX + 5, foe3CoordY - 60 + 640, 100, 100);
-                  text("  " + 20, foe3CoordX + foe3SizeX/5 - 10, foe3CoordY - 60 + 610);
+                  text("  " + 20, foe3CoordX + foe3SizeX/5, foe3CoordY - 60 + 700);
                   foe3HP -= 20;
                 }
 
@@ -4227,7 +4218,6 @@ void mousePressed () {
                 foe1SizeX = foe1SizeX * 1.1;
                 foe1SizeY = foe1SizeY * 1.1;                
 
-                image(musicNote2, foe1CoordX + 5, foe1CoordY - 60 + 640, 100, 100);
 
                 noFill();
                 strokeWeight(7);
@@ -4239,7 +4229,7 @@ void mousePressed () {
                 
       
                 foe1HP -= 15;
-                text("  " + 15, foe1CoordX + foe1SizeX/5 - 10, foe1CoordY - 60 + 610);
+                text("  " + 15, foe1CoordX + foe1SizeX/5, foe1CoordY - 60 + 700);
                 
                 fill(#FFFFFF);
 
@@ -4278,7 +4268,6 @@ void mousePressed () {
                 foe2SizeX = foe2SizeX * 1.1;
                 foe2SizeY = foe2SizeY * 1.1;                
           
-                image(musicNote2, foe2CoordX + 5, foe2CoordY - 60 + 640, 100, 100);
 
                 noFill();
                 strokeWeight(7);
@@ -4289,7 +4278,7 @@ void mousePressed () {
                 ellipse(cursorX, cursorY , 60, 60);
       
                 foe2HP -= 15;
-                text("  " + 15, foe2CoordX + foe2SizeX/5 - 10, foe2CoordY - 60 + 610);
+                text("  " + 15, foe2CoordX + foe2SizeX/5, foe2CoordY - 60 + 700);
                 
                 fill(#FFFFFF);
 
@@ -4328,7 +4317,6 @@ void mousePressed () {
                 foe3SizeX = foe3SizeX * 1.1;
                 foe3SizeY = foe3SizeY * 1.1;                
           
-                image(musicNote2, foe3CoordX + 5, foe3CoordY - 60 + 640, 100, 100);
 
                 noFill();
                 strokeWeight(7);
@@ -4384,8 +4372,7 @@ void mousePressed () {
                   foe4CoordY -= 650;
                   foe4SizeX = foe4SizeX * 1.15;
                   foe4SizeY = foe4SizeY * 1.15;                  
-                  image(musicNote2, foe4CoordX + 5, foe4CoordY - 60 + 640, 100, 100);
-                  text("  " + 20, foe4CoordX + foe4SizeX/5 - 10, foe4CoordY - 60 + 610);
+                  text("  " + 20, foe4CoordX + foe4SizeX/5, foe4CoordY - 60 + 700);
                   foe4HP -= 20;
                 }
                 if (foe5HP > 0) {
@@ -4393,8 +4380,7 @@ void mousePressed () {
                   foe5CoordY -= 650;
                   foe5SizeX = foe5SizeX * 1.15;
                   foe5SizeY = foe5SizeY * 1.15;                  
-                  image(musicNote2, foe5CoordX + 5, foe5CoordY - 60 + 640, 100, 100);
-                  text("  " + 20, foe5CoordX + foe5SizeX/5 - 10, foe5CoordY - 60 + 610);
+                  text("  " + 20, foe5CoordX + foe5SizeX/5, foe5CoordY - 60 + 700);
                   foe5HP -= 20;
                 }
                 if (foe6HP > 0) {
@@ -4402,8 +4388,7 @@ void mousePressed () {
                   foe6CoordY -= 650;
                   foe6SizeX = foe6SizeX * 1.15;
                   foe6SizeY = foe6SizeY * 1.15;                  
-                  image(musicNote2, foe6CoordX + 5, foe6CoordY - 60 + 640, 100, 100);
-                  text("  " + 20, foe6CoordX + foe6SizeX/5 - 10, foe6CoordY - 60 + 610);
+                  text("  " + 20, foe6CoordX + foe6SizeX/5, foe6CoordY - 60 + 700);
                   foe6HP -= 20;
                 }
                 if (foe7HP > 0) {
@@ -4411,8 +4396,7 @@ void mousePressed () {
                   foe7CoordY -= 650;
                   foe7SizeX = foe7SizeX * 1.15;
                   foe7SizeY = foe7SizeY * 1.15;                  
-                  image(musicNote2, foe7CoordX + 5, foe7CoordY - 60 + 640, 100, 100);
-                  text("  " + 20, foe7CoordX + foe7SizeX/5 - 10, foe7CoordY - 60 + 610);
+                  text("  " + 20, foe7CoordX + foe7SizeX/5, foe7CoordY - 60 + 700);
                   foe7HP -= 20;
                 }
                 if (foe8HP > 0) {
@@ -4420,8 +4404,7 @@ void mousePressed () {
                   foe8CoordY -= 650;
                   foe8SizeX = foe8SizeX * 1.15;
                   foe8SizeY = foe8SizeY * 1.15;                  
-                  image(musicNote2, foe8CoordX + 5, foe8CoordY - 60 + 640, 100, 100);
-                  text("  " + 20, foe8CoordX + foe8SizeX/5 - 10, foe8CoordY - 60 + 610);
+                  text("  " + 20, foe8CoordX + foe8SizeX/5, foe8CoordY - 60 + 700);
                   foe8HP -= 20;
                 }  
                 
@@ -4546,7 +4529,6 @@ void mousePressed () {
                 foe4SizeX = foe4SizeX * 1.1;
                 foe4SizeY = foe4SizeY * 1.1;
 
-                image(musicNote2, foe4CoordX + 5, foe4CoordY - 60 + 640, 100, 100);
 
                 noFill();
                 strokeWeight(7);
@@ -4558,7 +4540,7 @@ void mousePressed () {
                 
       
                 foe4HP -= 15;
-                text("  " + 15, foe4CoordX + foe4SizeX/5 - 10, foe4CoordY - 60 + 610);
+                text("  " + 15, foe4CoordX + foe4SizeX/5, foe4CoordY - 60 + 700);
                 
                 fill(#FFFFFF);
 
@@ -4597,7 +4579,6 @@ void mousePressed () {
                 foe5SizeX = foe5SizeX * 1.1;
                 foe5SizeY = foe5SizeY * 1.1;                
           
-                image(musicNote2, foe5CoordX + 5, foe5CoordY - 60 + 640, 100, 100);
 
                 noFill();
                 strokeWeight(7);
@@ -4608,7 +4589,7 @@ void mousePressed () {
                 ellipse(cursorX, cursorY , 60, 60);
       
                 foe5HP -= 15;
-                text("  " + 15, foe5CoordX + foe5SizeX/5 - 10, foe5CoordY - 60 + 610);
+                text("  " + 15, foe5CoordX + foe5SizeX/5, foe5CoordY - 60 + 700);
                 
                 fill(#FFFFFF);
 
@@ -4647,7 +4628,6 @@ void mousePressed () {
                 foe6SizeX = foe6SizeX * 1.1;
                 foe6SizeY = foe6SizeY * 1.1;                
           
-                image(musicNote2, foe6CoordX + 5, foe6CoordY - 60 + 640, 100, 100);
 
                 noFill();
                 strokeWeight(7);
@@ -4658,7 +4638,7 @@ void mousePressed () {
                 ellipse(cursorX, cursorY , 60, 60);
       
                 foe6HP -= 15;
-                text("  " + 15, foe6CoordX + foe6SizeX/5 - 10, foe6CoordY - 60 + 610);
+                text("  " + 15, foe6CoordX + foe6SizeX/5, foe6CoordY - 60 + 700);
                 
                 fill(#FFFFFF);
               
@@ -4697,7 +4677,6 @@ void mousePressed () {
                 foe7SizeX = foe7SizeX * 1.1;
                 foe7SizeY = foe7SizeY * 1.1;                
           
-                image(musicNote2, foe7CoordX + 5, foe7CoordY - 60 + 640, 100, 100);
 
                 noFill();
                 strokeWeight(7);
@@ -4708,7 +4687,7 @@ void mousePressed () {
                 ellipse(cursorX, cursorY , 60, 60);
       
                 foe7HP -= 15;
-                text("  " + 15, foe7CoordX + foe7SizeX/5 - 10, foe7CoordY - 60 + 610);
+                text("  " + 15, foe7CoordX + foe7SizeX/5, foe7CoordY - 60 + 700);
                 
                 fill(#FFFFFF);
               
@@ -4747,7 +4726,6 @@ void mousePressed () {
                 foe8SizeX = foe8SizeX * 1.1;
                 foe8SizeY = foe8SizeY * 1.1;                
           
-                image(musicNote2, foe8CoordX + 5, foe8CoordY - 60 + 640, 100, 100);
 
                 noFill();
                 strokeWeight(7);
@@ -4759,7 +4737,7 @@ void mousePressed () {
                 
       
                 foe8HP -= 15;
-                text("  " + 15, foe8CoordX + foe8SizeX/5 - 10, foe8CoordY - 60 + 610);
+                text("  " + 15, foe8CoordX + foe8SizeX/5, foe8CoordY - 60 + 700);
                 
                 fill(#FFFFFF);
               
@@ -4803,8 +4781,7 @@ void mousePressed () {
                   foe9CoordY -= 650;
                   foe9SizeX = foe9SizeX * 1.15;
                   foe9SizeY = foe9SizeY * 1.15;                  
-                  image(musicNote2, foe9CoordX + 5, foe9CoordY - 60 + 640, 100, 100);
-                  text("  " + 20, foe9CoordX + foe9SizeX/5 - 10, foe9CoordY - 60 + 610);
+                  text("  " + 20, foe9CoordX + foe9SizeX/5, foe9CoordY - 60 + 700);
                   foe9HP -= 20;
                 }
                 if (foe10HP > 0) {
@@ -4812,8 +4789,7 @@ void mousePressed () {
                   foe10CoordY -= 650;
                   foe10SizeX = foe10SizeX * 1.15;
                   foe10SizeY = foe10SizeY * 1.15;                  
-                  image(musicNote2, foe10CoordX + 5, foe10CoordY - 60 + 640, 100, 100);
-                  text("  " + 20, foe10CoordX + foe10SizeX/5 - 10, foe10CoordY - 60 + 610);
+                  text("  " + 20, foe10CoordX + foe10SizeX/5, foe10CoordY - 60 + 700);
                   foe10HP -= 20;
                 }
                 if (foe11HP > 0) {
@@ -4821,8 +4797,7 @@ void mousePressed () {
                   foe11CoordY -= 650;
                   foe11SizeX = foe11SizeX * 1.15;
                   foe11SizeY = foe11SizeY * 1.15;                  
-                  image(musicNote2, foe11CoordX + 5, foe11CoordY - 60 + 640, 100, 100);
-                  text("  " + 20, foe11CoordX + foe11SizeX/5 - 10, foe11CoordY - 60 + 610);
+                  text("  " + 20, foe11CoordX + foe11SizeX/5, foe11CoordY - 60 + 700);
                   foe11HP -= 20;
                 }
                 if (rGiantHP > 0) {
@@ -4830,8 +4805,7 @@ void mousePressed () {
                   rGiantCoordY -= 650;
                   rGiantSizeX = rGiantSizeX * 1.15;
                   rGiantSizeY = rGiantSizeY * 1.15;                  
-                  image(musicNote2, rGiantCoordX + 5, rGiantCoordY - 60 + 640, 100, 100);
-                  text("  " + "25", rGiantCoordX + 85, rGiantCoordY - rGiantCoordY/11 + 610);                  
+                  text("  " + "25", rGiantCoordX + 75, rGiantCoordY - rGiantCoordY/11 + 700);                  
                   if (giantArmor == true) {
                     gaugeDisapp = true;
                     rGiantArmor -= 25;
@@ -4963,7 +4937,6 @@ void mousePressed () {
                 foe9SizeX = foe9SizeX * 1.15;
                 foe9SizeY = foe9SizeY * 1.15;                
 
-                image(musicNote2, foe9CoordX + 5, foe9CoordY - 60 + 640, 100, 100);
 
                 noFill();
                 strokeWeight(7);
@@ -4975,7 +4948,7 @@ void mousePressed () {
                 
       
                 foe9HP -= 15;
-                text("  " + 15, foe9CoordX + foe9SizeX/5 - 10, foe9CoordY - 60 + 610);
+                text("  " + 15, foe9CoordX + foe9SizeX/5, foe9CoordY - 60 + 700);
                 
                 fill(#FFFFFF);
 
@@ -5014,7 +4987,6 @@ void mousePressed () {
                 foe10SizeX = foe10SizeX * 1.15;
                 foe10SizeY = foe10SizeY * 1.15;                
           
-                image(musicNote2, foe10CoordX + 5, foe10CoordY - 60 + 640, 100, 100);
 
                 noFill();
                 strokeWeight(7);
@@ -5025,7 +4997,7 @@ void mousePressed () {
                 ellipse(cursorX, cursorY , 60, 60);
       
                 foe10HP -= 15;
-                text("  " + 15, foe10CoordX + foe10SizeX/5 - 10, foe10CoordY - 60 + 610);
+                text("  " + 15, foe10CoordX + foe10SizeX/5, foe10CoordY - 60 + 700);
                 
                 fill(#FFFFFF);
 
@@ -5064,7 +5036,6 @@ void mousePressed () {
                 foe11SizeX = foe11SizeX * 1.15;
                 foe11SizeY = foe11SizeY * 1.15;                
           
-                image(musicNote2, foe11CoordX + 5, foe11CoordY - 60 + 640, 100, 100);
 
                 noFill();
                 strokeWeight(7);
@@ -5075,7 +5046,7 @@ void mousePressed () {
                 ellipse(cursorX, cursorY , 60, 60);
       
                 foe11HP -= 15;
-                text("  " + 15, foe11CoordX + foe11SizeX/5 - 10, foe11CoordY - 60 + 610);
+                text("  " + 15, foe11CoordX + foe11SizeX/5, foe11CoordY - 60 + 700);
                 
                 fill(#FFFFFF);
               
@@ -5115,7 +5086,6 @@ void mousePressed () {
                 rGiantSizeX = rGiantSizeX * 1.15;
                 rGiantSizeY = rGiantSizeY * 1.15;                
           
-                image(musicNote2, rGiantCoordX + 5, rGiantCoordY - 60 + 640, 100, 100);
 
                 noFill();
                 strokeWeight(7);
@@ -5133,7 +5103,7 @@ void mousePressed () {
                 else if (giantArmor == false) {                
                   rGiantHP -= 20; 
                 }                       
-                text("  " + "20", rGiantCoordX + 85, rGiantCoordY - rGiantCoordY/11 + 610);
+                text("  " + "20", rGiantCoordX + 75, rGiantCoordY - rGiantCoordY/11 + 700);
                 
                 fill(#FFFFFF);
               
@@ -5193,8 +5163,6 @@ void mousePressed () {
               foetutorialY -= 650;
               foetutorialSizeX = foetutorialSizeX * 1.1;
               foetutorialSizeY = foetutorialSizeY * 1.1;
-          
-              image(musicNote1, foetutorialX + foetutorialSizeX/5, foetutorialY - foetutorialY/10 + 550, 100, 100);
       
               noFill();
               strokeWeight(5);
@@ -5204,7 +5172,7 @@ void mousePressed () {
               ellipse(cursorX, cursorY , 50, 50);
       
               foeTHP -= damage;
-              text("  " + damage, foetutorialX + foetutorialSizeX/4, foetutorialY - foetutorialY/11 + 550);
+              text("  " + damage, foetutorialX + foetutorialSizeX/4, foetutorialY - foetutorialY/11 + 630);
               fill(#FFFFFF);
               foeTattacked = true;
               monsterViolin = true;
@@ -5244,7 +5212,6 @@ void mousePressed () {
               foeT2SizeX = foeT2SizeX * 1.1;
               foeT2SizeY = foeT2SizeY * 1.1;              
           
-              image(musicNote1, foeT2X + foeT2SizeX/5, foeT2Y - foeT2Y/10 + 550, 100, 100);
       
               noFill();
               strokeWeight(5);
@@ -5255,7 +5222,7 @@ void mousePressed () {
               
               
               foeT2HP -= damage;
-              text("  " + damage, foeT2X + foeT2SizeX/4, foeT2Y - foeT2Y/11 + 550);
+              text("  " + damage, foeT2X + foeT2SizeX/4, foeT2Y - foeT2Y/11 + 630);
               fill(#FFFFFF);
               monsterViolin = true;
               player2 = minim2.loadFile("violin.mp3", 400);
@@ -5272,7 +5239,6 @@ void mousePressed () {
               foeT3SizeX = foeT3SizeX * 1.1;
               foeT3SizeY = foeT3SizeY * 1.1;                
           
-              image(musicNote1, foeT3X + foeT3SizeX/5, foeT3Y - foeT3Y/10 + 550, 100, 100);
       
               noFill();
               strokeWeight(5);
@@ -5283,7 +5249,7 @@ void mousePressed () {
               
       
               foeT3HP -= damage;
-              text("  " + damage, foeT3X + foeT3SizeX/4, foeT3Y - foeT3Y/11 + 550);
+              text("  " + damage, foeT3X + foeT3SizeX/4, foeT3Y - foeT3Y/11 + 630);
               fill(#FFFFFF);
               monsterViolin = true;
               player2 = minim2.loadFile("violin.mp3", 400);
@@ -5303,7 +5269,6 @@ void mousePressed () {
               foe1SizeX = foe1SizeX * 1.1;
               foe1SizeY = foe1SizeY * 1.1;              
           
-              image(musicNote1, foe1CoordX + foe1SizeX/5, foe1CoordY - foe1CoordY/10 + 550, 100, 100);
       
               noFill();
               strokeWeight(5);
@@ -5313,7 +5278,7 @@ void mousePressed () {
               ellipse(cursorX, cursorY , 50, 50);
       
               foe1HP -= damage;
-              text("  " + damage, foe1CoordX + foe1SizeX/4, foe1CoordY - foe1CoordY/11 + 550);
+              text("  " + damage, foe1CoordX + foe1SizeX/4, foe1CoordY - foe1CoordY/11 + 630);
               fill(#FFFFFF);
               foe1attacked = true;
               monsterViolin = true;
@@ -5351,7 +5316,6 @@ void mousePressed () {
               foe2SizeX = foe2SizeX * 1.1;
               foe2SizeY = foe2SizeY * 1.1;              
           
-              image(musicNote1, foe2CoordX + foe2SizeX/5, foe2CoordY - foe2CoordY/10 + 550, 100, 100);
       
               noFill();
               strokeWeight(5);
@@ -5362,7 +5326,7 @@ void mousePressed () {
               
               
               foe2HP -= damage;
-              text("  " + damage, foe2CoordX + foe2SizeX/4, foe2CoordY - foe2CoordY/11 + 550);
+              text("  " + damage, foe2CoordX + foe2SizeX/4, foe2CoordY - foe2CoordY/11 + 630);
               fill(#FFFFFF);
               foe2attacked = true;
               monsterViolin = true;
@@ -5400,7 +5364,6 @@ void mousePressed () {
               foe3SizeX = foe3SizeX * 1.1;
               foe3SizeY = foe3SizeY * 1.1;              
           
-              image(musicNote1, foe3CoordX + foe3SizeX/5, foe3CoordY - foe3CoordY/10 + 550, 100, 100);
       
               noFill();
               strokeWeight(5);
@@ -5411,7 +5374,7 @@ void mousePressed () {
               
       
               foe3HP -= damage;
-              text("  " + damage, foe3CoordX + foe3SizeX/4, foe3CoordY - foe3CoordY/11 + 550);
+              text("  " + damage, foe3CoordX + foe3SizeX/4, foe3CoordY - foe3CoordY/11 + 630);
               fill(#FFFFFF);
               foe3attacked = true;
               monsterViolin = true;
@@ -5451,7 +5414,6 @@ void mousePressed () {
               foe4SizeX = foe4SizeX * 1.1;
               foe4SizeY = foe4SizeY * 1.1;                  
           
-              image(musicNote1, foe4CoordX + foe4SizeX/5, foe4CoordY - foe4CoordY/10 + 550, 100, 100);
       
               noFill();
               strokeWeight(5);
@@ -5462,7 +5424,7 @@ void mousePressed () {
               
       
               foe4HP -= damage;
-              text("  " + damage, foe4CoordX + foe4SizeX/4, foe4CoordY - foe4CoordY/11 + 550);
+              text("  " + damage, foe4CoordX + foe4SizeX/4, foe4CoordY - foe4CoordY/11 + 630);
               fill(#FFFFFF);
               foe4attacked = true;
               monsterViolin = true;
@@ -5500,7 +5462,6 @@ void mousePressed () {
               foe5SizeX = foe5SizeX * 1.1;
               foe5SizeY = foe5SizeY * 1.1;                  
           
-              image(musicNote1, foe5CoordX + foe5SizeX/5, foe5CoordY - foe5CoordY/10 + 550, 100, 100);
       
               noFill();
               strokeWeight(5);
@@ -5511,7 +5472,7 @@ void mousePressed () {
               
       
               foe5HP -= damage;
-              text("  " + damage, foe5CoordX + foe5SizeX/4, foe5CoordY - foe5CoordY/11 + 550);
+              text("  " + damage, foe5CoordX + foe5SizeX/4, foe5CoordY - foe5CoordY/11 + 630);
               fill(#FFFFFF);
               foe5attacked = true;
               monsterViolin = true;
@@ -5549,7 +5510,6 @@ void mousePressed () {
               foe6SizeX = foe6SizeX * 1.1;
               foe6SizeY = foe6SizeY * 1.1;                  
           
-              image(musicNote1, foe6CoordX + foe6SizeX/5, foe6CoordY - foe6CoordY/10 + 550, 100, 100);
       
               noFill();
               strokeWeight(5);
@@ -5560,7 +5520,7 @@ void mousePressed () {
               
       
               foe6HP -= damage;
-              text("  " + damage, foe6CoordX + foe6SizeX/4, foe6CoordY - foe6CoordY/11 + 550);
+              text("  " + damage, foe6CoordX + foe6SizeX/4, foe6CoordY - foe6CoordY/11 + 630);
               fill(#FFFFFF);
               foe6attacked = true;
               monsterViolin = true;
@@ -5598,7 +5558,6 @@ void mousePressed () {
               foe7SizeX = foe7SizeX * 1.1;
               foe7SizeY = foe3SizeY * 1.1;                  
           
-              image(musicNote1, foe7CoordX + foe7SizeX/5, foe7CoordY - foe7CoordY/10 + 550, 100, 100);
       
               noFill();
               strokeWeight(5);
@@ -5609,7 +5568,7 @@ void mousePressed () {
               
       
               foe7HP -= damage;
-              text("  " + damage, foe7CoordX + foe7SizeX/4, foe7CoordY - foe7CoordY/11 + 550);
+              text("  " + damage, foe7CoordX + foe7SizeX/4, foe7CoordY - foe7CoordY/11 + 630);
               fill(#FFFFFF);
               foe7attacked = true;
               monsterViolin = true;
@@ -5647,7 +5606,6 @@ void mousePressed () {
               foe8SizeX = foe3SizeX * 1.1;
               foe8SizeY = foe3SizeY * 1.1;                  
           
-              image(musicNote1, foe8CoordX + foe8SizeX/5, foe8CoordY - foe8CoordY/10 + 550, 100, 100);
       
               noFill();
               strokeWeight(5);
@@ -5658,7 +5616,7 @@ void mousePressed () {
               
       
               foe8HP -= damage;
-              text("  " + damage, foe8CoordX + foe8SizeX/4, foe8CoordY - foe8CoordY/11 + 550);
+              text("  " + damage, foe8CoordX + foe8SizeX/4, foe8CoordY - foe8CoordY/11 + 630);
               fill(#FFFFFF);
               foe8attacked = true;
               monsterViolin = true;
@@ -5698,11 +5656,10 @@ void mousePressed () {
                 rGiantArmor -= 2;
                 armorBar -= 5;
                 currentArmorBarX += 5;
-                text("  " + "2", rGiantCoordX + 95, rGiantCoordY - rGiantCoordY/11);
+                text("  " + "2", rGiantCoordX + 85, rGiantCoordY - rGiantCoordY/11 + 630);
                 player16 = minim16.loadFile("muffled violin.mp3", 400);
                 player16.play();
                 player16.shiftGain(-7, -7,1000);                
-                image(musicNote1, rGiantCoordX + 80, rGiantCoordY - rGiantCoordY/10, 100, 100);
               }
               else if (giantArmor == false) {
                 //image(rGiant, rGiantCoordX - 15, rGiantCoordY - 30, rGiantSizeX * 1.2, rGiantSizeY * 1.2);
@@ -5711,8 +5668,7 @@ void mousePressed () {
                 rGiantSizeX = rGiantSizeX * 1.1;
                 rGiantSizeY = rGiantSizeY * 1.1;                
                 rGiantHP -= damage;
-                image(musicNote1, rGiantCoordX + 80, rGiantCoordY - rGiantCoordY/10 + 550, 100, 100);
-                text("  " + damage, rGiantCoordX + 95, rGiantCoordY - rGiantCoordY/11 + 550);  
+                text("  " + damage, rGiantCoordX + 85, rGiantCoordY - rGiantCoordY/11 + 630);  
                 
                 rGiantattacked = true;
                 if (rGiantFlash == true && rGiantattacked == true) {
@@ -5768,8 +5724,6 @@ void mousePressed () {
               foe9CoordY -= 650;
               foe9SizeX = foe3SizeX * 1.1;
               foe9SizeY = foe3SizeY * 1.1;              
-          
-              image(musicNote1, foe9CoordX + foe9SizeX/5, foe9CoordY - foe9CoordY/10 + 550, 100, 100);
       
               noFill();
               strokeWeight(5);
@@ -5780,7 +5734,7 @@ void mousePressed () {
               
       
               foe9HP -= damage;
-              text("  " + damage, foe9CoordX + foe9SizeX/4, foe9CoordY - foe9CoordY/11 + 550);
+              text("  " + damage, foe9CoordX + foe9SizeX/4, foe9CoordY - foe9CoordY/11 + 630);
               fill(#FFFFFF);
               foe9attacked = true;
               monsterViolin = true;
@@ -5818,7 +5772,6 @@ void mousePressed () {
               foe10SizeX = foe10SizeX * 1.1;
               foe10SizeY = foe10SizeY * 1.1;              
           
-              image(musicNote1, foe10CoordX + foe10SizeX/5, foe10CoordY - foe10CoordY/10, 100, 100);
       
               noFill();
               strokeWeight(5);
@@ -5829,7 +5782,7 @@ void mousePressed () {
               
       
               foe10HP -= damage;
-              text("  " + damage, foe10CoordX + foe10SizeX/4, foe10CoordY - foe10CoordY/11);
+              text("  " + damage, foe10CoordX + foe10SizeX/4, foe10CoordY - foe10CoordY/11 + 630);
               fill(#FFFFFF);
               foe10attacked = true;
               monsterViolin = true;
@@ -5878,7 +5831,7 @@ void mousePressed () {
               
       
               foe11HP -= damage;
-              text("  " + damage, foe11CoordX + foe11SizeX/4, foe11CoordY - foe11CoordY/11 + 550);
+              text("  " + damage, foe11CoordX + foe11SizeX/4, foe11CoordY - foe11CoordY/11 + 630);
               fill(#FFFFFF);
               foe11attacked = true;
               monsterViolin = true;
