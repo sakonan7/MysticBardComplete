@@ -1068,12 +1068,6 @@ void draw() {
         }        
     }
     if (stage3Dead == true) {
-      if (giantArmor == true) {
-        setGradient(currentArmorBarX, armorBarY - 30, armorBar, 17, c5, c6, 2);
-        noFill();
-        stroke(#DBDBDB); 
-        rect(340 - 3 + 20, armorBarY - 33, rGiantSizeX + 6, 23);          
-      }
         
       if (rGiantHP > 0) {
         image(rGiant, rGiantCoordX, rGiantCoordY - 30, rGiantSizeX, rGiantSizeY);
@@ -3010,8 +3004,7 @@ void draw() {
         foe8CoordY = 355;
       }      
       if (stage3 == true) {
-        gaugeDisapp = false;
-        armorBarY = (int)rGiantCoordY - 20 - 4;
+        
         rGiantCoordY = 355;
         foe9CoordY = 425;
         foe10CoordY = 410;
@@ -4810,11 +4803,7 @@ void mousePressed () {
                     gaugeDisapp = true;
                     rGiantArmor -= 25;
                     armorBar -= 59;
-                    currentArmorBarX += 59;
-                    setGradient(currentArmorBarX, armorBarY - 60, armorBar, 17, c5, c6, 2);
-                    noFill();
-                    stroke(#DBDBDB); //#DEDEDE //F5F5F5 in the F level
-                    rect(340 - 3 + 20, armorBarY - 63, rGiantSizeX + 6, 23);                    
+                    currentArmorBarX += 59;        
                   }
                   else if (giantArmor == false) {                
                     rGiantHP -= 25;    
