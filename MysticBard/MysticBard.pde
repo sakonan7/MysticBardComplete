@@ -76,8 +76,7 @@ static final int FADE = 2200;
 PImage background;
 int backgroundY = 0;
 
-PImage musicNote1;
-PImage musicNote2;
+
 
 PImage foe1;
 PImage foe2;
@@ -651,8 +650,6 @@ void setup() {
   background(#000000);
   background = loadImage("forestcurrent.png");
   
-  musicNote1 = loadImage("note1.png");
-  musicNote2 = loadImage("note2.png");
   
   foe1 = loadImage("goblin.png");
   foe2 = loadImage("goblin.png");
@@ -678,9 +675,6 @@ void setup() {
   violinUse = loadImage("violinUse.png");
   tutorial = loadImage("tutorial.png");
   
-  violin = loadImage("violinPic.png");
-  
-  trombone = loadImage("trombonePic.png");
   
   bard = loadImage("village3.png");
   
@@ -1726,38 +1720,25 @@ void draw() {
       }
     
     }
-    //foe2b  
     if (playerAttacked == true) {
-      //image(background, 0, -40, width, height);
       backgroundY = -40;
       if (tutorialStage == true) {
-        //foeT2disapp = true;
-        //foeT3disapp = true;
-        //image(foetutorial, foetutorialX, foetutorialY - 30, foetutorialSizeX, foetutorialSizeY);
         foetutorialY = 440;
         if (foeT2HP > 0) {
-          //image(foeT2, foeT2X, foeT2Y - 30, foeT2SizeX, foeT2SizeY);
           foeT2Y = 310;
         }
         if (foeT3HP > 0) {
-          //image(foeT3, foeT3X, foeT3Y - 30, foeT3SizeX, foeT3SizeY);
           foeT3Y = 310;
         }
       }
       if (stage1 == true) {
-        //foe1disapp = true;
-        //foe2disapp = true;
-        //foe3disapp = true;
         if (foe1HP > 0) {
-          //image(foe1, foe1CoordX, foe1CoordY - 30, foe1SizeX, foe1SizeY);
           foe1CoordY = 440;
         }
         if (foe2HP > 0) {
-          //image(foe2, foe2CoordX, foe2CoordY - 30, foe2SizeX, foe2SizeY);
           foe2CoordY = 310;
         }
         if (foe3HP > 0) {
-          //image(foe3, foe3CoordX, foe3CoordY - 30, foe3SizeX, foe3SizeY);
           foe3CoordY = 310;
         }
       }      
@@ -1796,48 +1777,13 @@ void draw() {
       }      
       fill(117,0,0,145);
       stroke(#FFFFFF);
-
-      image(violinUI, 251, height - 156, 240, 156);
-      image(tromboneD, 7, height - 157, 250, 156);
-      image(shieldD, width - 253, height - 157, 244, 156); 
-      if (potionDrained == false) {
-        image(potion, 492, height - 157, 214, 156); 
-      }
-      else if (potionDrained == true) {
-        image(potionD, 492, height - 157, 214, 156);
-      }      
+      
       
       rect(0, 1, 1099, 898);        
         
-      setGradient(currentHPX, 50, HPbar, 40, c2, c1, 3);
-      noFill();
-      stroke(#9B9B9B);
-      rect(originalHPX - 3, 50 - 2.5, originalHPbar + 5, 40 + 6);      
- 
-      setGradient(currentShieldBarX, height-105, shieldBar, 15, c3, c4, 2);
-      setGradient(currentViolinBarX, height-105, violinBar, 15, c3, c4, 2); 
-      setGradient(currentTromboneBarX, height-105, tromboneBar, 15, c3, c4, 2);
-      setGradient(currentPotionBarX, height-105, potionBar, 15, c3, c4, 2);
-        
-      strokeWeight(3);
-      noFill();
 
-      strokeWeight(3);
-      if (weapon == "Violin") {
-        stroke(#FFCE46);
-        rect(252, height - 148, 235, 135, 8);          
-      }
-      if (weapon == "Trombone") {
-        stroke(#FFCE46);
-        rect(13, height - 148, 235, 135, 8);
-      }        
-                      
-      //maybe put this code in playerAttacked == false
-      //depending on the stage, cancel disapp and make the foes alive
-    
       playerAttacked = false;
       if (playerHP <= 0 && tutorialStage == true) {
-        //may need to do if stage2, foe not alive to make them disappear
         tutorialStage = false;
         tutorialSDead = true;
         playerAlive = false;
@@ -1847,7 +1793,6 @@ void draw() {
         redraw();
       } 
       else if (playerHP <= 0 && stage1 == true) {
-        //may need to do if stage2, foe not alive to make them disappear
         stage1 = false;
         stage1Dead = true;
         playerAlive = false;
@@ -1857,7 +1802,6 @@ void draw() {
         redraw();
       }        
       else if (playerHP <= 0 && stage2 == true) {
-        //may need to do if stage2, foe not alive to make them disappear
         stage2 = false;
         stage2Dead = true;
         playerAlive = false;
@@ -1867,7 +1811,6 @@ void draw() {
         redraw();
       }
       else if (playerHP <= 0 && stage3 == true) {
-        //may need to do if stage2, foe not alive to make them disappear
         stage3 = false;
         stage3Dead = true;
         playerAlive = false;
@@ -1880,9 +1823,6 @@ void draw() {
     else if (playerAttacked == false) {
       backgroundY = 0;
       if (tutorialStage == true) {
-        //foeTdisapp = false;
-        //foeT2disapp = false;
-        //foeT3disapp = false;   
         if (foeTHP > 0) {
           foetutorialY = 470;
         }
@@ -1893,10 +1833,7 @@ void draw() {
           foeT3Y = 340;
         }        
       }
-      if (stage1 == true) {
-        //foe1disapp = false;
-        //foe2disapp = false;
-        //foe3disapp = false;        
+      if (stage1 == true) {    
         if (foe1HP > 0) {
           foe1CoordY = 470;
         }
@@ -1941,37 +1878,28 @@ void draw() {
     }
     //here
     if (foeTAttack == true) {  
-      //foeTAlive = false;  
       foeTwhitet = foeTwhiteint-int(millis()/1000); 
       if (foeTHP > 0) {
         if (foeTwhitet > 0) {
-          //image(foeWhite, foetutorialX, foetutorialY, foetutorialSizeX, foetutorialSizeY);
-          //tint(255, 255, 255, 206);
-          //noTint();
-          //tint(#EDEDED);
           foetutorial.filter(GRAY);
         }
         else if (foeTwhitet <= 0) {
           foeTflasht = foeTflashint - int(millis()/1000);
           if (foeTflasht > 0) {
-            //image(foetutorial, foetutorialX, foetutorialY, foetutorialSizeX, foetutorialSizeY);
             foetutorial = loadImage("goblin.png");
           }
           else if (foeTflasht <= 0) {
             foeTredt = foeTredint-int(millis()/1000);
             if (foeTredt > 0) {
-              //image(foeRed, foetutorialX, foetutorialY, foetutorialSizeX, foetutorialSizeY);
               foetutorial.filter(INVERT);
             }
             else if (foeTredt <= 0) {
               foeTflash2t = foeTflash2int - int(millis()/1000);
               if (foeTflash2t > 0) {
-                //image(foetutorial, foetutorialX, foetutorialY, foetutorialSizeX, foetutorialSizeY);
                 foetutorial = loadImage("goblin.png");
                 foeTFlash = true;
               }
               else if (foeTflash2t <= 0 && foeTInterupt == false) {
-                //foeTAlive = false;
                 if (shield == true) {
                   foeTAttack = false;
                   attackBlocked = true;
@@ -1991,9 +1919,7 @@ void draw() {
                   player9.play();
                   player9.shiftGain(-18, -18,1000);                   
                 
-                  playerAttacked = true;
-                  //foeT2Alive = false;
-                  //foeT3Alive = false;                 
+                  playerAttacked = true;             
                     
                   foeTinterval = int(millis()/1000) + 5;
                   foeTwhiteint = int(millis()/1000) + 3;
@@ -2018,29 +1944,24 @@ void draw() {
       }
     }    
     if (foe1Attack == true) {  
-      //foe1Alive = false;  
       foe1whitet = foe1whiteint-int(millis()/1000); 
       if (foe1HP > 0) {
         if (foe1whitet > 0) {
-          //image(foeWhite, foe1CoordX, foe1CoordY, foe1SizeX, foe1SizeY);
           foe1.filter(GRAY);
         }
         else if (foe1whitet <= 0) {
           foe1flasht = foe1flashint - int(millis()/1000);
           if (foe1flasht > 0) {
-            //image(foe1, foe1CoordX, foe1CoordY, foe1SizeX, foe1SizeY);
             foe1 = loadImage("goblin.png");
           }
           else if (foe1flasht <= 0) {
             foe1redt = foe1redint-int(millis()/1000);
             if (foe1redt > 0) {
-              //image(foeRed, foe1CoordX, foe1CoordY, foe1SizeX, foe1SizeY);
               foe1.filter(INVERT);
             }
             else if (foe1redt <= 0) {
               foe1flash2t = foe1flash2int - int(millis()/1000);
               if (foe1flash2t > 0) {
-                //image(foe1, foe1CoordX, foe1CoordY, foe1SizeX, foe1SizeY);
                 foe1 = loadImage("goblin.png");
                 foe1Flash = true;
               }
@@ -2086,7 +2007,6 @@ void draw() {
         foe1Attack = false;
       }
     }  
-    //foe2a
     if (foe2Attack == true) {  
       //foe2Alive = false;  
       foe2whitet = foe2whiteint-int(millis()/1000); 
@@ -2856,7 +2776,6 @@ void draw() {
         rGiantAttack = false;
       }
     }    
-    //new fix
     if (shield == true) {
       shieldt = shieldInterval - int(millis()/1000);
       if (shieldt > 0) {
@@ -2914,7 +2833,6 @@ void draw() {
             foe9disapp = true;
             foe10disapp = true;
             foe11disapp = true;
-            //new fix 3
         
             if (rGiantHP > 0) {
               rGiantCoordY = 335;
@@ -2951,7 +2869,6 @@ void draw() {
         if (foe5Attack == true) {
           attackBlocked = true;
         }
-        //al cappucino
         if (foeTFlash == true) {
           attackBlocked = true;
         }
@@ -4321,7 +4238,7 @@ void mousePressed () {
                 
       
                 foe3HP -= 15;
-                text("  " + 15, foe3CoordX + foe3SizeX/5 - 10, foe3CoordY - 60 + 610);
+                text("  " + 15, foe3CoordX + foe3SizeX/5, foe3CoordY - 60 + 700);
                 
                 fill(#FFFFFF);
               
@@ -5809,7 +5726,6 @@ void mousePressed () {
               foe11SizeX = foe11SizeX * 1.1;
               foe11SizeY = foe11SizeY * 1.1;              
           
-              image(musicNote1, foe11CoordX + foe11SizeX/5, foe11CoordY - foe11CoordY/10 + 550, 100, 100);
       
               noFill();
               strokeWeight(5);
@@ -6042,7 +5958,7 @@ void mousePressed () {
       victoryConclude = false;
       //use boolean stagexvictory to determine victory
       if (stage1V == true) {
-        stage2 = true;
+        stage3 = true;
         stage1V = false;
       }
       if (stage2V == true) {
@@ -6320,7 +6236,6 @@ void mousePressed () {
         foe11HP = 150; 
         rGiantHP = 250;
         rGiantArmor = 100;
-        //new fix 2
         currentArmorBarX = (int)rGiantCoordX;
         armorBar = rGiantSizeX;
         foe4Alive = true;
